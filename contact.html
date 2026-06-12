@@ -10,19 +10,17 @@
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
   --ink:#111;--muted:#777;--light:#f8f7f5;--white:#fff;
-  --border:#e5e1db;--tag:#eeebe6;
+  --border:#e5e1db;--tag:#eeebe6;--accent:#8B6F4E;
   --serif:'Playfair Display',serif;--sans:'DM Sans',sans-serif;
 }
 body{font-family:var(--sans);background:var(--light);color:var(--ink);font-size:14px;line-height:1.65;min-height:100vh}
-header{display:flex;justify-content:space-between;align-items:center;padding:1.3rem 2.8rem;background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:30}
-.logo{font-family:var(--serif);font-size:1.1rem;cursor:pointer;font-weight:400}
+header{display:flex;justify-content:space-between;align-items:stretch;padding:0 2.8rem;background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:30;height:58px}
+.logo{font-family:var(--serif);font-size:1.1rem;font-weight:400;display:flex;align-items:center;text-decoration:none;color:var(--ink);flex-shrink:0}
 .logo span{color:var(--muted);font-style:italic;font-size:.95rem}
-.hcta{font-family:var(--sans);font-size:11px;letter-spacing:.09em;text-transform:uppercase;padding:.5rem 1.3rem;border:1px solid var(--ink);background:none;color:var(--ink);cursor:pointer;transition:all .2s}
-.hcta:hover{background:var(--ink);color:var(--white)}
-.tabs{display:flex;border-bottom:1px solid var(--border);background:var(--white);padding:0 2.8rem;position:sticky;top:57px;z-index:20;overflow-x:auto}
-.tab{font-family:var(--sans);font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:.95rem 1.4rem;border:none;background:none;cursor:pointer;color:var(--muted);border-bottom:2px solid transparent;transition:all .2s;white-space:nowrap}
+.header-nav{display:flex;align-items:stretch;overflow-x:auto}
+.tab{font-family:var(--sans);font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:0 1.1rem;border:none;background:none;cursor:pointer;color:var(--muted);border-bottom:2px solid transparent;transition:all .2s;white-space:nowrap;text-decoration:none;display:flex;align-items:center}
 .tab:hover{color:var(--ink)}
-.tab.on{color:var(--ink);border-bottom-color:var(--ink);font-weight:500}
+.tab.on{color:var(--ink);border-bottom-color:var(--accent);font-weight:500}
 .page{animation:fi .22s ease}
 
 @keyframes fi{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
@@ -190,18 +188,16 @@ a.hcta{text-decoration:none}
 </head>
 <body>
 <header>
-  <a href="index.html" class="logo" style="text-decoration:none">Dan Xu <span>· Personal Site</span></a>
-  <a href="contact.html" class="hcta" style="text-decoration:none">Get in Touch</a>
+  <a href="index.html" class="logo">Dan Xu <span>· Personal Site</span></a>
+  <nav class="header-nav">
+    <a href="index.html" class="tab">About</a>
+    <a href="experience.html" class="tab">Experience</a>
+    <a href="projects.html" class="tab">Projects</a>
+    <a href="casestudy.html" class="tab">Case Study</a>
+    <a href="articles.html" class="tab">Articles</a>
+    <a href="contact.html" class="tab on">Contact</a>
+  </nav>
 </header>
-<div class="tabs">
-  <a href="index.html" class="tab">About</a>
-  <a href="experience.html" class="tab">Experience</a>
-  <a href="projects.html" class="tab">Forward Projects</a>
-  <a href="casestudy.html" class="tab">Case Study</a>
-  <a href="articles.html" class="tab">Articles</a>
-  <a href="contact.html" class="tab" style="color:var(--ink);border-bottom:2px solid var(--ink);font-weight:500">Contact</a>
-  
-</div>
 <div class="cwrap">
     <div class="cleft">
       <h2>Let's connect</h2>
@@ -209,7 +205,7 @@ a.hcta{text-decoration:none}
       
     </div>
     <div class="citems">
-      <div class="ci"><i class="ti ti-mail ci-icon"></i><div><div class="ci-label">Email</div><div class="ci-val">[xudankyotann@gmail.com]</div></div></div>
+      <div class="ci" onclick="window.location='mailto:xudankyotann@gmail.com'"><i class="ti ti-mail ci-icon"></i><div><div class="ci-label">Email</div><div class="ci-val">xudankyotann@gmail.com</div></div></div>
       
       <div class="ci" onclick="window.open('https://www.linkedin.com/in/xudankyoni/','_blank')"><i class="ti ti-brand-linkedin ci-icon"></i><div><div class="ci-label">LinkedIn</div><div class="ci-val">linkedin.com/in/xudankyoni</div></div></div>
       <div class="ci"><i class="ti ti-map-pin ci-icon"></i><div><div class="ci-label">Location</div><div class="ci-val">Bochum, Germany</div></div></div>
