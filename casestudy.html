@@ -14,45 +14,81 @@
   --serif:'Playfair Display',serif;--sans:'DM Sans',sans-serif;
 }
 body{font-family:var(--sans);background:var(--light);color:var(--ink);font-size:14px;line-height:1.65;min-height:100vh}
-header{display:flex;justify-content:space-between;align-items:stretch;padding:0 2.8rem;background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:30;height:58px}
-.logo{font-family:var(--serif);font-size:1.1rem;font-weight:400;display:flex;align-items:center;text-decoration:none;color:var(--ink);flex-shrink:0}
-.logo span{color:var(--muted);font-style:italic;font-size:.95rem}
+
+/* NAV */
+header{
+  position:sticky;top:0;z-index:30;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:0 2.8rem;height:58px;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(229,225,219,.6);
+}
+.logo{font-family:var(--serif);font-size:1.05rem;font-weight:400;text-decoration:none;color:var(--ink)}
+.logo span{color:var(--muted);font-style:italic;font-size:.9rem}
 .header-nav{display:flex;align-items:stretch;overflow-x:auto}
-.tab{font-family:var(--sans);font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:0 1.1rem;border:none;background:none;cursor:pointer;color:var(--muted);border-bottom:2px solid transparent;transition:all .2s;white-space:nowrap;text-decoration:none;display:flex;align-items:center}
+.tab{font-family:var(--sans);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding:0 1rem;height:58px;border:none;background:none;cursor:pointer;color:var(--muted);border-bottom:2px solid transparent;transition:all .2s;white-space:nowrap;text-decoration:none;display:inline-flex;align-items:center}
 .tab:hover{color:var(--ink)}
 .tab.on{color:var(--ink);border-bottom-color:var(--accent);font-weight:500}
 
-.page-head{padding:3rem 2.8rem 2.5rem;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:flex-end;gap:2rem}
-.page-head h2{font-family:var(--serif);font-size:2rem;font-weight:400;margin-bottom:.3rem}
-.page-head p{color:var(--muted);font-size:13px;max-width:480px}
-.ph-count{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#bbb;flex-shrink:0}
+/* PAGE HERO */
+.page-hero{
+  background:var(--ink);padding:4.5rem 2.8rem 4rem;
+  display:grid;grid-template-columns:1fr auto;align-items:end;gap:3rem;
+}
+.ph-label{font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:#555;margin-bottom:1.4rem;display:flex;align-items:center;gap:.7rem}
+.ph-label::before{content:'';width:20px;height:1px;background:#555}
+.page-hero h1{font-family:var(--serif);font-size:2.8rem;font-weight:400;line-height:1.12;color:var(--white)}
+.page-hero h1 em{color:#8B6F4E;font-style:italic}
+.ph-desc{max-width:460px}
+.ph-desc p{font-size:13px;color:#666;line-height:1.9;margin-top:1.6rem;max-width:440px}
+.ph-meta{text-align:right;flex-shrink:0}
+.ph-count{font-family:var(--serif);font-size:3.5rem;font-weight:400;color:#222;line-height:1}
+.ph-count-lbl{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#555;margin-top:.3rem}
 
-.cs-list{padding:0 2.8rem 4rem}
-.cs-item{display:grid;grid-template-columns:72px 1fr;gap:2.5rem;padding:2.8rem 0;border-bottom:1px solid var(--border);cursor:pointer;transition:background .18s;margin:0 -2.8rem;padding-left:2.8rem;padding-right:2.8rem}
-.cs-item:first-child{border-top:1px solid var(--border)}
-.cs-item:hover{background:var(--white)}
-.cs-left{padding-top:.3rem}
-.cs-num{font-family:var(--serif);font-size:2.6rem;font-weight:400;color:#ddd;line-height:1;letter-spacing:-.02em}
-.cs-accent{width:2px;height:28px;background:var(--accent);margin-top:.8rem}
-.cs-right{}
-.cs-eyebrow{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#999;margin-bottom:.65rem}
-.cs-title{font-family:var(--serif);font-size:1.55rem;font-weight:400;line-height:1.22;margin-bottom:.75rem;max-width:640px}
-.cs-desc{font-size:13px;color:var(--muted);line-height:1.85;max-width:600px;margin-bottom:1.4rem}
-.cs-bottom{display:flex;justify-content:space-between;align-items:center;gap:1rem}
-.cs-facts{display:flex;gap:2rem}
-.cs-fact strong{display:block;font-family:var(--serif);font-size:1.1rem;font-weight:400;color:var(--ink);line-height:1}
-.cs-fact span{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#aaa;margin-top:2px;display:block}
-.cs-read{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--white);background:var(--ink);padding:.55rem 1.2rem;display:flex;align-items:center;gap:.45rem;flex-shrink:0;font-weight:500;transition:background .18s}
-.cs-item:hover .cs-read{background:var(--accent)}
-.cs-read i{font-size:13px;transition:transform .2s}
-.cs-item:hover .cs-read i{transform:translateX(3px)}
+/* GALLERY */
+.cs-gallery{padding:3rem 2.8rem 5rem;display:grid;grid-template-columns:1fr 1fr;gap:2.2rem}
+.csg-card{
+  background:var(--white);border:1px solid var(--border);
+  cursor:pointer;overflow:hidden;display:flex;flex-direction:column;
+  transition:transform .22s,box-shadow .22s;
+}
+.csg-card:hover{transform:translateY(-5px);box-shadow:0 18px 44px rgba(0,0,0,.09)}
+.csg-cover{overflow:hidden;line-height:0}
+.csg-cover img{width:100%;display:block;transition:transform .32s}
+.csg-card:hover .csg-cover img{transform:scale(1.025)}
+.csg-body{padding:1.8rem 2rem 2rem;flex:1;display:flex;flex-direction:column}
+.csg-eyebrow{font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:#aaa;margin-bottom:.8rem}
+.csg-title{font-family:var(--serif);font-size:1.35rem;font-weight:400;line-height:1.25;margin-bottom:.8rem;color:var(--ink)}
+.csg-desc{font-size:12.5px;color:var(--muted);line-height:1.85;margin-bottom:1.6rem;flex:1}
+.csg-bottom{border-top:1px solid var(--border);padding-top:1.2rem;display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;margin-top:auto}
+.csg-facts{display:flex;gap:1.6rem}
+.csg-fact strong{display:block;font-family:var(--serif);font-size:1.05rem;font-weight:400;color:var(--ink);line-height:1}
+.csg-fact span{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#bbb;margin-top:3px;display:block}
+.csg-cta{
+  font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--white);background:var(--ink);padding:.55rem 1.2rem;
+  white-space:nowrap;flex-shrink:0;transition:background .18s;display:flex;align-items:center;gap:.4rem;
+}
+.csg-cta i{font-size:12px;transition:transform .18s}
+.csg-card:hover .csg-cta{background:var(--accent)}
+.csg-card:hover .csg-cta i{transform:translateX(3px)}
 
-footer{padding:1.4rem 2.8rem;border-top:1px solid var(--border);background:var(--white);display:flex;justify-content:space-between;align-items:center}
+/* FOOTER */
+footer{background:var(--white);border-top:1px solid var(--border);padding:1.4rem 2.8rem;display:flex;justify-content:space-between;align-items:center}
 .fcopy{font-size:12px;color:var(--muted)}
 .ftop{background:none;border:none;font-size:12px;color:var(--muted);cursor:pointer;font-family:var(--sans)}
+
+@media(max-width:760px){
+  .cs-gallery{grid-template-columns:1fr;padding:2rem 1.6rem 4rem}
+  .page-hero{grid-template-columns:1fr;padding:3rem 1.6rem 2.5rem}
+  .ph-meta{text-align:left}
+  header{padding:0 1.6rem}
+}
 </style>
 </head>
 <body>
+
 <header>
   <a href="index.html" class="logo">Dan Xu <span>· Personal Site</span></a>
   <nav class="header-nav">
@@ -65,59 +101,64 @@ footer{padding:1.4rem 2.8rem;border-top:1px solid var(--border);background:var(-
   </nav>
 </header>
 
-<div class="page-head">
-  <div>
-    <h2>Case Studies</h2>
-    <p>Public analyses applying the NRI consulting framework — market data analysis, leading-company study, and client implications — to real categories using publicly available data.</p>
+<div class="page-hero">
+  <div class="ph-desc">
+    <div class="ph-label">Featured Work</div>
+    <h1>Case <em>Studies</em></h1>
+    <p>Public analyses applying the NRI consulting framework — market sizing, competitive benchmarking, and strategic implication — to real categories using available data.</p>
   </div>
-  <div class="ph-count">2 Studies</div>
+  <div class="ph-meta">
+    <div class="ph-count">02</div>
+    <div class="ph-count-lbl">Studies</div>
+  </div>
 </div>
 
-<div class="cs-list">
-  <div class="cs-item" onclick="window.location='npd.html'">
-    <div class="cs-left">
-      <div class="cs-num">01</div>
-      <div class="cs-accent"></div>
+<div class="cs-gallery">
+
+  <div class="csg-card" onclick="window.location='npd.html'">
+    <div class="csg-cover">
+      <img src="cs-cover-npd.svg" alt="China NPD Case Study">
     </div>
-    <div class="cs-right">
-      <div class="cs-eyebrow">FMCG · NPD · NRI Shanghai · Anonymised · Oct 2023 – May 2024</div>
-      <h2 class="cs-title">China New Product Development: From Category Research to Executive Decision</h2>
-      <p class="cs-desc">Coordinated a 6-month NPD program for a global household &amp; personal care manufacturer across 6 China categories — from market sizing and consumer research through regulatory checks and ODM mapping to a 61-slide executive steering pack that shaped the client's China product roadmap.</p>
-      <div class="cs-bottom">
-        <div class="cs-facts">
-          <div class="cs-fact"><strong>6</strong><span>Categories</span></div>
-          <div class="cs-fact"><strong>~61</strong><span>Slide Pack</span></div>
-          <div class="cs-fact"><strong>6 mo.</strong><span>Program</span></div>
+    <div class="csg-body">
+      <div class="csg-eyebrow">FMCG · NPD · NRI Shanghai · 2023–2024</div>
+      <h2 class="csg-title">China New Product Development: From Category Research to Executive Decision</h2>
+      <p class="csg-desc">Coordinated a 6-month NPD program for a global household &amp; personal care manufacturer across 6 China categories — from market sizing and consumer research through regulatory checks and ODM mapping to a 61-slide executive steering pack that shaped the client's China product roadmap.</p>
+      <div class="csg-bottom">
+        <div class="csg-facts">
+          <div class="csg-fact"><strong>6</strong><span>Categories</span></div>
+          <div class="csg-fact"><strong>~61</strong><span>Slide Pack</span></div>
+          <div class="csg-fact"><strong>6 mo.</strong><span>Program</span></div>
         </div>
-        <div class="cs-read">Read Case Study <i class="ti ti-arrow-right"></i></div>
+        <div class="csg-cta">Read <i class="ti ti-arrow-right"></i></div>
       </div>
     </div>
   </div>
 
-  <div class="cs-item" onclick="window.location='toothbrush.html'">
-    <div class="cs-left">
-      <div class="cs-num">02</div>
-      <div class="cs-accent"></div>
+  <div class="csg-card" onclick="window.location='toothbrush.html'">
+    <div class="csg-cover">
+      <img src="cs-cover-toothbrush.svg" alt="China Electric Toothbrush Case Study">
     </div>
-    <div class="cs-right">
-      <div class="cs-eyebrow">Consumer Electronics · Oral Care · China Market · Public Data Analysis</div>
-      <h2 class="cs-title">China Electric Toothbrush Market: Mid-Term Strategy Review</h2>
-      <p class="cs-desc">Market sizing, competitive benchmark, and internal gap analysis for a brand at a strategic inflection point in China's electric toothbrush category — where EC-native domestic challengers were rapidly closing share on Tmall and price bands were consolidating.</p>
-      <div class="cs-bottom">
-        <div class="cs-facts">
-          <div class="cs-fact"><strong>3</strong><span>Brands Benchmarked</span></div>
-          <div class="cs-fact"><strong>~45</strong><span>Slide Format</span></div>
-          <div class="cs-fact"><strong>Public</strong><span>Data Source</span></div>
+    <div class="csg-body">
+      <div class="csg-eyebrow">Consumer Electronics · Oral Care · China Market</div>
+      <h2 class="csg-title">China Electric Toothbrush Market: Mid-Term Strategy Review</h2>
+      <p class="csg-desc">Market sizing, competitive benchmark, and internal gap analysis for a brand at a strategic inflection point in China's electric toothbrush category — where EC-native domestic challengers were rapidly closing share on Tmall and price bands were consolidating.</p>
+      <div class="csg-bottom">
+        <div class="csg-facts">
+          <div class="csg-fact"><strong>3</strong><span>Brands Benchmarked</span></div>
+          <div class="csg-fact"><strong>~45</strong><span>Slides</span></div>
+          <div class="csg-fact"><strong>Public</strong><span>Data</span></div>
         </div>
-        <div class="cs-read">Read Case Study <i class="ti ti-arrow-right"></i></div>
+        <div class="csg-cta">Read <i class="ti ti-arrow-right"></i></div>
       </div>
     </div>
   </div>
+
 </div>
 
 <footer>
   <div class="fcopy">© 2026 Dan Xu</div>
   <button class="ftop" onclick="window.scrollTo({top:0,behavior:'smooth'})">Back to top ↑</button>
 </footer>
+
 </body>
 </html>
