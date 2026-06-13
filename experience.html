@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dan Xu · Experience</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -14,179 +13,67 @@
   --serif:'Playfair Display',serif;--sans:'DM Sans',sans-serif;
 }
 body{font-family:var(--sans);background:var(--light);color:var(--ink);font-size:14px;line-height:1.65;min-height:100vh}
-header{display:flex;justify-content:space-between;align-items:stretch;padding:0 2.8rem;background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:30;height:58px}
-.logo{font-family:var(--serif);font-size:1.1rem;font-weight:400;display:flex;align-items:center;text-decoration:none;color:var(--ink);flex-shrink:0}
-.logo span{color:var(--muted);font-style:italic;font-size:.95rem}
+
+header{
+  position:sticky;top:0;z-index:30;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:0 2.8rem;height:58px;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(229,225,219,.6);
+}
+.logo{font-family:var(--serif);font-size:1.05rem;font-weight:400;text-decoration:none;color:var(--ink)}
+.logo span{color:var(--muted);font-style:italic;font-size:.9rem}
 .header-nav{display:flex;align-items:stretch;overflow-x:auto}
-.tab{font-family:var(--sans);font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:0 1.1rem;border:none;background:none;cursor:pointer;color:var(--muted);border-bottom:2px solid transparent;transition:all .2s;white-space:nowrap;text-decoration:none;display:flex;align-items:center}
+.tab{font-family:var(--sans);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding:0 1rem;height:58px;border:none;background:none;cursor:pointer;color:var(--muted);border-bottom:2px solid transparent;transition:all .2s;white-space:nowrap;text-decoration:none;display:inline-flex;align-items:center}
 .tab:hover{color:var(--ink)}
 .tab.on{color:var(--ink);border-bottom-color:var(--accent);font-weight:500}
-.page{animation:fi .22s ease}
 
-@keyframes fi{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
-.hero{padding:4.5rem 2.8rem 3.5rem;border-bottom:1px solid var(--border);display:grid;grid-template-columns:1.1fr 1fr;gap:4rem;align-items:center}
-.eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:1.1rem;display:flex;align-items:center;gap:.6rem}
-.eyebrow::before{content:'';width:18px;height:.5px;background:var(--muted);display:inline-block}
-.hero h1{font-family:var(--serif);font-size:3.4rem;font-weight:400;line-height:1.1;margin-bottom:1.1rem}
-.hero h1 em{font-style:italic;color:#666}
-.hero-desc{color:var(--muted);font-size:13px;line-height:1.9;max-width:380px;margin-bottom:1.8rem}
-.btns{display:flex;gap:.9rem}
-.btn1{font-family:var(--sans);font-size:11px;letter-spacing:.09em;text-transform:uppercase;padding:.65rem 1.5rem;background:var(--ink);color:var(--white);border:none;cursor:pointer;transition:background .2s}
-.btn1:hover{background:#333}
-.btn2{font-family:var(--sans);font-size:11px;letter-spacing:.09em;text-transform:uppercase;padding:.65rem 1.5rem;background:none;color:var(--ink);border:1px solid var(--border);cursor:pointer;transition:border-color .2s}
-.btn2:hover{border-color:#999}
-.stats-box{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);margin-bottom:1.2rem}
-.sbox{background:var(--white);padding:1.4rem;text-align:center}
-.snum{font-family:var(--serif);font-size:2.2rem;font-weight:400}
-.slabel{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:2px}
-.skills{display:flex;flex-wrap:wrap;gap:.4rem}
-.sk{font-size:11px;padding:.3rem .8rem;background:var(--tag);border-radius:2px}
-.section{padding:3rem 2.8rem;border-bottom:1px solid var(--border)}
-.sec-label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:2rem;display:flex;align-items:center;gap:.6rem}
+.page-head{padding:3rem 2.8rem 2.5rem;border-bottom:1px solid var(--border);background:var(--white)}
+.page-head h2{font-family:var(--serif);font-size:2rem;font-weight:400;margin-bottom:.35rem}
+.page-head p{color:var(--muted);font-size:13px;max-width:580px}
+
+.section{padding:2.8rem 2.8rem;border-bottom:1px solid var(--border)}
+.sec-label{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:2rem;display:flex;align-items:center;gap:.6rem}
 .sec-label::after{content:'';width:28px;height:.5px;background:var(--border);display:inline-block}
+
 .exp-list{display:flex;flex-direction:column}
-.exp-item{padding:1.75rem 0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:200px 1fr;gap:2rem}
+.exp-item{padding:1.8rem 0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:200px 1fr;gap:2rem}
 .exp-item:last-child{border-bottom:none}
-.exp-left .company{font-weight:500;font-size:14px;margin-bottom:.2rem}
+.exp-left .company{font-weight:500;font-size:13.5px;margin-bottom:.2rem}
 .exp-left .period{font-size:12px;color:var(--muted)}
 .exp-left .loc{font-size:11px;color:#aaa;margin-top:.2rem}
-.exp-right .role{font-family:var(--serif);font-size:1.05rem;font-weight:400;margin-bottom:.5rem}
-.exp-right .desc{font-size:13px;color:var(--muted);line-height:1.8}
-.exp-right ul{margin-top:.6rem;padding-left:1.1rem;display:flex;flex-direction:column;gap:.3rem}
-.exp-right ul li{font-size:12px;color:var(--muted);line-height:1.7}
+.exp-right .role{font-family:var(--serif);font-size:1.05rem;font-weight:400;margin-bottom:.45rem}
+.exp-right .desc{font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:.6rem}
+.exp-right ul{padding-left:1.1rem;display:flex;flex-direction:column;gap:.3rem}
+.exp-right ul li{font-size:12.5px;color:#555;line-height:1.75}
+
 .lang-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border)}
 .lang-box{background:var(--white);padding:1.25rem;text-align:center}
 .lang-name{font-size:13px;font-weight:500;margin-bottom:.2rem}
 .lang-level{font-size:11px;color:var(--muted)}
+
 .edu-list{display:flex;flex-direction:column;gap:1.2rem}
 .edu-item{display:flex;justify-content:space-between;align-items:baseline;padding-bottom:1.2rem;border-bottom:1px solid var(--border)}
 .edu-item:last-child{border-bottom:none;padding-bottom:0}
 .edu-deg{font-size:13px;font-weight:500}
 .edu-school{font-size:12px;color:var(--muted);margin-top:.15rem}
 .edu-year{font-size:12px;color:var(--muted);white-space:nowrap;margin-left:1rem}
-.page-head{padding:3rem 2.8rem 2rem;border-bottom:1px solid var(--border)}
-.page-head h2{font-family:var(--serif);font-size:2rem;font-weight:400;margin-bottom:.35rem}
-.page-head p{color:var(--muted);font-size:13px;max-width:540px}
-.filter-row{padding:1.1rem 2.8rem;display:flex;gap:.5rem;border-bottom:1px solid var(--border);flex-wrap:wrap;align-items:center}
-.fl{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-right:.3rem}
-.fb{font-family:var(--sans);font-size:11px;letter-spacing:.07em;text-transform:uppercase;padding:.32rem .9rem;border:1px solid var(--border);background:none;color:var(--muted);cursor:pointer;transition:all .2s}
-.fb:hover{border-color:#999;color:var(--ink)}
-.fb.on{background:var(--ink);color:var(--white);border-color:var(--ink)}
-.pgrid{padding:2.5rem 2.8rem;display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
-.pcard{background:var(--white);border:1px solid var(--border);overflow:hidden;cursor:pointer;transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column}
-.pcard:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(0,0,0,.06)}
-.pcard.wide{grid-column:span 2}
-.ptop{height:4px}
-.pbody{padding:1.75rem;flex:1}
-.ptag{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#888;margin-bottom:.7rem;display:flex;align-items:center;gap:.4rem}
-.ptitle{font-family:var(--serif);font-size:1.2rem;font-weight:400;line-height:1.3;margin-bottom:.65rem}
-.pdesc{font-size:12px;color:var(--muted);line-height:1.8;margin-bottom:1.2rem}
-.pmets{display:flex;gap:1.4rem}
-.pm{border-left:2px solid var(--tag);padding-left:.7rem}
-.pmv{font-family:var(--serif);font-size:1.15rem}
-.pml{font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
-.pfoot{border-top:1px solid var(--border);padding:.9rem 1.75rem;display:flex;justify-content:space-between;align-items:center}
-.pscope{font-size:11px;color:var(--muted)}
-.badge{font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:.25rem .65rem}
-.b-pipe{background:#fff8e1;color:#8a6d00}
-.agrid{padding:2.5rem 2.8rem;display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
-.acard{background:var(--white);border:1px solid var(--border);padding:1.6rem;cursor:pointer;transition:transform .2s,box-shadow .2s}
-.acard:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(0,0,0,.06)}
-.acard.wide{grid-column:span 2;display:flex;gap:1.8rem;align-items:flex-start}
-.anum{font-family:var(--serif);font-size:3rem;font-weight:300;color:var(--tag);line-height:1;flex-shrink:0;margin-top:.1rem}
-.alabel{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#888;margin-bottom:.65rem}
-.atitle{font-family:var(--serif);font-size:1rem;font-weight:400;line-height:1.4;margin-bottom:.55rem}
-.acard.wide .atitle{font-size:1.25rem;line-height:1.3}
-.aexcerpt{font-size:12px;color:var(--muted);line-height:1.75;margin-bottom:1rem}
-.ameta{font-size:11px;color:#aaa}
-.amore{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink);display:flex;align-items:center;gap:.3rem;margin-top:.65rem;font-weight:500}
-.cwrap{padding:4rem 2.8rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
-.cleft h2{font-family:var(--serif);font-size:2.3rem;font-weight:400;line-height:1.2;margin-bottom:.9rem}
-.cleft p{color:var(--muted);font-size:13px;line-height:1.85;max-width:290px;margin-bottom:1.5rem}
-.cnote{font-size:12px;padding:1.1rem 1.25rem;border:1px solid var(--border);background:var(--white);line-height:1.7}
-.citems{display:flex;flex-direction:column;gap:.7rem}
-.ci{display:flex;align-items:center;gap:1rem;padding:1.15rem 1.4rem;background:var(--white);border:1px solid var(--border);transition:border-color .2s;cursor:pointer}
-.ci:hover{border-color:#aaa}
-.ci-icon{font-size:18px;color:#555}
-.ci-label{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.ci-val{font-size:13px;font-weight:500}
-#p-casestudy{background:var(--white)}
-.cs-hero{padding:3.5rem 2.8rem;border-bottom:1px solid var(--border);background:var(--ink);color:var(--white)}
-.cs-back{display:inline-flex;align-items:center;gap:.5rem;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#aaa;cursor:pointer;margin-bottom:1.5rem;background:none;border:none;font-family:var(--sans)}
-.cs-back:hover{color:var(--white)}
-.cs-eyebrow{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#888;margin-bottom:.75rem}
-.cs-hero h1{font-family:var(--serif);font-size:2.6rem;font-weight:400;line-height:1.15;max-width:700px;margin-bottom:1rem;color:var(--white)}
-.cs-hero h1 em{font-style:italic;color:#ccc}
-.cs-meta{display:flex;gap:2.5rem;flex-wrap:wrap;margin-top:1.5rem}
-.cs-meta-item{font-size:12px;color:#aaa}
-.cs-meta-item strong{color:#ddd;display:block;font-size:13px;margin-bottom:.1rem}
-.cs-disclaimer{display:inline-block;margin-top:1.5rem;font-size:11px;padding:.45rem 1rem;border:1px solid #333;color:#888;letter-spacing:.06em}
-.cs-body{max-width:900px;margin:0 auto;padding:3rem 2.8rem}
-.cs-section{margin-bottom:3rem;padding-bottom:3rem;border-bottom:1px solid var(--border)}
-.cs-section:last-child{border-bottom:none}
-.cs-section-label{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem;display:flex;align-items:center;gap:.6rem}
-.cs-section-label::after{content:'';width:24px;height:.5px;background:var(--border);display:inline-block}
-.cs-section h2{font-family:var(--serif);font-size:1.6rem;font-weight:400;margin-bottom:1rem;line-height:1.25}
-.cs-section p{font-size:13px;color:#444;line-height:1.9;margin-bottom:.9rem}
-.cs-chart-wrap{margin:1.5rem 0;background:var(--light);border:1px solid var(--border);padding:1.5rem}
-.cs-chart-title{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:1.2rem}
-.bar-row{display:flex;align-items:center;gap:.75rem;margin-bottom:.7rem}
-.bar-label{font-size:12px;min-width:140px;color:var(--ink);text-align:right}
-.bar-track{flex:1;height:28px;background:#ece9e4;border-radius:1px;overflow:hidden}
-.bar-fill{height:100%;display:flex;align-items:center;padding-left:.6rem;font-size:11px;font-weight:500;color:var(--white)}
-.bar-val{font-size:12px;color:var(--muted);min-width:60px}
-.cs-grid{display:grid;gap:1px;background:var(--border);margin:1.5rem 0}
-.cs-grid-cell{background:var(--white);padding:1.25rem}
-.cs-grid-cell.head{background:var(--ink);color:var(--white)}
-.cgc-title{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:.35rem}
-.cs-grid-cell.head .cgc-title{color:#aaa}
-.cgc-val{font-size:13px;font-weight:500;line-height:1.5}
-.price-band{display:flex;flex-direction:column;gap:.5rem;margin:1.5rem 0}
-.pb-row{display:flex;align-items:center;gap:.75rem}
-.pb-range{font-size:12px;min-width:120px;color:var(--ink);text-align:right;font-weight:500}
-.pb-track{flex:1;height:22px;background:#ece9e4;overflow:hidden}
-.pb-fill{height:100%;display:flex;align-items:center;padding-left:.5rem;font-size:11px;color:var(--white)}
-.pb-brands{font-size:11px;color:var(--muted);min-width:200px}
-.insight-box{background:var(--light);border-left:3px solid var(--ink);padding:1.1rem 1.3rem;margin:1.2rem 0;font-size:13px;color:#333;line-height:1.75}
-.cs-findings{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);margin:1.5rem 0}
-.cs-finding{background:var(--white);padding:1.4rem}
-.cs-finding-num{font-family:var(--serif);font-size:1.8rem;color:var(--tag);margin-bottom:.3rem}
-.cs-finding-title{font-size:13px;font-weight:500;margin-bottom:.3rem}
-.cs-finding-desc{font-size:12px;color:var(--muted);line-height:1.7}
-.skills-used{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem}
-.su{font-size:11px;padding:.3rem .8rem;background:var(--tag);border-radius:2px}
-.overlay{position:fixed;inset:0;background:rgba(0,0,0,.38);z-index:50;display:flex;align-items:flex-end;justify-content:center;opacity:0;pointer-events:none;transition:opacity .22s}
-.overlay.open{opacity:1;pointer-events:all}
-.drawer{background:var(--white);width:100%;max-height:82vh;overflow-y:auto;padding:2.5rem 2.8rem;border-top:2px solid var(--ink);transform:translateY(14px);transition:transform .22s;position:relative}
-.overlay.open .drawer{transform:translateY(0)}
-.dclose{position:absolute;top:1rem;right:1.5rem;background:none;border:none;cursor:pointer;font-size:21px;color:var(--muted)}
-.dtag{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#888;margin-bottom:.55rem}
-.dtitle{font-family:var(--serif);font-size:1.9rem;font-weight:400;margin-bottom:1rem;line-height:1.2;max-width:680px}
-.dbody{font-size:13px;color:#555;line-height:1.9;max-width:660px}
-.dphases{margin-top:1.6rem;display:flex;flex-direction:column;gap:.8rem}
-.dph{display:flex;gap:1rem;align-items:flex-start}
-.dph-n{width:22px;height:22px;border-radius:50%;background:var(--tag);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:500;flex-shrink:0;margin-top:2px}
-.dph-title{font-size:13px;font-weight:500}
-.dph-sub{font-size:12px;color:var(--muted)}
-footer{padding:1.4rem 2.8rem;border-top:1px solid var(--border);background:var(--white);display:flex;justify-content:space-between;align-items:center}
+
+footer{background:var(--white);border-top:1px solid var(--border);padding:1.4rem 2.8rem;display:flex;justify-content:space-between;align-items:center}
 .fcopy{font-size:12px;color:var(--muted)}
 .ftop{background:none;border:none;font-size:12px;color:var(--muted);cursor:pointer;font-family:var(--sans)}
 
 @media(max-width:700px){
-  .agrid{grid-template-columns:1fr;padding:1.5rem 1.2rem}
-  .acard.wide{grid-column:span 1;flex-direction:column;gap:.5rem}
-  .anum{font-size:2rem}
+  header{padding:0 1.6rem}
+  .page-head,.section{padding-left:1.6rem;padding-right:1.6rem}
+  .exp-item{grid-template-columns:1fr;gap:.6rem}
+  .lang-grid{grid-template-columns:repeat(2,1fr)}
 }
-
-a.tab{font-family:var(--sans);font-size:12px;letter-spacing:.08em;text-transform:uppercase;
-padding:.95rem 1.4rem;color:var(--muted);border-bottom:2px solid transparent;
-transition:all .2s;white-space:nowrap;text-decoration:none;display:inline-block}
-a.tab:hover{color:var(--ink)}
-a.logo{text-decoration:none;color:var(--ink)}
-a.hcta{text-decoration:none}
 </style>
 </head>
 <body>
+
 <header>
   <a href="index.html" class="logo">Dan Xu <span>· Personal Site</span></a>
   <nav class="header-nav">
@@ -198,68 +85,89 @@ a.hcta{text-decoration:none}
     <a href="contact.html" class="tab">Contact</a>
   </nav>
 </header>
-<div class="page-head"><h2>Work Experience</h2><p>5+ years across consulting, key account management, and e-commerce growth in Asia-Pacific markets. Based in Bochum, Germany — open to English-primary consulting, BD, and e-commerce roles.</p></div>
-  <div class="section">
-    <div class="sec-label">Professional History</div>
-    <div class="exp-list">
-      <div class="exp-item">
-        <div class="exp-left"><div class="company">Nomura Research Institute Shanghai</div><div class="period">Mar 2023 – Dec 2024</div><div class="loc">Shanghai, China</div></div>
-        <div class="exp-right">
-          <div class="role">Business Management Consultant</div>
-          <p class="desc">APAC strategy consulting for market entry, expansion, and investment assessment across financial services, healthcare, and consumer goods.</p>
-          <ul>
-            <li>Managed 4+ client engagements per month in parallel, coordinating teams across Japan, China, India, and Southeast Asia from problem framing through executive-ready recommendations</li>
-            <li>Led market attractiveness and investment assessments for new energy vehicles, financial services, healthcare, and FMCG — competitive positioning, regulatory landscape, and growth scenarios for C-level decision-makers</li>
-            <li>Built a stock-market external-factor assessment for a financial services client: integrated framework, correlation/regression analysis, and medium-term growth scenarios adopted for strategic planning</li>
-            <li>Structured China PAP healthcare strategy review — market, competitor, pricing, channel, and service-model analysis — into benchmarked recommendations for business leadership</li>
-            <li>Prioritized a Japanese consumer portfolio for China entry: assessed 20+ concepts, shortlisted 10, and delivered competitor benchmarks, consumer insights, and commercialization roadmaps</li>
-          </ul>
-        </div>
+
+<div class="page-head">
+  <h2>Work Experience</h2>
+  <p>5+ years across consulting, key account management, and e-commerce growth in Asia-Pacific. Based in Bochum — open to English-primary consulting, BD, and e-commerce roles in Europe.</p>
+</div>
+
+<div class="section">
+  <div class="sec-label">Professional History</div>
+  <div class="exp-list">
+
+    <div class="exp-item">
+      <div class="exp-left">
+        <div class="company">Nomura Research Institute Shanghai</div>
+        <div class="period">Mar 2023 – Dec 2024</div>
+        <div class="loc">Shanghai, China</div>
       </div>
-      <div class="exp-item">
-        <div class="exp-left"><div class="company">Rakuten Group, Inc.</div><div class="period">Mar 2021 – Mar 2023</div><div class="loc">Shanghai, China</div></div>
-        <div class="exp-right">
-          <div class="role">Market Entry &amp; Business Development Consultant</div>
-          <p class="desc">China market entry and growth advisory for Japanese brands — bidding, omnichannel strategy, and cross-functional execution.</p>
-          <ul>
-            <li>Won an exclusive-distributor contract against two competing agencies within six months — owned positioning, commercial model, and P&amp;L simulation through internal approval for a color-care brand</li>
-            <li>Delivered five major consulting projects in five months solo while running parallel client work — translated regulatory, market, and competitor findings into actionable growth plans for Japanese companies entering China</li>
-            <li>Drove e-commerce growth for 8+ Japanese brands and reached 132% of GMV and gross profit targets through brand positioning, channel development, and cross-functional execution with sales, operations, media, and business management</li>
-            <li>Test-and-learn first activation: onboarded 3 brands to new channel expansion, achieving 20% sales uplift in the first month — built business cases, three-year roadmap, and ROI analyses that drove the roll-out</li>
-            <li>Advised Japanese clients on China expansion end-to-end — regulatory and market analysis, customer and competitor insight, and structured recommendations presented to senior stakeholders</li>
-          </ul>
-        </div>
-      </div>
-      <div class="exp-item">
-        <div class="exp-left"><div class="company">YRGLM Inc.</div><div class="period">Apr 2019 – Mar 2021</div><div class="loc">Tokyo, Japan</div></div>
-        <div class="exp-right">
-          <div class="role">Marketing Analyst &amp; Business Development Specialist</div>
-          <p class="desc">Data-driven marketing and business development for Japanese e-commerce clients — campaign optimization, lead generation, and solution-based new business.</p>
-          <ul>
-            <li>Exceeded lead-generation targets by 123% and helped deliver 110% year-on-year revenue growth through market analysis, campaign optimization, and targeted BD initiatives</li>
-            <li>Converted 50% of qualified new-business opportunities by running needs assessments and solution-based sales conversations with Japanese e-commerce companies</li>
-            <li>Designed and executed multi-channel marketing programs that improved campaign effectiveness and tied activity directly to sales KPIs</li>
-            <li>Produced thought-leadership content — customer success stories and white papers — that fed pipeline and supported consultative selling</li>
-            <li>Identified growth segments and messaging angles from data and market signals, then aligned sales and marketing on priorities that moved revenue</li>
-          </ul>
-        </div>
+      <div class="exp-right">
+        <div class="role">Business Management Consultant</div>
+        <p class="desc">APAC strategy consulting — market entry, expansion, and investment assessment across financial services, healthcare, and consumer goods.</p>
+        <ul>
+          <li>Managed 4+ client engagements per month, coordinating teams across Japan, China, India, and Southeast Asia from problem framing through executive-ready recommendations</li>
+          <li>Led market attractiveness and investment assessments for NEV, financial services, healthcare, and FMCG — competitive positioning, regulatory landscape, and growth scenarios for C-level decision-makers</li>
+          <li>Prioritized a Japanese consumer portfolio for China entry: assessed 20+ concepts, shortlisted 10, and delivered competitor benchmarks, consumer insights, and commercialization roadmaps</li>
+        </ul>
       </div>
     </div>
-  </div>
-  <div class="section">
-    <div class="sec-label">Languages</div>
-    <div class="lang-grid">
-      <div class="lang-box"><div class="lang-name">Chinese</div><div class="lang-level">Native</div></div>
-      <div class="lang-box"><div class="lang-name">English</div><div class="lang-level">Professional</div></div>
-      <div class="lang-box"><div class="lang-name">Japanese</div><div class="lang-level">Professional</div></div>
-      <div class="lang-box"><div class="lang-name">German</div><div class="lang-level">B1 → B2</div></div>
+
+    <div class="exp-item">
+      <div class="exp-left">
+        <div class="company">Rakuten Group, Inc.</div>
+        <div class="period">Mar 2021 – Mar 2023</div>
+        <div class="loc">Shanghai, China</div>
+      </div>
+      <div class="exp-right">
+        <div class="role">Market Entry &amp; Business Development Consultant</div>
+        <p class="desc">China market entry and growth advisory for Japanese brands — omnichannel strategy, KAM, and cross-functional execution.</p>
+        <ul>
+          <li>Won an exclusive-distributor contract against two competing agencies within six months — owned positioning, commercial model, and P&amp;L simulation through internal approval</li>
+          <li>Drove e-commerce growth for 8+ Japanese brands to 132% of GMV and gross profit targets through brand positioning, channel development, and cross-functional execution</li>
+          <li>Test-and-learn first activation: onboarded 3 brands to new channel expansion, achieving 20% sales uplift in the first month — built business cases, three-year roadmap, and ROI analyses that drove the roll-out</li>
+        </ul>
+      </div>
     </div>
+
+    <div class="exp-item">
+      <div class="exp-left">
+        <div class="company">YRGLM Inc.</div>
+        <div class="period">Apr 2019 – Mar 2021</div>
+        <div class="loc">Tokyo, Japan</div>
+      </div>
+      <div class="exp-right">
+        <div class="role">Marketing Analyst &amp; Business Development Specialist</div>
+        <p class="desc">Data-driven marketing and BD for Japanese e-commerce clients — campaign optimization, lead generation, and solution-based new business.</p>
+        <ul>
+          <li>Exceeded lead-generation targets by 123% and helped deliver 110% year-on-year revenue growth through market analysis, campaign optimization, and targeted BD initiatives</li>
+          <li>Converted 50% of qualified new-business opportunities by running needs assessments and solution-based sales conversations with Japanese e-commerce companies</li>
+        </ul>
+      </div>
+    </div>
+
   </div>
-  <div class="section">
-    <div class="sec-label">Education</div>
-    <div class="edu-list">
-      <div class="edu-item"><div><div class="edu-deg">Master of Practical Sociology Science for SDGs</div><div class="edu-school">Hokkaido University · Sapporo, Japan</div></div><div class="edu-year">2017–2019</div></div>
-      <div class="edu-item"><div><div class="edu-deg">Bachelor of Landscape Design</div><div class="edu-school">Chengdu University · Sichuan, China</div></div><div class="edu-year">2011–2015</div></div>
+</div>
+
+<div class="section">
+  <div class="sec-label">Languages</div>
+  <div class="lang-grid">
+    <div class="lang-box"><div class="lang-name">Chinese</div><div class="lang-level">Native</div></div>
+    <div class="lang-box"><div class="lang-name">English</div><div class="lang-level">Business Fluent</div></div>
+    <div class="lang-box"><div class="lang-name">Japanese</div><div class="lang-level">Business Fluent</div></div>
+    <div class="lang-box"><div class="lang-name">German</div><div class="lang-level">B1 → B2</div></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="sec-label">Education</div>
+  <div class="edu-list">
+    <div class="edu-item">
+      <div><div class="edu-deg">Master of Practical Sociology Science for SDGs</div><div class="edu-school">Hokkaido University · Sapporo, Japan</div></div>
+      <div class="edu-year">2017–2019</div>
+    </div>
+    <div class="edu-item">
+      <div><div class="edu-deg">Bachelor of Landscape Design</div><div class="edu-school">Chengdu University · Sichuan, China</div></div>
+      <div class="edu-year">2011–2015</div>
     </div>
   </div>
 </div>
@@ -268,15 +176,6 @@ a.hcta{text-decoration:none}
   <div class="fcopy">© 2026 Dan Xu</div>
   <button class="ftop" onclick="window.scrollTo({top:0,behavior:'smooth'})">Back to top ↑</button>
 </footer>
-<script>
-function go(name){
-  const map = {
-    'about':'index.html','experience':'experience.html',
-    'projects':'projects.html','casestudy':'casestudy.html',
-    'articles':'articles.html','contact':'contact.html'
-  };
-  if(map[name]) window.location=map[name];
-}
-</script>
+
 </body>
 </html>
