@@ -6,7 +6,7 @@
   </defs>
 
   <!-- Background -->
-  <rect width="600" height="380" fill="#bf7d6e"/>
+  <rect width="600" height="380" fill="#8B6F4E"/>
   <!-- Dot texture bottom right -->
   <rect x="330" y="160" width="270" height="220" fill="url(#dots)"/>
   <!-- Top accent bar -->
