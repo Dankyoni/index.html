@@ -15,69 +15,57 @@
 }
 body{font-family:var(--sans);background:var(--light);color:var(--ink);font-size:14px;line-height:1.65;min-height:100vh}
 
-/* === SINGLE-ROW HEADER === */
-header{
-  display:flex;justify-content:space-between;align-items:stretch;
-  padding:0 2.8rem;background:var(--white);
-  border-bottom:1px solid var(--border);
-  position:sticky;top:0;z-index:30;height:58px;
-}
-.logo{
-  font-family:var(--serif);font-size:1.1rem;font-weight:400;
-  display:flex;align-items:center;text-decoration:none;color:var(--ink);
-  flex-shrink:0;
-}
+/* === HEADER === */
+header{display:flex;justify-content:space-between;align-items:stretch;padding:0 2.8rem;background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:30;height:58px}
+.logo{font-family:var(--serif);font-size:1.1rem;font-weight:400;display:flex;align-items:center;text-decoration:none;color:var(--ink);flex-shrink:0}
 .logo span{color:var(--muted);font-style:italic;font-size:.95rem}
 .header-nav{display:flex;align-items:stretch;overflow-x:auto}
-.tab{
-  font-family:var(--sans);font-size:12px;letter-spacing:.08em;text-transform:uppercase;
-  padding:0 1.1rem;border:none;background:none;cursor:pointer;color:var(--muted);
-  border-bottom:2px solid transparent;transition:all .2s;white-space:nowrap;
-  text-decoration:none;display:flex;align-items:center;
-}
+.tab{font-family:var(--sans);font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:0 1.1rem;border:none;background:none;cursor:pointer;color:var(--muted);border-bottom:2px solid transparent;transition:all .2s;white-space:nowrap;text-decoration:none;display:flex;align-items:center}
 .tab:hover{color:var(--ink)}
 .tab.on{color:var(--ink);border-bottom-color:var(--accent);font-weight:500}
 
-.page{animation:fi .22s ease}
 @keyframes fi{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+.page{animation:fi .22s ease}
 
 /* === HERO === */
-.hero{padding:4.5rem 2.8rem 3.5rem;border-bottom:1px solid var(--border);display:grid;grid-template-columns:1.1fr 1fr;gap:4rem;align-items:center}
+.hero{padding:4rem 2.8rem 3.5rem;border-bottom:1px solid var(--border);display:grid;grid-template-columns:1.1fr 1fr;gap:4rem;align-items:start}
 .eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:1.1rem;display:flex;align-items:center;gap:.6rem}
 .eyebrow::before{content:'';width:18px;height:2px;background:var(--accent);display:inline-block;border-radius:1px}
-.hero h1{font-family:var(--serif);font-size:3.4rem;font-weight:400;line-height:1.1;margin-bottom:1.1rem}
+.hero h1{font-family:var(--serif);font-size:3.2rem;font-weight:400;line-height:1.1;margin-bottom:1.1rem}
 .hero h1 em{font-style:italic;color:#666}
-.hero-desc{color:var(--muted);font-size:14px;line-height:1.9;max-width:380px;margin-bottom:1.8rem}
+.hero-desc{color:var(--muted);font-size:13.5px;line-height:1.9;max-width:380px;margin-bottom:1.8rem}
 .btns{display:flex;gap:.9rem;flex-wrap:wrap}
-.btn1{
-  font-family:var(--sans);font-size:11px;letter-spacing:.09em;text-transform:uppercase;
-  padding:.65rem 1.5rem;background:var(--ink);color:var(--white);
-  border:none;cursor:pointer;transition:background .2s;
-  text-decoration:none;display:inline-block;
-}
+.btn1{font-family:var(--sans);font-size:11px;letter-spacing:.09em;text-transform:uppercase;padding:.65rem 1.5rem;background:var(--ink);color:var(--white);border:none;cursor:pointer;transition:background .2s;text-decoration:none;display:inline-block}
 .btn1:hover{background:#333}
-.btn2{
-  font-family:var(--sans);font-size:11px;letter-spacing:.09em;text-transform:uppercase;
-  padding:.65rem 1.5rem;background:none;color:var(--ink);
-  border:1px solid #bbb;cursor:pointer;transition:border-color .2s;
-  text-decoration:none;display:inline-block;
-}
+.btn2{font-family:var(--sans);font-size:11px;letter-spacing:.09em;text-transform:uppercase;padding:.65rem 1.5rem;background:none;color:var(--ink);border:1px solid #bbb;cursor:pointer;transition:border-color .2s;text-decoration:none;display:inline-block}
 .btn2:hover{border-color:#666}
 
-/* === STATS — editorial style, no table grid === */
-.stats-box{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem 1.8rem;margin-bottom:1.8rem}
+/* === HERO PHOTO === */
+.hero-photo{width:100%;overflow:hidden;margin-bottom:1.4rem;background:var(--tag);aspect-ratio:3/4;max-height:330px}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 18%;display:block}
+
+/* === STATS === */
+.stats-box{display:grid;grid-template-columns:1fr 1fr;gap:1rem 1.4rem}
 .sbox{padding-left:.9rem;border-left:2px solid var(--accent)}
-.snum{font-family:var(--serif);font-size:2.2rem;font-weight:400;line-height:1.1}
-.slabel{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.snum{font-family:var(--serif);font-size:2rem;font-weight:400;line-height:1.1}
+.slabel{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:3px}
 
-/* === SKILLS === */
-.skills{display:flex;flex-wrap:wrap;gap:.4rem}
-.sk{font-size:11px;padding:.3rem .8rem;background:var(--tag);border-radius:4px}
-
-/* === SECTIONS (kept for other pages) === */
-.section{padding:3rem 2.8rem;border-bottom:1px solid var(--border)}
-.sec-label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:2rem;display:flex;align-items:center;gap:.6rem}
+/* === ABOUT SECTION === */
+.about-sec{padding:3.5rem 2.8rem 4rem;border-bottom:1px solid var(--border);display:grid;grid-template-columns:1.35fr 1fr;gap:5rem;align-items:start}
+.sec-label{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:1.8rem;display:flex;align-items:center;gap:.6rem}
 .sec-label::after{content:'';width:28px;height:.5px;background:var(--border);display:inline-block}
+.abt-para{font-size:13px;color:#444;line-height:1.95;max-width:490px;margin-bottom:1.2rem}
+.abt-skills{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem}
+.sk{font-size:11px;padding:.3rem .8rem;background:var(--tag);border-radius:4px}
+.glance-list{display:flex;flex-direction:column;gap:1.5rem;margin-bottom:2.2rem}
+.gl-val{font-family:var(--serif);font-size:1.05rem;font-weight:400;color:var(--ink);line-height:1.25;margin-bottom:.15rem}
+.gl-label{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#bbb}
+.quote-box{border-left:2px solid var(--accent);padding:.9rem 1.4rem;background:var(--white)}
+.quote-text{font-family:var(--serif);font-size:1rem;font-style:italic;color:#555;line-height:1.75;margin-bottom:.6rem}
+.quote-attr{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#bbb}
+
+/* === SHARED PAGE STYLES === */
+.section{padding:3rem 2.8rem;border-bottom:1px solid var(--border)}
 .exp-list{display:flex;flex-direction:column}
 .exp-item{padding:1.75rem 0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:200px 1fr;gap:2rem}
 .exp-item:last-child{border-bottom:none}
@@ -144,51 +132,6 @@ header{
 .ci-icon{font-size:18px;color:#555}
 .ci-label{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 .ci-val{font-size:13px;font-weight:500}
-#p-casestudy{background:var(--white)}
-.cs-hero{padding:3.5rem 2.8rem;border-bottom:1px solid var(--border);background:var(--ink);color:var(--white)}
-.cs-back{display:inline-flex;align-items:center;gap:.5rem;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#aaa;cursor:pointer;margin-bottom:1.5rem;background:none;border:none;font-family:var(--sans)}
-.cs-back:hover{color:var(--white)}
-.cs-eyebrow{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#888;margin-bottom:.75rem}
-.cs-hero h1{font-family:var(--serif);font-size:2.6rem;font-weight:400;line-height:1.15;max-width:700px;margin-bottom:1rem;color:var(--white)}
-.cs-hero h1 em{font-style:italic;color:#ccc}
-.cs-meta{display:flex;gap:2.5rem;flex-wrap:wrap;margin-top:1.5rem}
-.cs-meta-item{font-size:12px;color:#aaa}
-.cs-meta-item strong{color:#ddd;display:block;font-size:13px;margin-bottom:.1rem}
-.cs-disclaimer{display:inline-block;margin-top:1.5rem;font-size:11px;padding:.45rem 1rem;border:1px solid #333;color:#888;letter-spacing:.06em}
-.cs-body{max-width:900px;margin:0 auto;padding:3rem 2.8rem}
-.cs-section{margin-bottom:3rem;padding-bottom:3rem;border-bottom:1px solid var(--border)}
-.cs-section:last-child{border-bottom:none}
-.cs-section-label{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem;display:flex;align-items:center;gap:.6rem}
-.cs-section-label::after{content:'';width:24px;height:.5px;background:var(--border);display:inline-block}
-.cs-section h2{font-family:var(--serif);font-size:1.6rem;font-weight:400;margin-bottom:1rem;line-height:1.25}
-.cs-section p{font-size:13px;color:#444;line-height:1.9;margin-bottom:.9rem}
-.cs-chart-wrap{margin:1.5rem 0;background:var(--light);border:1px solid var(--border);padding:1.5rem}
-.cs-chart-title{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:1.2rem}
-.bar-row{display:flex;align-items:center;gap:.75rem;margin-bottom:.7rem}
-.bar-label{font-size:12px;min-width:140px;color:var(--ink);text-align:right}
-.bar-track{flex:1;height:28px;background:#ece9e4;border-radius:1px;overflow:hidden}
-.bar-fill{height:100%;display:flex;align-items:center;padding-left:.6rem;font-size:11px;font-weight:500;color:var(--white)}
-.bar-val{font-size:12px;color:var(--muted);min-width:60px}
-.cs-grid{display:grid;gap:1px;background:var(--border);margin:1.5rem 0}
-.cs-grid-cell{background:var(--white);padding:1.25rem}
-.cs-grid-cell.head{background:var(--ink);color:var(--white)}
-.cgc-title{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:.35rem}
-.cs-grid-cell.head .cgc-title{color:#aaa}
-.cgc-val{font-size:13px;font-weight:500;line-height:1.5}
-.price-band{display:flex;flex-direction:column;gap:.5rem;margin:1.5rem 0}
-.pb-row{display:flex;align-items:center;gap:.75rem}
-.pb-range{font-size:12px;min-width:120px;color:var(--ink);text-align:right;font-weight:500}
-.pb-track{flex:1;height:22px;background:#ece9e4;overflow:hidden}
-.pb-fill{height:100%;display:flex;align-items:center;padding-left:.5rem;font-size:11px;color:var(--white)}
-.pb-brands{font-size:11px;color:var(--muted);min-width:200px}
-.insight-box{background:var(--light);border-left:3px solid var(--ink);padding:1.1rem 1.3rem;margin:1.2rem 0;font-size:13px;color:#333;line-height:1.75}
-.cs-findings{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);margin:1.5rem 0}
-.cs-finding{background:var(--white);padding:1.4rem}
-.cs-finding-num{font-family:var(--serif);font-size:1.8rem;color:var(--tag);margin-bottom:.3rem}
-.cs-finding-title{font-size:13px;font-weight:500;margin-bottom:.3rem}
-.cs-finding-desc{font-size:12px;color:var(--muted);line-height:1.7}
-.skills-used{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem}
-.su{font-size:11px;padding:.3rem .8rem;background:var(--tag);border-radius:2px}
 .overlay{position:fixed;inset:0;background:rgba(0,0,0,.38);z-index:50;display:flex;align-items:flex-end;justify-content:center;opacity:0;pointer-events:none;transition:opacity .22s}
 .overlay.open{opacity:1;pointer-events:all}
 .drawer{background:var(--white);width:100%;max-height:82vh;overflow-y:auto;padding:2.5rem 2.8rem;border-top:2px solid var(--ink);transform:translateY(14px);transition:transform .22s;position:relative}
@@ -207,7 +150,9 @@ footer{padding:1.4rem 2.8rem;border-top:1px solid var(--border);background:var(-
 .ftop{background:none;border:none;font-size:12px;color:var(--muted);cursor:pointer;font-family:var(--sans)}
 
 @media(max-width:700px){
-  .hero{grid-template-columns:1fr;gap:2.5rem;padding:3rem 1.4rem 2.5rem}
+  .hero{grid-template-columns:1fr;gap:2rem;padding:3rem 1.4rem 2.5rem}
+  .hero-photo{max-height:240px;aspect-ratio:4/3}
+  .about-sec{grid-template-columns:1fr;gap:2.5rem;padding:2.5rem 1.4rem 3rem}
   .agrid{grid-template-columns:1fr;padding:1.5rem 1.2rem}
   .acard.wide{grid-column:span 1;flex-direction:column;gap:.5rem}
   .anum{font-size:2rem}
@@ -232,24 +177,64 @@ footer{padding:1.4rem 2.8rem;border-top:1px solid var(--border);background:var(-
   <div>
     <div class="eyebrow">Market Entry · Account Management · E-commerce Growth</div>
     <h1>Business Development<br>&amp; Account Management<br>across <em>Asia-Pacific.</em></h1>
-    <p class="hero-desc">5+ years in market entry, key account management, and e-commerce scaling across Asia-Pacific. Previously at Nomura Research Institute and Rakuten Group. Based in Bochum, Germany — open to roles across Europe.</p>
+    <p class="hero-desc">From consulting at NRI Shanghai to KAM and business development across Asia-Pacific — five years building commercial systems that connect market insight to revenue. Now based in Bochum, Germany, targeting BD and account management roles in Europe.</p>
     <div class="btns">
       <a class="btn1" href="projects.html">View My Work</a>
-      <a class="btn2" href="casestudy.html">View Case Study</a>
+      <a class="btn2" href="casestudy.html">Case Studies</a>
     </div>
   </div>
   <div>
+    <div class="hero-photo">
+      <img src="dan-photo.jpg" alt="Dan Xu">
+    </div>
     <div class="stats-box">
       <div class="sbox"><div class="snum">5+</div><div class="slabel">Years Experience</div></div>
       <div class="sbox"><div class="snum">132%</div><div class="slabel">GMV vs. Target</div></div>
-      <div class="sbox"><div class="snum">123%</div><div class="slabel">Lead-Gen KPI Met</div></div>
+      <div class="sbox"><div class="snum">123%</div><div class="slabel">Lead-Gen KPI</div></div>
       <div class="sbox"><div class="snum">4+</div><div class="slabel">Active Projects</div></div>
     </div>
-    <div class="skills">
-      <span class="sk">Market Entry Strategy</span><span class="sk">Key Account Management</span>
-      <span class="sk">Business Development</span><span class="sk">E-commerce Growth</span>
-      <span class="sk">Cross-border Expansion</span><span class="sk">Data Analysis</span>
-      <span class="sk">APAC Markets</span><span class="sk">Omnichannel Growth Strategy</span>
+  </div>
+</div>
+
+<div class="about-sec">
+  <div>
+    <div class="sec-label">About</div>
+    <p class="abt-para">My work sits at the intersection of strategy and relationship — market entry analyses that shape product decisions, key account programs that become multi-year revenue streams, e-commerce frameworks that translate East Asian consumer logic into action a global HQ can actually execute.</p>
+    <p class="abt-para">What drives me is the translation problem: the gap between a global brand's ambition and a local market's reality. Between platform data and a strategic recommendation. Between an account's short-term ask and the long-term partnership it could become.</p>
+    <p class="abt-para">I'm based in Bochum, Germany, actively looking for Business Development, Account Management, or Commercial Strategy roles — particularly with companies that have Asia-European links, or want to build one.</p>
+    <div class="abt-skills">
+      <span class="sk">Market Entry Strategy</span>
+      <span class="sk">Key Account Management</span>
+      <span class="sk">Business Development</span>
+      <span class="sk">E-commerce Growth</span>
+      <span class="sk">Cross-border Expansion</span>
+      <span class="sk">APAC Markets</span>
+      <span class="sk">Omnichannel Strategy</span>
+      <span class="sk">Data Analysis</span>
+    </div>
+  </div>
+  <div>
+    <div class="glance-list">
+      <div>
+        <div class="gl-val">Chinese · Japanese · English</div>
+        <div class="gl-label">Languages (+ German B1)</div>
+      </div>
+      <div>
+        <div class="gl-val">China · Japan · Southeast Asia</div>
+        <div class="gl-label">Markets covered</div>
+      </div>
+      <div>
+        <div class="gl-val">Bochum, Germany</div>
+        <div class="gl-label">Based — open to Europe &amp; remote</div>
+      </div>
+      <div>
+        <div class="gl-val">BD · KAM · Commercial Strategy</div>
+        <div class="gl-label">Roles I'm targeting</div>
+      </div>
+    </div>
+    <div class="quote-box">
+      <div class="quote-text">"Add a one-line testimonial from a manager or colleague here — a single sentence changes how recruiters read the rest of the page."</div>
+      <div class="quote-attr">— Name · Title · Company</div>
     </div>
   </div>
 </div>
@@ -260,7 +245,7 @@ footer{padding:1.4rem 2.8rem;border-top:1px solid var(--border);background:var(-
 </footer>
 <script>
 function go(name){
-  const map = {
+  const map={
     'about':'index.html','experience':'experience.html',
     'projects':'projects.html','casestudy':'casestudy.html',
     'articles':'articles.html','contact':'contact.html'
