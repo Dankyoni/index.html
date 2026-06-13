@@ -236,11 +236,15 @@ a.hcta{text-decoration:none}
 .role-desc{font-size:12px;color:var(--muted);line-height:1.7}
 
 /* Chapter finding cards */
-.finding-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);margin:1.2rem 0}
-.finding-card{background:var(--white);padding:1.4rem}
-.finding-tag{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.4rem}
-.finding-title{font-size:13px;font-weight:500;margin-bottom:.4rem}
-.finding-desc{font-size:12px;color:var(--muted);line-height:1.7}
+.finding-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;margin:1.5rem 0}
+.finding-card{background:var(--white);border:1px solid var(--border);overflow:hidden}
+.finding-stripe{height:3px}
+.finding-body{padding:1.4rem 1.5rem 1.6rem}
+.finding-tag{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#aaa;margin-bottom:.75rem}
+.finding-icon{font-size:22px;margin-bottom:.5rem}
+.finding-title{font-size:13.5px;font-weight:600;color:var(--ink);margin-bottom:.6rem;line-height:1.3}
+.finding-stat{font-size:11.5px;font-weight:500;padding:.4rem .75rem;background:var(--light);border-left:2px solid;margin-bottom:.75rem;color:var(--ink);line-height:1.55}
+.finding-desc{font-size:12px;color:var(--muted);line-height:1.75}
 
 /* Priority */
 .priority-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--border);margin:1.2rem 0}
@@ -397,24 +401,44 @@ a.hcta{text-decoration:none}
     <p>Across six categories, four themes consistently shaped the strategic recommendations:</p>
     <div class="finding-grid">
       <div class="finding-card">
-        <div class="finding-tag">Market Structure</div>
-        <div class="finding-title">Aroma is the highest-priority category</div>
-        <div class="finding-desc">Largest Tmall GMV, CAGR 15%, and alignment with the client's existing product direction. No Japanese brand holds a dominant position in premium aroma — creating a clear gap for a Japanese quality + air-care expert positioning strategy.</div>
+        <div class="finding-stripe" style="background:#8B6F4E"></div>
+        <div class="finding-body">
+          <div class="finding-tag">Market Structure</div>
+          <div class="finding-icon" style="color:#8B6F4E"><i class="ti ti-trending-up"></i></div>
+          <div class="finding-title">Aroma is the highest-priority category</div>
+          <div class="finding-stat" style="border-color:#8B6F4E">CAGR 15% · Largest Tmall GMV across 6 categories</div>
+          <div class="finding-desc">No Japanese brand holds a dominant position in premium aroma — creating a clear gap for a Japanese quality + air-care expert positioning strategy.</div>
+        </div>
       </div>
       <div class="finding-card">
-        <div class="finding-tag">Competitive Gap</div>
-        <div class="finding-title">EC-native domestic brands set the pace</div>
-        <div class="finding-desc">Top competitors run KOL-heavy, content-first traffic models with fast product iteration. The client's traffic allocation was skewed to standard paid search — limiting social/SNS reach compared to EC-native rivals.</div>
+        <div class="finding-stripe" style="background:#bf7d6e"></div>
+        <div class="finding-body">
+          <div class="finding-tag">Competitive Gap</div>
+          <div class="finding-icon" style="color:#bf7d6e"><i class="ti ti-chart-bar"></i></div>
+          <div class="finding-title">EC-native domestic brands set the pace</div>
+          <div class="finding-stat" style="border-color:#bf7d6e">Client: ~80% paid search · Rivals: KOL-first content model</div>
+          <div class="finding-desc">Top competitors run content-first traffic models with fast product iteration — limiting social/SNS reach vs. EC-native rivals.</div>
+        </div>
       </div>
       <div class="finding-card">
-        <div class="finding-tag">Consumer Insight</div>
-        <div class="finding-title">Usage occasion and scent story drive conversion</div>
-        <div class="finding-desc">Consumer SNS signals pointed to bedroom, closet, car, and pet-care occasions as the highest-engagement use-cases. Scent storytelling and lifestyle-led KOL content outperformed generic deodorization claims in awareness-to-conversion.</div>
+        <div class="finding-stripe" style="background:#4a8880"></div>
+        <div class="finding-body">
+          <div class="finding-tag">Consumer Insight</div>
+          <div class="finding-icon" style="color:#4a8880"><i class="ti ti-bulb"></i></div>
+          <div class="finding-title">Usage occasion and scent story drive conversion</div>
+          <div class="finding-stat" style="border-color:#4a8880">4 occasions: bedroom · closet · car · pet-care</div>
+          <div class="finding-desc">Scent storytelling and lifestyle-led KOL content outperformed generic deodorization claims in awareness-to-conversion.</div>
+        </div>
       </div>
       <div class="finding-card">
-        <div class="finding-tag">Regulatory</div>
-        <div class="finding-title">Claims architecture matters before page creation</div>
-        <div class="finding-desc">PRC Advertising Law limits sleep/aroma efficacy language and prohibits medical-adjacent claims. Front-loading the claims architecture — including test-institution citation paths — prevented costly page-creation rework downstream.</div>
+        <div class="finding-stripe" style="background:#555"></div>
+        <div class="finding-body">
+          <div class="finding-tag">Regulatory</div>
+          <div class="finding-icon" style="color:#555"><i class="ti ti-shield"></i></div>
+          <div class="finding-title">Claims architecture matters before page creation</div>
+          <div class="finding-stat" style="border-color:#555">PRC Ad Law: sleep / aroma efficacy claims restricted pre-page</div>
+          <div class="finding-desc">Front-loading the claims architecture — including test-institution citation paths — prevented costly page-creation rework downstream.</div>
+        </div>
       </div>
     </div>
 
