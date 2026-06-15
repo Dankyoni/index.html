@@ -151,6 +151,16 @@ header{
 .dph-title{font-size:13px;font-weight:500}
 .dph-sub{font-size:12px;color:var(--muted)}
 
+/* === NEW RELEASE STRIP === */
+.new-release{background:var(--white);border-bottom:1px solid var(--border);cursor:pointer;transition:background .18s}
+.new-release:hover{background:#faf8f5}
+.nr-inner{display:flex;align-items:center;gap:1rem;padding:1.1rem 2.8rem}
+.nr-pill{font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;background:#f0ece6;color:var(--accent);padding:.22rem .75rem;border-radius:2px;font-weight:500;white-space:nowrap;flex-shrink:0}
+.nr-title{font-size:13px;color:var(--ink);flex:1;line-height:1.4}
+.nr-meta{font-size:11px;color:#aaa;white-space:nowrap;flex-shrink:0}
+.nr-arrow{color:var(--muted);font-size:15px;flex-shrink:0;transition:transform .18s}
+.new-release:hover .nr-arrow{transform:translateX(4px)}
+
 /* === FOOTER === */
 footer{background:var(--white);border-top:1px solid var(--border);padding:1.4rem 2.8rem;display:flex;justify-content:space-between;align-items:center}
 .fcopy{font-size:12px;color:var(--muted)}
@@ -195,6 +205,15 @@ footer{background:var(--white);border-top:1px solid var(--border);padding:1.4rem
       <a class="btn1" href="projects.html">View My Work</a>
       <a class="btn2" href="casestudy.html">Case Studies</a>
     </div>
+  </div>
+</div>
+
+<div class="new-release" onclick="window.location='consumer-insight.html'">
+  <div class="nr-inner">
+    <span class="nr-pill">New Essay</span>
+    <span class="nr-title">As Values Rebuild: Can a Brand Become Someone's "Nearby"?</span>
+    <span class="nr-meta">China Market · Consumer Insight</span>
+    <span class="nr-arrow">→</span>
   </div>
 </div>
 
