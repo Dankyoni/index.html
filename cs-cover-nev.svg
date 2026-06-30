@@ -1,49 +1,53 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="600" height="380">
   <defs>
-    <pattern id="grid" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
-      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+    <pattern id="dots3" x="0" y="0" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="rgba(0,0,0,0.07)"/>
     </pattern>
+    <clipPath id="clip-r">
+      <rect x="330" y="50" width="270" height="290"/>
+    </clipPath>
   </defs>
 
   <!-- Background -->
-  <rect width="600" height="380" fill="#1c2b3a"/>
-  <!-- Grid texture -->
-  <rect width="600" height="380" fill="url(#grid)"/>
-  <!-- Accent stripe -->
-  <rect x="0" y="0" width="600" height="3" fill="#8B6F4E"/>
-  <!-- Right glow panel -->
-  <rect x="370" y="0" width="230" height="380" fill="rgba(139,111,78,0.06)"/>
-  <!-- Diagonal rule -->
-  <line x1="370" y1="0" x2="370" y2="380" stroke="rgba(139,111,78,0.2)" stroke-width="1"/>
+  <rect width="600" height="380" fill="#8B6F4E"/>
+  <!-- Dot texture right panel -->
+  <rect x="330" y="80" width="270" height="260" fill="url(#dots3)"/>
+  <!-- Arc decorative -->
+  <circle cx="560" cy="165" r="118" fill="none" stroke="rgba(0,0,0,0.08)" stroke-width="1.5" clip-path="url(#clip-r)"/>
+  <circle cx="560" cy="165" r="88" fill="none" stroke="rgba(0,0,0,0.08)" stroke-width="1" clip-path="url(#clip-r)"/>
+  <!-- Top accent -->
+  <rect x="0" y="0" width="600" height="3" fill="rgba(0,0,0,0.15)"/>
 
   <!-- Category -->
-  <text x="36" y="50" font-size="10" fill="rgba(255,255,255,0.45)" font-family="Arial,sans-serif" letter-spacing="2">AUTOMOTIVE · NEV · EUROPE MARKET ENTRY · 2024</text>
+  <text x="36" y="50" font-size="10" fill="rgba(255,255,255,0.65)" font-family="Arial,sans-serif" letter-spacing="2">AUTOMOTIVE · NEV · EUROPE EXPANSION · 2024</text>
 
   <!-- Title -->
-  <text x="36" y="102" font-size="28" font-weight="400" fill="#ffffff" font-family="Georgia,serif">Chinese NEV OEM &amp;</text>
-  <text x="36" y="140" font-size="28" font-weight="400" fill="#ffffff" font-family="Georgia,serif">Charging Infrastructure</text>
+  <text x="36" y="102" font-size="29" font-weight="400" fill="#ffffff" font-family="Georgia,serif">Asian EV &amp; Charging</text>
+  <text x="36" y="141" font-size="29" font-weight="400" fill="#ffffff" font-family="Georgia,serif">Equipment Go-Global</text>
+
   <!-- Subtitle -->
-  <text x="36" y="175" font-size="13" fill="rgba(255,255,255,0.6)" font-family="Georgia,serif" font-style="italic">European Expansion Intelligence &amp; Partnership Mapping</text>
+  <text x="36" y="176" font-size="13" fill="rgba(255,255,255,0.72)" font-family="Georgia,serif" font-style="italic">Market Intelligence &amp; Partnership Mapping — Europe</text>
 
   <!-- Rule -->
-  <rect x="36" y="198" width="200" height="1" fill="rgba(255,255,255,0.15)"/>
+  <rect x="36" y="200" width="200" height="1" fill="rgba(255,255,255,0.25)"/>
 
-  <!-- Stats -->
-  <text x="36"  y="238" font-size="28" font-weight="400" fill="#ffffff" font-family="Georgia,serif">3</text>
-  <text x="36"  y="256" font-size="9" fill="rgba(255,255,255,0.45)" font-family="Arial,sans-serif" letter-spacing="1.8">ECOSYSTEM LAYERS</text>
+  <!-- Conceptual bar chart (no numbers, relative heights only) -->
+  <!-- X-axis base line -->
+  <rect x="36" y="296" width="248" height="1" fill="rgba(255,255,255,0.2)"/>
+  <!-- Bars — ascending, purely conceptual -->
+  <rect x="44"  y="274" width="28" height="22" fill="rgba(255,255,255,0.18)" rx="1"/>
+  <rect x="84"  y="262" width="28" height="34" fill="rgba(255,255,255,0.26)" rx="1"/>
+  <rect x="124" y="244" width="28" height="52" fill="rgba(255,255,255,0.36)" rx="1"/>
+  <rect x="164" y="220" width="28" height="76" fill="rgba(255,255,255,0.5)"  rx="1"/>
+  <rect x="204" y="190" width="28" height="106" fill="rgba(255,255,255,0.7)" rx="1"/>
+  <!-- Arrow indicating continued growth -->
+  <text x="250" y="220" font-size="18" fill="rgba(255,255,255,0.6)" font-family="Arial,sans-serif">↑</text>
 
-  <text x="130" y="238" font-size="28" font-weight="400" fill="#ffffff" font-family="Georgia,serif">~518k</text>
-  <text x="130" y="256" font-size="9" fill="rgba(255,255,255,0.45)" font-family="Arial,sans-serif" letter-spacing="1.8">EU BEV UNITS 2023</text>
-
-  <text x="270" y="238" font-size="28" font-weight="400" fill="#ffffff" font-family="Georgia,serif">+135%</text>
-  <text x="270" y="256" font-size="9" fill="rgba(255,255,255,0.45)" font-family="Arial,sans-serif" letter-spacing="1.8">CHINA BEV EXPORT YOY</text>
-
-  <!-- Client label -->
-  <rect x="36" y="278" width="220" height="24" fill="rgba(139,111,78,0.25)" rx="2"/>
-  <text x="46" y="294" font-size="10" fill="rgba(255,255,255,0.7)" font-family="Arial,sans-serif" letter-spacing="1">Japanese Global Trading House · Confidential</text>
+  <!-- Caption under bars -->
+  <text x="36" y="316" font-size="9" fill="rgba(255,255,255,0.45)" font-family="Arial,sans-serif" letter-spacing="1.5">CHINA BEV EXPORT TO EUROPE — GROWTH TRAJECTORY</text>
 
   <!-- Bottom bar -->
-  <rect x="0" y="340" width="600" height="40" fill="rgba(0,0,0,0.2)"/>
-  <text x="36" y="364" font-size="9.5" fill="rgba(255,255,255,0.4)" font-family="Arial,sans-serif" letter-spacing="1.8">MARKET INTELLIGENCE · STAKEHOLDER MAPPING · STRATEGIC PARTNERSHIPS</text>
-  <text x="540" y="364" font-size="9.5" fill="rgba(255,255,255,0.8)" font-family="Arial,sans-serif" letter-spacing="1.2">READ →</text>
+  <rect x="0" y="340" width="600" height="40" fill="rgba(0,0,0,0.1)"/>
+  <text x="36" y="364" font-size="9.5" fill="rgba(255,255,255,0.5)" font-family="Arial,sans-serif" letter-spacing="1.8">MARKET INTELLIGENCE · STAKEHOLDER MAPPING · CONSULTING</text>
+  <text x="490" y="364" font-size="9.5" fill="rgba(255,255,255,0.9)" font-family="Arial,sans-serif" letter-spacing="1.2">READ →</text>
 </svg>
