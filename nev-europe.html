@@ -26,9 +26,9 @@ header{display:flex;justify-content:space-between;align-items:stretch;padding:0 
 
 /* HERO */
 .cs-hero{padding:3.5rem 2.8rem 3rem;border-bottom:1px solid var(--border);background:var(--white);border-top:3px solid var(--navy)}
-.cs-back{display:inline-flex;align-items:center;gap:.5rem;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);cursor:pointer;margin-bottom:1.5rem;background:none;border:none;font-family:var(--sans);text-decoration:none}
+.cs-back{display:inline-flex;align-items:center;gap:.5rem;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem;background:none;border:none;font-family:var(--sans);text-decoration:none}
 .cs-back:hover{color:var(--ink)}
-.cs-eyebrow{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--navy);margin-bottom:.75rem;opacity:.7}
+.cs-eyebrow{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:.75rem;opacity:.8}
 .cs-hero h1{font-family:var(--serif);font-size:2.6rem;font-weight:400;line-height:1.15;max-width:720px;margin-bottom:1rem;color:var(--ink)}
 .cs-hero h1 em{font-style:italic;color:var(--accent)}
 .cs-meta{display:flex;gap:2.5rem;flex-wrap:wrap;margin-top:1.5rem}
@@ -37,105 +37,96 @@ header{display:flex;justify-content:space-between;align-items:stretch;padding:0 
 .cs-disclaimer{display:inline-block;margin-top:1.5rem;font-size:11px;padding:.45rem 1rem;border:1px solid var(--border);color:var(--muted);letter-spacing:.06em}
 
 /* BODY */
-.cs-body{max-width:920px;margin:0 auto;padding:3rem 2.8rem}
+.cs-body{max-width:900px;margin:0 auto;padding:3rem 2.8rem}
 .cs-section{margin-bottom:3rem;padding-bottom:3rem;border-bottom:1px solid var(--border)}
 .cs-section:last-child{border-bottom:none}
-.cs-section-label{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem;display:flex;align-items:center;gap:.6rem}
-.cs-section-label::after{content:'';width:24px;height:.5px;background:var(--border);display:inline-block}
+.sec-label{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem;display:flex;align-items:center;gap:.6rem}
+.sec-label::after{content:'';width:24px;height:.5px;background:var(--border);display:inline-block}
 .cs-section h2{font-family:var(--serif);font-size:1.55rem;font-weight:400;margin-bottom:1.2rem;line-height:1.25}
 
 /* CONTEXT STRIP */
 .ctx-strip{border:1px solid var(--border);margin:1.2rem 0 1.6rem}
 .ctx-row{display:grid;grid-template-columns:96px 1fr;border-bottom:1px solid var(--border)}
 .ctx-row:last-child{border-bottom:none}
-.ctx-key{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding:.9rem 1.1rem;background:var(--tag);border-right:1px solid var(--border);line-height:1.4;display:flex;align-items:center}
-.ctx-val{font-size:13px;color:#333;padding:.9rem 1.3rem;line-height:1.75}
+.ctx-key{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding:.85rem 1.1rem;background:var(--tag);border-right:1px solid var(--border);display:flex;align-items:center;line-height:1.4}
+.ctx-val{font-size:13px;color:#333;padding:.85rem 1.3rem;line-height:1.75}
 
 /* ECOSYSTEM FLOW */
-.eco-flow{display:flex;align-items:stretch;margin:1.6rem 0;border:1px solid var(--border);overflow:hidden;background:var(--white)}
-.eco-node{flex:1;padding:1.2rem 1.1rem}
+.eco-flow{display:flex;align-items:stretch;margin:1.4rem 0;border:1px solid var(--border);overflow:hidden;background:var(--white)}
+.eco-node{flex:1;padding:1.1rem 1.1rem}
 .eco-node+.eco-node{border-left:1px solid var(--border)}
-.eco-node-num{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:.4rem}
-.eco-node-title{font-family:var(--serif);font-size:1rem;font-weight:400;color:var(--navy);margin-bottom:.4rem;line-height:1.2}
-.eco-node-players{font-size:11.5px;color:var(--muted);line-height:1.6}
-.eco-connector{display:flex;align-items:center;padding:0 .6rem;color:#ccc;font-size:1rem;background:var(--light);flex-shrink:0;border-left:1px solid var(--border);border-right:1px solid var(--border)}
+.eco-node-num{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:.35rem}
+.eco-node-title{font-family:var(--serif);font-size:.95rem;font-weight:400;color:var(--navy);margin-bottom:.3rem}
+.eco-node-players{font-size:11px;color:var(--muted);line-height:1.6}
+.eco-connector{display:flex;align-items:center;padding:0 .5rem;color:#ccc;font-size:1rem;background:var(--light);flex-shrink:0;border-left:1px solid var(--border);border-right:1px solid var(--border)}
 
 /* GROWTH SIGNAL */
-.growth-signal{margin:1.5rem 0;background:var(--white);border:1px solid var(--border);padding:1.4rem 1.6rem}
-.gs-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.1rem;flex-wrap:wrap;gap:.5rem}
+.growth-signal{margin:1.4rem 0;background:var(--white);border:1px solid var(--border);padding:1.3rem 1.5rem}
+.gs-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;flex-wrap:wrap;gap:.5rem}
 .gs-title{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-.gs-badge{background:var(--navy);color:var(--white);font-size:10px;letter-spacing:.05em;padding:.28rem .75rem;font-weight:500}
-.gs-row{display:flex;align-items:center;gap:.8rem;margin-bottom:.55rem}
-.gs-year{font-size:11.5px;min-width:36px;color:var(--muted);text-align:right;flex-shrink:0}
-.gs-track{flex:1;height:22px;background:#ece9e4;overflow:hidden}
+.gs-badge{background:var(--navy);color:var(--white);font-size:10px;letter-spacing:.05em;padding:.26rem .7rem;font-weight:500}
+.gs-row{display:flex;align-items:center;gap:.75rem;margin-bottom:.5rem}
+.gs-year{font-size:11px;min-width:36px;color:var(--muted);text-align:right;flex-shrink:0}
+.gs-track{flex:1;height:20px;background:#ece9e4;overflow:hidden}
 .gs-fill{height:100%}
-.gs-note{font-size:11.5px;color:var(--muted);margin-top:.9rem;line-height:1.65;border-top:1px solid var(--border);padding-top:.8rem}
+.gs-note{font-size:11.5px;color:var(--muted);margin-top:.8rem;line-height:1.65;border-top:1px solid var(--border);padding-top:.75rem}
 
 /* OEM CARDS */
-.layer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin:1.4rem 0}
+.layer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin:1.3rem 0}
 .layer-card{border:1px solid var(--border);overflow:hidden}
-.layer-head{padding:.9rem 1.2rem;background:var(--navy)}
-.layer-num{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:.3rem}
-.layer-title{font-family:var(--serif);font-size:.95rem;font-weight:400;color:var(--white)}
-.layer-body{padding:1rem 1.2rem;display:flex;flex-direction:column;gap:.75rem;background:var(--white)}
-.layer-row{padding-left:.75rem;border-left:2px solid var(--border)}
+.layer-head{padding:.85rem 1.1rem;background:var(--navy)}
+.layer-num{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:.25rem}
+.layer-title{font-family:var(--serif);font-size:.92rem;font-weight:400;color:var(--white)}
+.layer-body{padding:.9rem 1.1rem;display:flex;flex-direction:column;gap:.65rem;background:var(--white)}
+.layer-row{padding-left:.7rem;border-left:2px solid var(--border)}
 .layer-row.hi{border-left-color:var(--accent)}
-.layer-lbl{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#bbb;margin-bottom:.18rem}
-.layer-txt{font-size:12px;color:#444;line-height:1.65}
+.layer-lbl{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#bbb;margin-bottom:.15rem}
+.layer-txt{font-size:12px;color:#444;line-height:1.6}
 
-/* CPO TYPE GRID */
-.cpo-type-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin:1.4rem 0}
-.cpo-col{background:var(--white)}
-.cpo-col-head{padding:1rem 1.2rem}
-.cpo-col-head.h1{background:var(--navy)}
-.cpo-col-head.h2{background:#264870}
-.cpo-col-head.h3{background:#2e5888}
-.cpo-col-tag{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:.3rem}
-.cpo-col-title{font-family:var(--serif);font-size:.92rem;color:var(--white);font-weight:400;line-height:1.25}
-.cpo-col-body{padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.9rem}
-.cpo-player{padding-left:.75rem;border-left:2px solid var(--border)}
-.cpo-player.star{border-left-color:var(--accent)}
-.cpo-player-name{font-size:12px;font-weight:500;color:var(--ink);margin-bottom:.2rem}
-.cpo-player-desc{font-size:11.5px;color:var(--muted);line-height:1.6}
+/* BENCH GRID (CPO comparison) */
+.bench-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin:1.4rem 0}
+.bench-col{background:var(--white)}
+.bench-head{padding:.9rem 1.2rem;background:var(--navy)}
+.bench-tag{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:.28rem}
+.bench-title{font-family:var(--serif);font-size:.9rem;color:var(--white);font-weight:400;line-height:1.25}
+.bench-row{padding:.6rem 1.2rem;border-bottom:1px solid var(--border)}
+.bench-row:last-child{border-bottom:none}
+.bench-dim{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#bbb;margin-bottom:.18rem}
+.bench-val{font-size:12px;color:var(--ink);line-height:1.5}
+.bench-val.star{color:var(--accent);font-weight:500}
+.bench-val.dim{color:var(--muted)}
 
-/* EQUIPMENT GRID */
-.equip-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);margin:1.4rem 0}
-.equip-card{background:var(--white);padding:1rem 1.1rem;display:flex;flex-direction:column}
-.equip-name{font-size:12.5px;font-weight:500;color:var(--ink);margin-bottom:.2rem}
-.equip-type{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.4rem}
-.equip-signal{font-size:11.5px;color:#444;line-height:1.6;flex:1}
-.equip-badge{display:inline-block;font-size:9px;letter-spacing:.05em;padding:.18rem .55rem;margin-top:.55rem;font-weight:500}
-.badge-first{background:#e8ecf2;color:#1c2b3a}
-.badge-wide{background:#ede8f2;color:#3a1c6a}
-.badge-supply{background:#f2ece8;color:#6a3a1c}
-.badge-factory{background:#e8f2e8;color:#1c6a3a}
-.badge-b2b{background:#f2f0e8;color:#4a4a1c}
-.badge-grid{background:#e8f2f0;color:#1c4a4a}
+/* FINDING CARDS (Equipment) */
+.finding-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);margin:1.4rem 0}
+.finding-card{background:var(--white);overflow:hidden}
+.finding-stripe{height:3px;background:var(--accent)}
+.finding-body{padding:1rem 1.1rem 1.1rem}
+.finding-tag{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#bbb;margin-bottom:.4rem}
+.finding-title{font-size:13px;font-weight:500;color:var(--ink);margin-bottom:.4rem;line-height:1.25}
+.finding-signal{font-size:11.5px;color:var(--muted);line-height:1.6}
+.finding-badge{display:inline-block;font-size:9px;letter-spacing:.05em;padding:.18rem .55rem;margin-top:.5rem;background:var(--tag);color:#555}
 
-/* AC/DC SPLIT */
-.split-bar{display:flex;height:30px;overflow:hidden;margin-bottom:.65rem}
+/* SPLIT BAR */
+.split-bar{display:flex;height:28px;overflow:hidden;margin-bottom:.6rem}
 .split-seg{display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:500}
 .seg-ac{background:#c5d5e5;color:#1c2b3a}
 .seg-dc{background:var(--navy);color:var(--white)}
 
-/* INSIGHT */
-.insight-box{background:var(--light);border-left:3px solid var(--navy);padding:1rem 1.3rem;margin:1.2rem 0;font-size:13px;color:#333;line-height:1.75}
+/* PRIORITY GRID (Archetypes) */
+.priority-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);margin:1.4rem 0}
+.priority-card{padding:1.2rem;background:var(--white)}
+.priority-card.dark{background:var(--navy)}
+.p-label{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:.35rem}
+.priority-card.dark .p-label{color:rgba(255,255,255,.4)}
+.p-title{font-family:var(--serif);font-size:.92rem;font-weight:400;color:var(--ink);margin-bottom:.5rem;line-height:1.25}
+.priority-card.dark .p-title{color:var(--white)}
+.p-players{font-size:11px;font-weight:500;color:var(--ink);margin-bottom:.4rem;line-height:1.5}
+.priority-card.dark .p-players{color:rgba(255,255,255,.9)}
+.p-desc{font-size:11px;color:var(--muted);line-height:1.65}
+.priority-card.dark .p-desc{color:rgba(255,255,255,.5)}
 
-/* ARCHETYPE GRID */
-.arch-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin:1.4rem 0}
-.arch-card{border:1px solid var(--border);background:var(--white);overflow:hidden}
-.arch-head{padding:.9rem 1.1rem;background:var(--tag);border-bottom:1px solid var(--border)}
-.arch-num{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:.3rem}
-.arch-title{font-family:var(--serif);font-size:.88rem;font-weight:400;color:var(--ink)}
-.arch-body{padding:.9rem 1.1rem}
-.arch-players{font-size:11px;font-weight:500;color:var(--ink);margin-bottom:.4rem;line-height:1.5}
-.arch-desc{font-size:11.5px;color:var(--muted);line-height:1.65}
-.arch-card.dominant .arch-head{background:var(--accent)}
-.arch-card.dominant .arch-num{color:rgba(255,255,255,.6)}
-.arch-card.dominant .arch-title{color:var(--white)}
-.arch-card.nascent .arch-head{background:#264870}
-.arch-card.nascent .arch-num{color:rgba(255,255,255,.55)}
-.arch-card.nascent .arch-title{color:var(--white)}
+/* INSIGHT */
+.insight-box{background:var(--light);border-left:3px solid var(--ink);padding:.95rem 1.2rem;margin:1.1rem 0;font-size:13px;color:#333;line-height:1.75}
 
 /* SKILLS */
 .skills-used{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem}
@@ -153,9 +144,9 @@ footer{padding:1.4rem 2.8rem;border-top:1px solid var(--border);background:var(-
   .eco-flow{flex-direction:column}
   .eco-node+.eco-node{border-left:none;border-top:1px solid var(--border)}
   .eco-connector{display:none}
-  .layer-grid,.cpo-type-grid{grid-template-columns:1fr}
-  .equip-grid{grid-template-columns:repeat(2,1fr)}
-  .arch-grid{grid-template-columns:repeat(2,1fr)}
+  .layer-grid,.bench-grid{grid-template-columns:1fr}
+  .finding-grid{grid-template-columns:repeat(2,1fr)}
+  .priority-grid{grid-template-columns:repeat(2,1fr)}
   header{padding:0 1.4rem}
   .cs-hero h1{font-size:1.9rem}
 }
@@ -177,7 +168,7 @@ footer{padding:1.4rem 2.8rem;border-top:1px solid var(--border);background:var(-
 
 <div class="cs-hero">
   <a class="cs-back" href="casestudy.html"><i class="ti ti-arrow-left"></i> Back to Case Studies</a>
-  <div class="cs-eyebrow">Case Study · Automotive / NEV · Europe Market Entry</div>
+  <div class="cs-eyebrow">Case Study · Automotive / NEV · Europe Market Entry · 2024</div>
   <h1>Asian EV & Charging Equipment Go-Global:<br><em>European Expansion Intelligence</em></h1>
   <div class="cs-meta">
     <div class="cs-meta-item"><strong>Client</strong>Japanese Global Trading House</div>
@@ -191,15 +182,15 @@ footer{padding:1.4rem 2.8rem;border-top:1px solid var(--border);background:var(-
 
 <div class="cs-body">
 
-  <!-- ── SITUATION ─────────────────────────────── -->
+  <!-- 01 SITUATION -->
   <div class="cs-section">
-    <div class="cs-section-label">Situation</div>
-    <h2>A Trading House Mapping China's NEV Wave into Europe</h2>
+    <div class="sec-label">01 — Situation</div>
+    <h2>A Japanese Trading House Mapping China's NEV Wave into Europe</h2>
 
     <div class="ctx-strip">
       <div class="ctx-row">
         <div class="ctx-key">Background</div>
-        <div class="ctx-val">US–China trade decoupling redirected Chinese NEV and charging ecosystem ambitions toward Europe — simultaneously across vehicles, operators, and hardware manufacturers.</div>
+        <div class="ctx-val">US–China trade decoupling redirected Chinese NEV and charging ecosystem ambitions toward Europe — simultaneously across vehicles, operators, and hardware.</div>
       </div>
       <div class="ctx-row">
         <div class="ctx-key">The Work</div>
@@ -207,7 +198,7 @@ footer{padding:1.4rem 2.8rem;border-top:1px solid var(--border);background:var(-
       </div>
       <div class="ctx-row">
         <div class="ctx-key">Deliverable</div>
-        <div class="ctx-val">Japanese / English executive steering materials for a Japanese global trading house: account targeting priorities, stakeholder maps, and a multi-year engagement roadmap.</div>
+        <div class="ctx-val">Japanese / English executive steering materials: account targeting priorities, stakeholder maps, and a multi-year engagement roadmap.</div>
       </div>
     </div>
 
@@ -232,9 +223,9 @@ footer{padding:1.4rem 2.8rem;border-top:1px solid var(--border);background:var(-
     </div>
   </div>
 
-  <!-- ── LAYER 1: OEM ────────────────────────── -->
+  <!-- 02 OEM -->
   <div class="cs-section">
-    <div class="cs-section-label">Layer 1 — OEM / Vehicle</div>
+    <div class="sec-label">02 — Layer 1 · OEM / Vehicle</div>
     <h2>BEV Export Surge — Three Entry Paths into Europe</h2>
 
     <div class="growth-signal">
@@ -242,226 +233,218 @@ footer{padding:1.4rem 2.8rem;border-top:1px solid var(--border);background:var(-
         <span class="gs-title">China BEV Export to Europe — Growth Trajectory</span>
         <span class="gs-badge">+135% YoY · 2022 → 2023</span>
       </div>
-      <div class="gs-row">
-        <span class="gs-year">2021</span>
-        <div class="gs-track"><div class="gs-fill" style="width:22%;background:#3a4a5a"></div></div>
-      </div>
-      <div class="gs-row">
-        <span class="gs-year">2022</span>
-        <div class="gs-track"><div class="gs-fill" style="width:48%;background:#2a3a4a"></div></div>
-      </div>
-      <div class="gs-row">
-        <span class="gs-year">2023</span>
-        <div class="gs-track"><div class="gs-fill" style="width:100%;background:var(--navy)"></div></div>
-      </div>
-      <div class="gs-note">Europe — primarily via Belgium / Antwerp as the EU's main re-export corridor — is the top destination for Chinese OEM vehicles. In 2023, China surpassed Japan as the world's #1 auto exporter for the first time.</div>
+      <div class="gs-row"><span class="gs-year">2021</span><div class="gs-track"><div class="gs-fill" style="width:22%;background:#3a4a5a"></div></div></div>
+      <div class="gs-row"><span class="gs-year">2022</span><div class="gs-track"><div class="gs-fill" style="width:48%;background:#2a3a4a"></div></div></div>
+      <div class="gs-row"><span class="gs-year">2023</span><div class="gs-track"><div class="gs-fill" style="width:100%;background:var(--navy)"></div></div></div>
+      <div class="gs-note">Europe (primarily Belgium / Antwerp as re-export corridor) is the top destination. In 2023 China surpassed Japan as the world's #1 auto exporter for the first time.</div>
     </div>
 
     <div class="layer-grid">
       <div class="layer-card">
         <div class="layer-head"><div class="layer-num">Path 01</div><div class="layer-title">Volume — Direct Market</div></div>
         <div class="layer-body">
-          <div class="layer-row hi"><div class="layer-lbl">Lead</div><div class="layer-txt">BYD — high-volume EU rollout; active on tariff policy; Hungary factory under consideration</div></div>
-          <div class="layer-row"><div class="layer-lbl">Signal</div><div class="layer-txt">Fleet / taxi channel in Norway & Netherlands; largest Chinese OEM EU presence</div></div>
+          <div class="layer-row hi"><div class="layer-lbl">Lead</div><div class="layer-txt">BYD — high-volume EU rollout; Hungary factory under consideration</div></div>
+          <div class="layer-row"><div class="layer-lbl">Signal</div><div class="layer-txt">Fleet / taxi channel in Norway & Netherlands</div></div>
         </div>
       </div>
       <div class="layer-card">
         <div class="layer-head"><div class="layer-num">Path 02</div><div class="layer-title">Premium — Brand Build</div></div>
         <div class="layer-body">
-          <div class="layer-row hi"><div class="layer-lbl">Lead</div><div class="layer-txt">NIO — NIO House showrooms (Berlin, Amsterdam, Oslo); BaaS subscription battery model</div></div>
-          <div class="layer-row"><div class="layer-lbl">Signal</div><div class="layer-txt">High brand investment, lower volume; targets Tesla / premium German OEM buyers</div></div>
+          <div class="layer-row hi"><div class="layer-lbl">Lead</div><div class="layer-txt">NIO — NIO House showrooms (Berlin, Amsterdam, Oslo); BaaS subscription model</div></div>
+          <div class="layer-row"><div class="layer-lbl">Signal</div><div class="layer-txt">High brand investment; targets premium German OEM buyers</div></div>
         </div>
       </div>
       <div class="layer-card">
         <div class="layer-head"><div class="layer-num">Path 03</div><div class="layer-title">Partnership — Asset-Light</div></div>
         <div class="layer-body">
-          <div class="layer-row hi"><div class="layer-lbl">Lead</div><div class="layer-txt">Leapmotor × Stellantis — EU distribution via Stellantis established dealer networks</div></div>
-          <div class="layer-row"><div class="layer-lbl">Signal</div><div class="layer-txt">Asset-light entry; leverages existing European automotive infrastructure</div></div>
+          <div class="layer-row hi"><div class="layer-lbl">Lead</div><div class="layer-txt">Leapmotor × Stellantis — EU distribution via Stellantis dealer networks</div></div>
+          <div class="layer-row"><div class="layer-lbl">Signal</div><div class="layer-txt">Asset-light; leverages existing EU automotive infrastructure</div></div>
         </div>
       </div>
     </div>
-
-    <div class="insight-box">Three parallel archetypes — not converging paths. Different risk profiles and commercial implications for a trading house seeking partnership opportunities across the ecosystem.</div>
   </div>
 
-  <!-- ── LAYER 2: CPO ───────────────────────── -->
+  <!-- 03 CPO -->
   <div class="cs-section">
-    <div class="cs-section-label">Layer 2 — Charging Point Operators (CPOs)</div>
+    <div class="sec-label">03 — Layer 2 · Charging Point Operators (CPOs)</div>
     <h2>Three CPO Models — One Clear EU Leader</h2>
 
-    <div class="cpo-type-grid">
-      <div class="cpo-col">
-        <div class="cpo-col-head h1">
-          <div class="cpo-col-tag">Hardware-Integrated CPO</div>
-          <div class="cpo-col-title">Own Assets · EU-Deployed</div>
+    <div class="bench-grid">
+      <div class="bench-col">
+        <div class="bench-head">
+          <div class="bench-tag">Hardware-Integrated CPO</div>
+          <div class="bench-title">Own Assets · EU-Deployed</div>
         </div>
-        <div class="cpo-col-body">
-          <div class="cpo-player star">
-            <div class="cpo-player-name">Star Charge ★ Most Advanced</div>
-            <div class="cpo-player-desc">Operational in Germany, France, Belgium, Italy, Norway, UK. 2018 Hubject partnership · 2024 Schneider Electric collaboration (new-energy equipment + microgrid + inverter + lithium storage R&amp;D)</div>
-          </div>
-          <div class="cpo-player">
-            <div class="cpo-player-name">TELD</div>
-            <div class="cpo-player-desc">CE cert obtained Jan 2023 (160KW DC); EN 61557-8 component cert May 2024. China's #2 CPO by terminal share. EU deployment early stage but further along than most peers.</div>
-          </div>
-        </div>
+        <div class="bench-row"><div class="bench-dim">EU Stage</div><div class="bench-val star">Operational — 6 countries</div></div>
+        <div class="bench-row"><div class="bench-dim">Lead Player</div><div class="bench-val">Star Charge ★ · TELD</div></div>
+        <div class="bench-row"><div class="bench-dim">Key Signal</div><div class="bench-val">Star Charge: Hubject (2018) + Schneider Electric (2024)</div></div>
+        <div class="bench-row"><div class="bench-dim">Certification</div><div class="bench-val">TELD: CE cert Jan 2023 (160KW DC); EN 61557-8 May 2024</div></div>
+        <div class="bench-row"><div class="bench-dim">Strategy</div><div class="bench-val">Build own assets → EU grid / utility partnerships</div></div>
       </div>
-      <div class="cpo-col">
-        <div class="cpo-col-head h2">
-          <div class="cpo-col-tag">State-Owned Grid</div>
-          <div class="cpo-col-title">Domestic Scale · EU Nascent</div>
+      <div class="bench-col">
+        <div class="bench-head">
+          <div class="bench-tag">State-Owned Grid</div>
+          <div class="bench-title">Domestic Scale · EU Nascent</div>
         </div>
-        <div class="cpo-col-body">
-          <div class="cpo-player">
-            <div class="cpo-player-name">State Grid (SGCC)</div>
-            <div class="cpo-player-desc">China's largest charging network by coverage. High EU entry barriers — regulatory and commercial. Exploratory positioning only as of 2024.</div>
-          </div>
-          <div class="cpo-player">
-            <div class="cpo-player-name">CSG (Southern Grid)</div>
-            <div class="cpo-player-desc">Southern China focus. Monitoring EU market as long-term strategic option; no confirmed EU commercial activity.</div>
-          </div>
-        </div>
+        <div class="bench-row"><div class="bench-dim">EU Stage</div><div class="bench-val dim">Exploratory — no EU deployment</div></div>
+        <div class="bench-row"><div class="bench-dim">Players</div><div class="bench-val">State Grid (SGCC) · CSG</div></div>
+        <div class="bench-row"><div class="bench-dim">Key Barrier</div><div class="bench-val">Regulatory + geopolitical access limits</div></div>
+        <div class="bench-row"><div class="bench-dim">Domestic Scale</div><div class="bench-val">Largest CN charging networks by coverage</div></div>
+        <div class="bench-row"><div class="bench-dim">Strategy</div><div class="bench-val">Monitoring; EU entry timeline unclear</div></div>
       </div>
-      <div class="cpo-col">
-        <div class="cpo-col-head h3">
-          <div class="cpo-col-tag">SaaS / Platform Model</div>
-          <div class="cpo-col-title">Software-First · Emerging</div>
+      <div class="bench-col">
+        <div class="bench-head">
+          <div class="bench-tag">SaaS / Platform Model</div>
+          <div class="bench-title">Software-First · Emerging</div>
         </div>
-        <div class="cpo-col-body">
-          <div class="cpo-player star">
-            <div class="cpo-player-name">YKC (云快充)</div>
-            <div class="cpo-player-desc">China's largest 3rd-party EV charging SaaS — ~17% domestic share via aggregation platform (not owned hardware). Investors: GLP · CATL · NIO Capital · OPPO · ABB. International expansion via GLP global network.</div>
-          </div>
-          <div class="cpo-player">
-            <div class="cpo-player-name">DAKEYUN</div>
-            <div class="cpo-player-desc">Only Chinese CPO attempting pure SaaS international model — customizable station management SaaS for Chinese charger makers going overseas (since 2023). EU market still nascent.</div>
-          </div>
-        </div>
+        <div class="bench-row"><div class="bench-dim">EU Stage</div><div class="bench-val dim">Nascent — software pilot only</div></div>
+        <div class="bench-row"><div class="bench-dim">Lead Player</div><div class="bench-val">YKC ★ (~17% CN share via aggregation)</div></div>
+        <div class="bench-row"><div class="bench-dim">Backers</div><div class="bench-val">GLP · CATL · NIO Capital · OPPO · ABB</div></div>
+        <div class="bench-row"><div class="bench-dim">SW-Only Model</div><div class="bench-val">DAKEYUN — only CN CPO with intl SaaS pilot (2023)</div></div>
+        <div class="bench-row"><div class="bench-dim">Strategy</div><div class="bench-val">Platform aggregation; no owned hardware in EU</div></div>
       </div>
     </div>
 
-    <div class="insight-box">Software-only EU entry is still nascent — only DAKEYUN has attempted it as of 2024. Most CPOs must build hardware presence before software can follow. <strong>Star Charge is the only Chinese CPO with confirmed multi-country EU operational assets.</strong></div>
+    <div class="insight-box">Software-only EU entry is still nascent as of 2024. Star Charge is the only Chinese CPO with confirmed multi-country EU operational assets.</div>
   </div>
 
-  <!-- ── LAYER 3: EQUIPMENT ─────────────────── -->
+  <!-- 04 EQUIPMENT -->
   <div class="cs-section">
-    <div class="cs-section-label">Layer 3 — Charging Equipment Manufacturers</div>
-    <h2>Equipment Export as the Dominant China → EU Entry Model</h2>
+    <div class="sec-label">04 — Layer 3 · Equipment Manufacturers</div>
+    <h2>Equipment Export — The Dominant China → EU Entry Model</h2>
 
-    <div class="equip-grid">
-      <div class="equip-card">
-        <div class="equip-name">EN+ (EN+科技)</div>
-        <div class="equip-type">First Mover</div>
-        <div class="equip-signal">Entered EU 2016 — earliest Chinese charger maker in Europe. Netherlands & Germany. Sole Chinese private exhibitor at IAA Mobility 2023 (Germany).</div>
-        <span class="equip-badge badge-first">EU since 2016</span>
+    <div class="finding-grid">
+      <div class="finding-card">
+        <div class="finding-stripe"></div>
+        <div class="finding-body">
+          <div class="finding-tag">First Mover</div>
+          <div class="finding-title">EN+</div>
+          <div class="finding-signal">Entered EU 2016 — earliest Chinese charger maker in Europe. Netherlands & Germany. Sole Chinese private exhibitor at IAA Mobility 2023.</div>
+          <span class="finding-badge">EU since 2016</span>
+        </div>
       </div>
-      <div class="equip-card">
-        <div class="equip-name">Autel (道通科技)</div>
-        <div class="equip-type">Widest EU Footprint</div>
-        <div class="equip-signal">Subsidiaries in NL, UK, DE, FR, IT. R&amp;D hubs in Netherlands &amp; Spain. CPO partner summit Amsterdam 2023 — hardware + CPO integration play.</div>
-        <span class="equip-badge badge-wide">5 EU countries</span>
+      <div class="finding-card">
+        <div class="finding-stripe"></div>
+        <div class="finding-body">
+          <div class="finding-tag">Widest EU Footprint</div>
+          <div class="finding-title">Autel</div>
+          <div class="finding-signal">Subsidiaries in NL, UK, DE, FR, IT. R&amp;D in Netherlands &amp; Spain. CPO partner summit Amsterdam 2023.</div>
+          <span class="finding-badge">5 EU countries</span>
+        </div>
       </div>
-      <div class="equip-card">
-        <div class="equip-name">Sinexcel (盛弘股份)</div>
-        <div class="equip-type">Supply Chain Integration</div>
-        <div class="equip-signal">First Chinese charger maker on BP supplier list (2022). Also supplies ABB and Schneider Electric. VDE-MessEV cert for DC charger (Germany, Aug 2024).</div>
-        <span class="equip-badge badge-supply">BP · ABB · Schneider</span>
+      <div class="finding-card">
+        <div class="finding-stripe"></div>
+        <div class="finding-body">
+          <div class="finding-tag">Supply Chain Integration</div>
+          <div class="finding-title">Sinexcel</div>
+          <div class="finding-signal">First Chinese charger maker on BP supplier list (2022). Also supplies ABB and Schneider Electric. VDE-MessEV cert (Germany, Aug 2024).</div>
+          <span class="finding-badge">BP · ABB · Schneider</span>
+        </div>
       </div>
-      <div class="equip-card">
-        <div class="equip-name">Sungrow (陽光電源)</div>
-        <div class="equip-type">Solar-to-EV Crossover</div>
-        <div class="equip-signal">9 European offices via existing solar/inverter channel. Partners UK's Current platform for software layer. No EU factory planned — pure equipment export model.</div>
-        <span class="equip-badge badge-first">9 EU offices</span>
+      <div class="finding-card">
+        <div class="finding-stripe"></div>
+        <div class="finding-body">
+          <div class="finding-tag">Solar-to-EV Crossover</div>
+          <div class="finding-title">Sungrow</div>
+          <div class="finding-signal">9 EU offices via existing solar/inverter channel. Partners UK's Current platform for software. No EU factory planned — pure export model.</div>
+          <span class="finding-badge">9 EU offices</span>
+        </div>
       </div>
-      <div class="equip-card">
-        <div class="equip-name">Iocharger (银河龙芯)</div>
-        <div class="equip-type">B2B CPO Software</div>
-        <div class="equip-signal">One of few Chinese hardware makers also providing backend software to CPOs. OCPP protocol; 40+ countries. Targets CPO integration over direct retail.</div>
-        <span class="equip-badge badge-b2b">HW + SW for CPOs</span>
+      <div class="finding-card">
+        <div class="finding-stripe"></div>
+        <div class="finding-body">
+          <div class="finding-tag">B2B CPO Software</div>
+          <div class="finding-title">Iocharger</div>
+          <div class="finding-signal">One of few Chinese hardware makers also providing backend software to CPOs. OCPP protocol. 40+ countries. Targets CPO integration over direct retail.</div>
+          <span class="finding-badge">HW + SW for CPOs</span>
+        </div>
       </div>
-      <div class="equip-card">
-        <div class="equip-name">Gresgying (緑能慧充)</div>
-        <div class="equip-type">EU-Focus Pivot 2022</div>
-        <div class="equip-signal">Pivoted to EU-focus in 2022. Launched 480kW DC rapid charger at Power2Drive Europe 2024 (Munich) — highest-power Chinese DC charger demonstrated in EU.</div>
-        <span class="equip-badge badge-first">480kW DC · 2024</span>
+      <div class="finding-card">
+        <div class="finding-stripe"></div>
+        <div class="finding-body">
+          <div class="finding-tag">EU-Focus Pivot 2022</div>
+          <div class="finding-title">Gresgying</div>
+          <div class="finding-signal">Pivoted to EU in 2022. Launched 480kW DC charger at Power2Drive Europe 2024 (Munich) — highest-power Chinese DC charger demonstrated in EU.</div>
+          <span class="finding-badge">480kW DC · 2024</span>
+        </div>
       </div>
-      <div class="equip-card">
-        <div class="equip-name">East (易事特)</div>
-        <div class="equip-type">Grid Partnership Entry</div>
-        <div class="equip-signal">Entry via EU power grid company partnerships — infrastructure channel rather than direct commercial sales. Distinctive model vs. most peers.</div>
-        <span class="equip-badge badge-grid">EU grid partners</span>
+      <div class="finding-card">
+        <div class="finding-stripe"></div>
+        <div class="finding-body">
+          <div class="finding-tag">Grid Partnership Entry</div>
+          <div class="finding-title">East</div>
+          <div class="finding-signal">Entry via EU power grid company partnerships — infrastructure channel rather than direct commercial sales. Distinctive model vs. peers.</div>
+          <span class="finding-badge">EU grid partners</span>
+        </div>
       </div>
-      <div class="equip-card">
-        <div class="equip-name">EVbee (小蜂充電)</div>
-        <div class="equip-type">Only EU Local Factory</div>
-        <div class="equip-signal">The only Chinese charger maker with an actual EU local factory (Netherlands) + EU R&amp;D center. CE certified. DC charger launched at Nordic EV Summit 2024.</div>
-        <span class="equip-badge badge-factory">EU Factory · NL</span>
+      <div class="finding-card">
+        <div class="finding-stripe"></div>
+        <div class="finding-body">
+          <div class="finding-tag">Only EU Local Factory</div>
+          <div class="finding-title">EVbee</div>
+          <div class="finding-signal">The only Chinese charger maker with an actual EU local factory (Netherlands) + EU R&amp;D center. CE certified. DC charger launched at Nordic EV Summit 2024.</div>
+          <span class="finding-badge">EU Factory · NL</span>
+        </div>
       </div>
     </div>
 
-    <!-- AC/DC Split Visual -->
-    <div style="margin:1.8rem 0;background:var(--white);border:1px solid var(--border);padding:1.4rem 1.6rem">
-      <div style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:1.2rem">EU vs. China — Public Charging Infrastructure Split · AC / DC · 2023</div>
-      <div style="font-size:11px;color:var(--muted);margin-bottom:.35rem">European Union</div>
-      <div class="split-bar" style="margin-bottom:.65rem">
+    <!-- AC/DC Split -->
+    <div style="margin-top:1.6rem;background:var(--white);border:1px solid var(--border);padding:1.3rem 1.5rem">
+      <div style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:1.1rem">EU vs. China — Public Charging Mix · AC / DC · 2023</div>
+      <div style="font-size:11px;color:var(--muted);margin-bottom:.3rem">European Union</div>
+      <div class="split-bar" style="margin-bottom:.6rem">
         <div class="split-seg seg-ac" style="width:80.7%">AC 80.7%</div>
         <div class="split-seg seg-dc" style="width:19.3%">DC 19.3%</div>
       </div>
-      <div style="font-size:11px;color:var(--muted);margin-bottom:.35rem">China</div>
+      <div style="font-size:11px;color:var(--muted);margin-bottom:.3rem">China</div>
       <div class="split-bar">
         <div class="split-seg seg-ac" style="width:46%">AC ~46%</div>
         <div class="split-seg seg-dc" style="width:54%">DC ~54%</div>
       </div>
-      <div style="font-size:12px;color:var(--muted);margin-top:.9rem;line-height:1.7;border-top:1px solid var(--border);padding-top:.75rem">EU DC fast-charging is still nascent — European public networks remain predominantly slow AC, while China is DC-majority. Chinese exporters proven at DC scale face a large structural growth runway in Europe.</div>
+      <div style="font-size:11.5px;color:var(--muted);margin-top:.8rem;line-height:1.65;border-top:1px solid var(--border);padding-top:.7rem">EU DC fast-charging is still nascent — China-proven DC hardware exporters face a large structural growth runway in Europe.</div>
     </div>
-
-    <div class="insight-box">Common pattern across all 8 players: CE certification → local subsidiary build-out → utility/grid partnerships. Only EVbee has committed to EU local manufacturing — most stay asset-light, exporting from China.</div>
   </div>
 
-  <!-- ── FRAMEWORK ──────────────────────────── -->
+  <!-- 05 FRAMEWORK -->
   <div class="cs-section">
-    <div class="cs-section-label">Synthesis — Expansion Framework</div>
+    <div class="sec-label">05 — Synthesis · Expansion Framework</div>
     <h2>Four Archetypes Across the Ecosystem</h2>
 
-    <div class="arch-grid">
-      <div class="arch-card">
-        <div class="arch-head"><div class="arch-num">Archetype 01</div><div class="arch-title">Local Manufacturing</div></div>
-        <div class="arch-body">
-          <div class="arch-players">BYD · Leapmotor × Stellantis</div>
-          <div class="arch-desc">Highest capital commitment. Bypasses EU tariffs, qualifies for local content incentives. Longest timeline; strongest long-term strategic moat.</div>
-        </div>
+    <div class="priority-grid">
+      <div class="priority-card">
+        <div class="p-label">Archetype 01</div>
+        <div class="p-title">Local Manufacturing</div>
+        <div class="p-players">BYD · Leapmotor × Stellantis</div>
+        <div class="p-desc">Highest capital commitment. Bypasses EU tariffs, qualifies for local content incentives. Longest timeline to revenue.</div>
       </div>
-      <div class="arch-card dominant">
-        <div class="arch-head"><div class="arch-num">Archetype 02 · Dominant</div><div class="arch-title">Equipment Export</div></div>
-        <div class="arch-body">
-          <div class="arch-players">EN+ · Autel · Sungrow · Gresgying · East · Iocharger · EVbee</div>
-          <div class="arch-desc">Fastest-scaling model in 2024. China-manufactured hardware with CE cert + local service subsidiary. Asset-light but tariff-exposed.</div>
-        </div>
+      <div class="priority-card dark">
+        <div class="p-label">Archetype 02 · Dominant</div>
+        <div class="p-title">Equipment Export</div>
+        <div class="p-players">EN+ · Autel · Sungrow · Gresgying · East · Iocharger · EVbee</div>
+        <div class="p-desc">Fastest-scaling model in 2024. CE-certified hardware + local service subsidiary. Asset-light but tariff-exposed.</div>
       </div>
-      <div class="arch-card">
-        <div class="arch-head"><div class="arch-num">Archetype 03</div><div class="arch-title">Strategic Partnerships</div></div>
-        <div class="arch-body">
-          <div class="arch-players">Star Charge (Hubject, Schneider) · Autel (CPO network) · NIO (BaaS)</div>
-          <div class="arch-desc">Deep integration with European utilities, interoperability platforms, and automotive groups. Builds highest strategic moat over time.</div>
-        </div>
+      <div class="priority-card">
+        <div class="p-label">Archetype 03</div>
+        <div class="p-title">Strategic Partnerships</div>
+        <div class="p-players">Star Charge · Autel · NIO</div>
+        <div class="p-desc">Deep integration with EU utilities, interoperability platforms, and auto groups. Highest strategic moat over time.</div>
       </div>
-      <div class="arch-card nascent">
-        <div class="arch-head"><div class="arch-num">Archetype 04 · Emerging</div><div class="arch-title">SaaS / Platform Play</div></div>
-        <div class="arch-body">
-          <div class="arch-players">YKC · DAKEYUN</div>
-          <div class="arch-desc">Software-only international model — aggregation platform or SaaS to European CPOs without owning hardware. Still nascent in Europe as of 2024.</div>
-        </div>
+      <div class="priority-card">
+        <div class="p-label">Archetype 04 · Emerging</div>
+        <div class="p-title">SaaS / Platform Play</div>
+        <div class="p-players">YKC · DAKEYUN</div>
+        <div class="p-desc">Software-only international model — aggregation platform or SaaS to EU CPOs without owning hardware. Nascent as of 2024.</div>
       </div>
     </div>
 
-    <div class="insight-box"><strong>Segmentation for account targeting:</strong> Archetype 03 — highest-priority strategic dialogue · Archetype 02 — distribution & supply chain partnerships · Archetype 01 — long-cycle anchor accounts.</div>
+    <div class="insight-box"><strong>Segmentation for account targeting:</strong> Archetype 03 — highest-priority strategic dialogue · Archetype 02 — distribution & supply chain · Archetype 01 — long-cycle anchor accounts.</div>
   </div>
 
-  <!-- ── OUTPUT ─────────────────────────────── -->
+  <!-- 06 OUTPUT -->
   <div class="cs-section">
-    <div class="cs-section-label">Output & Skills Demonstrated</div>
+    <div class="sec-label">06 — Output & Skills Demonstrated</div>
     <h2>Cross-Layer Intelligence for a Multi-Year Engagement Roadmap</h2>
-    <p style="font-size:13px;color:#444;line-height:1.9">Synthesized across three simultaneous industry layers — automotive OEMs, energy infrastructure operators, hardware manufacturers — tracking exhibition events, regulatory filings, and partnership disclosures across Europe and China. Delivered bilingual Japanese / English for Japan HQ and regional commercial teams.</p>
+    <p style="font-size:13px;color:#444;line-height:1.9">Synthesized across three simultaneous industry layers — automotive OEMs, energy infrastructure operators, hardware manufacturers — tracking exhibition events, regulatory filings, and partnership disclosures across Europe and China. Bilingual Japanese / English delivery for Japan HQ and regional commercial teams.</p>
     <div class="skills-used">
       <span class="su">Market Intelligence Synthesis</span>
       <span class="su">Ecosystem Mapping (OEM–CPO–Equipment)</span>
@@ -472,7 +455,6 @@ footer{padding:1.4rem 2.8rem;border-top:1px solid var(--border);background:var(-
       <span class="su">Strategic Partnership Mapping</span>
       <span class="su">Expansion Archetype Framework</span>
       <span class="su">Bilingual Executive Delivery (Japanese / English)</span>
-      <span class="su">Cross-sector Industry Analysis</span>
       <span class="su">Regulatory & Certification Context (CE / OCPP)</span>
       <span class="su">Consulting at NRI Shanghai</span>
     </div>
