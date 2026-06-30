@@ -9,7 +9,7 @@
   </defs>
 
   <!-- Background -->
-  <rect width="600" height="380" fill="#7D8C6A"/>
+  <rect width="600" height="380" fill="#8B6F4E"/>
   <!-- Dot texture -->
   <rect x="330" y="80" width="270" height="260" fill="url(#dots2)"/>
   <!-- Arc decorative -->
