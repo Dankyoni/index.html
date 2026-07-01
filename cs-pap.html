@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dan Xu · China Home PAP Market Case Study</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --ink:#111;--muted:#777;--light:#f8f7f5;--white:#fff;
+  --border:#e5e1db;--tag:#eeebe6;--accent:#8B6F4E;--navy:#1c2b3a;
+  --serif:'Playfair Display',serif;--sans:'DM Sans',sans-serif;
+}
+body{font-family:var(--sans);background:var(--light);color:var(--ink);font-size:14px;line-height:1.65;min-height:100vh}
+header{display:flex;justify-content:space-between;align-items:stretch;padding:0 2.8rem;background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:30;height:58px}
+.logo{font-family:var(--serif);font-size:1.1rem;font-weight:400;display:flex;align-items:center;text-decoration:none;color:var(--ink);flex-shrink:0}
+.logo span{color:var(--muted);font-style:italic;font-size:.95rem}
+.header-nav{display:flex;align-items:stretch;overflow-x:auto}
+.tab{font-family:var(--sans);font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:0 1.1rem;border:none;background:none;cursor:pointer;color:var(--muted);border-bottom:2px solid transparent;transition:all .2s;white-space:nowrap;text-decoration:none;display:flex;align-items:center}
+.tab:hover{color:var(--ink)}
+.tab.on{color:var(--ink);border-bottom-color:var(--accent);font-weight:500}
+
+.cs-hero{padding:3.5rem 2.8rem 3rem;border-bottom:1px solid var(--border);background:var(--white);border-top:3px solid var(--navy)}
+.cs-back{display:inline-flex;align-items:center;gap:.5rem;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem;background:none;border:none;font-family:var(--sans);text-decoration:none}
+.cs-back:hover{color:var(--ink)}
+.cs-eyebrow{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--navy);margin-bottom:.75rem;opacity:.7}
+.cs-hero h1{font-family:var(--serif);font-size:2.6rem;font-weight:400;line-height:1.15;max-width:720px;margin-bottom:1rem;color:var(--ink)}
+.cs-hero h1 em{font-style:italic;color:var(--accent)}
+.cs-meta{display:flex;gap:2.5rem;flex-wrap:wrap;margin-top:1.5rem}
+.cs-meta-item{font-size:12px;color:var(--muted)}
+.cs-meta-item strong{color:#aaa;display:block;font-size:10px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.25rem}
+.cs-disclaimer{display:inline-block;margin-top:1.5rem;font-size:11px;padding:.45rem 1rem;border:1px solid var(--border);color:var(--muted);letter-spacing:.06em}
+
+.cs-body{max-width:900px;margin:0 auto;padding:3rem 2.8rem}
+.cs-section{margin-bottom:3rem;padding-bottom:3rem;border-bottom:1px solid var(--border)}
+.cs-section:last-child{border-bottom:none}
+.cs-section-label{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem;display:flex;align-items:center;gap:.6rem}
+.cs-section-label::after{content:'';width:24px;height:.5px;background:var(--border);display:inline-block}
+.cs-section h2{font-family:var(--serif);font-size:1.55rem;font-weight:400;margin-bottom:1.2rem;line-height:1.25}
+
+/* CONTEXT STRIP */
+.ctx-strip{border:1px solid var(--border);margin:1.2rem 0 1.6rem}
+.ctx-row{display:grid;grid-template-columns:96px 1fr;border-bottom:1px solid var(--border)}
+.ctx-row:last-child{border-bottom:none}
+.ctx-key{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding:.9rem 1.1rem;background:var(--tag);border-right:1px solid var(--border);display:flex;align-items:center;line-height:1.4}
+.ctx-val{font-size:13px;color:#333;padding:.9rem 1.3rem;line-height:1.75}
+
+/* TWO-CHAPTER FLOW */
+.chapter-flow{display:flex;gap:1px;background:var(--border);margin:1.5rem 0}
+.ch-block{flex:1;background:var(--white);padding:1.2rem 1.3rem}
+.ch-block.active{background:var(--navy)}
+.ch-num{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:.3rem}
+.ch-block.active .ch-num{color:rgba(255,255,255,.5)}
+.ch-title{font-family:var(--serif);font-size:1rem;color:var(--ink);margin-bottom:.3rem}
+.ch-block.active .ch-title{color:var(--white)}
+.ch-sub{font-size:11px;color:var(--muted);line-height:1.55}
+.ch-block.active .ch-sub{color:rgba(255,255,255,.55)}
+
+/* PRICE BAND BAR */
+.bar-section{margin:1.5rem 0;border:1px solid var(--border);background:var(--white);overflow:hidden}
+.bar-header{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:.9rem 1.3rem;border-bottom:1px solid var(--border);background:var(--tag)}
+.bar-wrap{padding:1.4rem 1.3rem}
+.price-bar{height:38px;display:flex;border-radius:1px;overflow:hidden;margin-bottom:1rem}
+.pb-seg{display:flex;align-items:center;justify-content:center;font-size:9px;letter-spacing:.06em;text-transform:uppercase;border-right:1px solid rgba(255,255,255,.2)}
+.pb-seg:last-child{border-right:none}
+.pb-seg.s1{background:#e8e4de;color:#999;flex:1}
+.pb-seg.s2{background:#c5bfb5;color:#666;flex:3}
+.pb-seg.s3{background:#1c2b3a;color:rgba(255,255,255,.9);flex:5.5}
+.pb-seg.s4{background:#2e4a62;color:rgba(255,255,255,.85);flex:3.5}
+.pb-seg.s5{background:#8B6F4E;color:rgba(255,255,255,.85);flex:2.5}
+.pb-seg.s6{background:#b8956e;color:rgba(255,255,255,.8);flex:2}
+.pb-legend{display:flex;gap:1.2rem;flex-wrap:wrap}
+.leg-item{display:flex;align-items:center;gap:.4rem;font-size:11px;color:var(--muted)}
+.leg-dot{width:10px;height:10px;border-radius:1px;flex-shrink:0}
+.bar-note{font-size:11px;color:var(--muted);margin-top:.8rem;font-style:italic}
+
+/* BRAND ARCHETYPE GRID */
+.arch-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin:1.5rem 0}
+.arch-card{background:var(--white);overflow:hidden}
+.arch-head{padding:1rem 1.2rem;background:var(--tag)}
+.arch-head.premium{background:var(--navy)}
+.arch-head.ec-native{background:#264870}
+.arch-head.value{background:#4a5568}
+.arch-label{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:.3rem}
+.arch-head:not(.premium):not(.ec-native):not(.value) .arch-label{color:var(--muted)}
+.arch-name{font-family:var(--serif);font-size:.95rem;color:var(--white)}
+.arch-head:not(.premium):not(.ec-native):not(.value) .arch-name{color:var(--ink)}
+.arch-body{padding:.85rem 1.2rem;display:flex;flex-direction:column;gap:.55rem}
+.arch-row{font-size:11.5px;color:#444;line-height:1.6;padding-left:.8rem;border-left:2px solid var(--border)}
+.arch-row.highlight{border-left-color:var(--accent);color:var(--ink);font-weight:500}
+
+/* GAP CARDS */
+.gap-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin:1.5rem 0}
+.gap-card{padding:1.1rem 1.2rem 1.1rem 1.5rem;border:1px solid var(--border);background:var(--white);border-left:3px solid var(--accent)}
+.gap-cat{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:.35rem}
+.gap-title{font-size:13px;font-weight:500;color:var(--ink);margin-bottom:.35rem}
+.gap-desc{font-size:11.5px;color:var(--muted);line-height:1.7}
+
+/* JOURNEY */
+.journey-flow{display:flex;gap:1px;background:var(--border);margin:1.5rem 0}
+.jnode{flex:1;background:var(--white);padding:1rem 1.1rem}
+.jnode.active{background:#f5f0ea}
+.jnum{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:.3rem}
+.jtitle{font-size:12px;font-weight:500;color:var(--ink);margin-bottom:.25rem}
+.jsub{font-size:11px;color:var(--muted);line-height:1.55}
+
+/* INSIGHT */
+.insight-box{background:var(--light);border-left:3px solid var(--navy);padding:1rem 1.3rem;margin:1.2rem 0;font-size:13px;color:#333;line-height:1.75}
+.insight-box.accent{border-left-color:var(--accent)}
+
+.skills-used{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem}
+.su{font-size:11px;padding:.3rem .8rem;background:var(--tag)}
+.btn1{font-size:11px;letter-spacing:.09em;text-transform:uppercase;padding:.65rem 1.5rem;background:var(--ink);color:var(--white);border:none;cursor:pointer;transition:background .2s;text-decoration:none;display:inline-block;margin-top:1.5rem}
+.btn1:hover{background:#333}
+
+footer{padding:1.4rem 2.8rem;border-top:1px solid var(--border);background:var(--white);display:flex;justify-content:space-between;align-items:center}
+.fcopy{font-size:12px;color:var(--muted)}
+.ftop{background:none;border:none;font-size:12px;color:var(--muted);cursor:pointer;font-family:var(--sans)}
+
+@media(max-width:760px){
+  .cs-body{padding:2rem 1.4rem}
+  .cs-hero{padding:2.5rem 1.4rem 2rem}
+  .chapter-flow,.arch-grid,.gap-grid,.journey-flow{flex-direction:column;display:block}
+  .arch-grid{display:flex;flex-direction:column}
+  header{padding:0 1.4rem}
+  .cs-hero h1{font-size:1.9rem}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">Dan Xu <span>· Personal Site</span></a>
+  <nav class="header-nav">
+    <a href="index.html" class="tab">About</a>
+    <a href="experience.html" class="tab">Experience</a>
+    <a href="projects.html" class="tab">Projects</a>
+    <a href="casestudy.html" class="tab on">Case Study</a>
+    <a href="articles.html" class="tab">Articles</a>
+    <a href="contact.html" class="tab">Contact</a>
+  </nav>
+</header>
+
+<div class="cs-hero">
+  <a class="cs-back" href="casestudy.html"><i class="ti ti-arrow-left"></i> Back to Case Studies</a>
+  <div class="cs-eyebrow">Case Study · Healthcare · Medical Device · Sleep Therapy</div>
+  <h1>China Home PAP Market:<br><em>Competitive Landscape & Business Review</em></h1>
+  <div class="cs-meta">
+    <div class="cs-meta-item"><strong>Sector</strong>Healthcare / Medical Device (Sleep Therapy)</div>
+    <div class="cs-meta-item"><strong>Client</strong>Japanese Medical Device Manufacturer (anonymized)</div>
+    <div class="cs-meta-item"><strong>Market</strong>China — Online EC (Tmall / JD) + Offline</div>
+    <div class="cs-meta-item"><strong>Brands Studied</strong>3 Leading Competitors · APAP &amp; BiPAP</div>
+    <div class="cs-meta-item"><strong>Format</strong>~45-Slide Executive Steering Pack</div>
+    <div class="cs-meta-item"><strong>Role</strong>Lead Analyst · NRI Shanghai</div>
+  </div>
+  <div class="cs-disclaimer">🔒 Client identity and all commercial data anonymized. Methodology and framework only.</div>
+</div>
+
+<div class="cs-body">
+
+  <!-- SITUATION -->
+  <div class="cs-section">
+    <div class="cs-section-label">Situation</div>
+    <h2>Reassessing a China PAP Business at a Category Inflection Point</h2>
+
+    <div class="ctx-strip">
+      <div class="ctx-row">
+        <div class="ctx-key">Background</div>
+        <div class="ctx-val">A Japanese medical device manufacturer with existing China operations needed to reassess its PAP (Positive Airway Pressure / sleep therapy device) business strategy. The category was intensifying: domestic brands had scaled aggressively via EC-first strategies, the global premium leader was deepening hospital and distributor relationships, and the client's own sales trajectory and return rates signalled an urgent need for repositioning.</div>
+      </div>
+      <div class="ctx-row">
+        <div class="ctx-key">The Work</div>
+        <div class="ctx-val">Full two-chapter analysis under the NRI consulting framework — (1) China PAP market data analysis covering overall sizing, online channel structure (Tmall), brand GMV concentration, and price band dynamics; and (2) a three-brand leading company study examining commercial models, channel architecture, P&L structure, KPI design, distribution, promotion, service, and org structure — with client internal gaps mapped against benchmarks.</div>
+      </div>
+      <div class="ctx-row">
+        <div class="ctx-key">Deliverable</div>
+        <div class="ctx-val">~45-slide executive steering pack delivered to client leadership to reassess mid-term product strategy, channel investment priorities, and organizational structure for the China PAP business.</div>
+      </div>
+    </div>
+
+    <!-- Two-chapter flow -->
+    <div class="chapter-flow">
+      <div class="ch-block active">
+        <div class="ch-num">Chapter 01</div>
+        <div class="ch-title">Market Data Analysis</div>
+        <div class="ch-sub">Overall market sizing · Tmall online market · Brand GMV concentration · Price band distribution · Consumer purchase journey</div>
+      </div>
+      <div class="ch-block">
+        <div class="ch-num">Chapter 02</div>
+        <div class="ch-title">Leading Company Study</div>
+        <div class="ch-sub">3-brand competitive deep dive · Channel architecture · P&L & margin logic · KPI design · Distribution model · Service & after-sales · Client implications</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHAPTER 1 -->
+  <div class="cs-section">
+    <div class="cs-section-label">Chapter 01 — Market Data Analysis</div>
+    <h2>Online Channel Structure & Price Band Concentration</h2>
+
+    <p style="font-size:13px;color:#444;line-height:1.9;margin-bottom:1.2rem">The China home PAP market has grown at a sustained pace over the observed period. Online channels — led by Tmall — account for a significant and rising proportion of total category sales. Top-5 brand concentration on Tmall is high, with the gap between leaders and smaller players widening over time. APAP and BiPAP serve structurally different patient profiles: APAP skews online and female-purchase (family buying for a partner), while BiPAP is more physician-referred and purchased by the patient themselves.</p>
+
+    <!-- SINGLE BAR: Price Band Concentration -->
+    <div class="bar-section">
+      <div class="bar-header">Price Band Distribution — Tmall Unit Volume Concentration (Relative Weight)</div>
+      <div class="bar-wrap">
+        <div class="price-bar">
+          <div class="pb-seg s1">Entry</div>
+          <div class="pb-seg s2">Low-Mid</div>
+          <div class="pb-seg s3">Core ★</div>
+          <div class="pb-seg s4">Mid-High</div>
+          <div class="pb-seg s5">Premium</div>
+          <div class="pb-seg s6">High-End</div>
+        </div>
+        <div class="pb-legend">
+          <div class="leg-item"><div class="leg-dot" style="background:#e8e4de"></div>Entry tier (lowest volume)</div>
+          <div class="leg-item"><div class="leg-dot" style="background:#c5bfb5"></div>Low-mid</div>
+          <div class="leg-item"><div class="leg-dot" style="background:#1c2b3a"></div>Core tier ★ Highest unit volume</div>
+          <div class="leg-item"><div class="leg-dot" style="background:#2e4a62"></div>Mid-high</div>
+          <div class="leg-item"><div class="leg-dot" style="background:#8B6F4E"></div>Premium</div>
+          <div class="leg-item"><div class="leg-dot" style="background:#b8956e"></div>High-end</div>
+        </div>
+        <p class="bar-note">Bar shows relative proportional weight of each price tier. Specific unit shares not disclosed.</p>
+      </div>
+    </div>
+
+    <div class="insight-box">The core price band accounts for the largest share of Tmall unit volume — and is the primary battleground between domestic challengers and foreign incumbents. Brands without a clear competitive position in this tier face structural squeeze from both sides.</div>
+
+    <!-- Consumer journey insight -->
+    <p style="font-size:13px;color:#444;line-height:1.9;margin:1.2rem 0 .6rem"><strong>Consumer Purchase Routes — Two Distinct Paths</strong></p>
+    <div class="journey-flow">
+      <div class="jnode active">
+        <div class="jnum">Route 01 · ~80%</div>
+        <div class="jtitle">Hospital Diagnosis</div>
+        <div class="jsub">Patient diagnosed with OSA by physician → doctor recommends PAP → patient purchases near-hospital retail or searches online for the recommended brand</div>
+      </div>
+      <div class="jnode">
+        <div class="jnum">Route 02 · ~20%</div>
+        <div class="jtitle">Market Discovery</div>
+        <div class="jsub">Consumer searches online for snoring solutions → discovers PAP category → researches brands via SNS (Redbook, Zhihu) → selects from top-visibility brands in-platform</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHAPTER 2 -->
+  <div class="cs-section">
+    <div class="cs-section-label">Chapter 02 — Leading Company Study</div>
+    <h2>Three Competitive Archetypes — How Market Leaders Win</h2>
+
+    <p style="font-size:13px;color:#444;line-height:1.9;margin-bottom:1.2rem">Three brands were selected to represent the dominant competitive archetypes in the China home PAP market. Each archetype reflects a distinct commercial logic — the analysis went beyond surface metrics to examine how channel decisions, KPI design, distributor management, and service architecture combine to create sustainable competitive positions.</p>
+
+    <div class="arch-grid">
+      <div class="arch-card">
+        <div class="arch-head premium">
+          <div class="arch-label">Archetype A</div>
+          <div class="arch-name">Premium Foreign Specialist</div>
+        </div>
+        <div class="arch-body">
+          <div class="arch-row highlight">High-end brand equity built via hospital physician relationships</div>
+          <div class="arch-row">EC used primarily for traffic acquisition on entry-level APAP; high-margin BiPAP protected exclusively offline</div>
+          <div class="arch-row">Separate EC legal entity with dedicated pre-sales consultation (8–10 specialists) — brand education before purchase is the core conversion lever</div>
+          <div class="arch-row">Distributor profit protection as strategic priority: online channel kept minimal to protect offline margins; distributor KPIs include service capability and inventory management</div>
+          <div class="arch-row highlight">Post-purchase: 7-day intensive follow-up to overcome return window — "adherence" as the core retention metric</div>
+        </div>
+      </div>
+      <div class="arch-card">
+        <div class="arch-head ec-native">
+          <div class="arch-label">Archetype B</div>
+          <div class="arch-name">Domestic EC-Native Challenger</div>
+        </div>
+        <div class="arch-body">
+          <div class="arch-row highlight">EC-first build: heavy early-stage traffic investment to acquire market share rapidly</div>
+          <div class="arch-row">Full price-range lineup across APAP and BiPAP, supported by respiratory therapy as a dedicated company business unit</div>
+          <div class="arch-row">KPI priority: GMV and growth rate above margin — Sell-In to distributors as primary accountability metric</div>
+          <div class="arch-row">Consequence: price management historically weak — Sell-In pressure leads to inventory overload, triggering grey-market outflows</div>
+          <div class="arch-row highlight">Hospital channel attempted post-COVID but exited as product spec gaps became evident against clinical requirements</div>
+        </div>
+      </div>
+      <div class="arch-card">
+        <div class="arch-head value">
+          <div class="arch-label">Archetype C</div>
+          <div class="arch-name">Value Offline Specialist</div>
+        </div>
+        <div class="arch-body">
+          <div class="arch-row highlight">Low-price positioning enabled by OEM cost structure — strong production cost management</div>
+          <div class="arch-row">Offline-first distribution: exclusive distributor model with Sell-Out KPIs built into distributor agreements — tracks inventory turnover, not just Sell-In</div>
+          <div class="arch-row">Distributor profit protection: specific SKUs assigned exclusively to offline channel, preventing online undercutting</div>
+          <div class="arch-row">Hospital channel built systematically via physician education and dedicated service engineering at distributor level</div>
+          <div class="arch-row highlight">Channel management discipline as the core competency — not brand or product</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="insight-box accent">The leading company study revealed that brand equity and channel profitability are structurally linked in this category. Brands that sacrifice channel discipline to chase volume end up with price erosion that undermines both hospital physician trust and offline distributor commitment — a compounding disadvantage.</div>
+  </div>
+
+  <!-- CLIENT INTERNAL ANALYSIS -->
+  <div class="cs-section">
+    <div class="cs-section-label">Chapter 02 continued — Client Implications & Internal Gap Analysis</div>
+    <h2>Diagnosing the Gaps Against the Competitive Benchmark</h2>
+
+    <p style="font-size:13px;color:#444;line-height:1.9;margin-bottom:1.2rem">Mapped against the three-archetype benchmark, the client's China PAP business showed structural gaps across organizational commitment, EC operating model, and product competitiveness. These were documented through internal interviews with EC planning, store operations, and after-sales leadership.</p>
+
+    <div class="gap-grid">
+      <div class="gap-card">
+        <div class="gap-cat">Organizational Commitment</div>
+        <div class="gap-title">PAP below the analysis threshold</div>
+        <div class="gap-desc">PAP not treated as a priority category — volume below the threshold for regular management review. No dedicated PAP headcount across EC planning, after-sales, or product management. Analysis and decision-making defaulted to larger categories.</div>
+      </div>
+      <div class="gap-card">
+        <div class="gap-cat">EC Operating Model</div>
+        <div class="gap-title">Conversion rate and return rate gaps</div>
+        <div class="gap-desc">Store CVR significantly below category benchmark. Return rate above 30% — driven by inadequate pre-purchase consultation and post-purchase setup support. Purchase inquiry content not systematically analyzed; no PAP-dedicated pre-sales team.</div>
+      </div>
+      <div class="gap-card">
+        <div class="gap-cat">Product Competitiveness</div>
+        <div class="gap-title">Spec and SKU range gaps</div>
+        <div class="gap-desc">Limited SKU range relative to leading competitors. Key functional gaps: data transfer capability, mobile app connectivity, humidity management. Warranty period shorter than market standard. No trial/return policy to reduce purchase risk.</div>
+      </div>
+      <div class="gap-card">
+        <div class="gap-cat">Promotional Investment</div>
+        <div class="gap-title">Traffic investment below effective threshold</div>
+        <div class="gap-desc">Monthly EC traffic spend far below the estimated per-unit acquisition cost typical for this category. Large-scale promotional events not feasible at current scale — creating a cycle where low visibility suppresses the volume needed to justify investment.</div>
+      </div>
+    </div>
+
+    <div class="insight-box">The steering pack concluded: addressing organizational commitment and pre/post-sales service capability were higher-priority levers than price reduction. Price cuts without specialist support would not close the conversion gap — the purchase decision in this category is driven by clinical trust and usage confidence, not price alone.</div>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="cs-section">
+    <div class="cs-section-label">Skills Demonstrated</div>
+    <h2>Healthcare Consulting · EC Channel Analysis · Competitive Benchmarking</h2>
+    <p style="font-size:13px;color:#444;line-height:1.9">This engagement applied the NRI two-chapter consulting framework — market data analysis + leading company study with client implications — to the China home PAP category. All client and commercial data is fully anonymized.</p>
+    <div class="skills-used">
+      <span class="su">Healthcare Market Research</span>
+      <span class="su">China PAP / Medical Device</span>
+      <span class="su">EC Channel Analysis (Tmall / JD)</span>
+      <span class="su">Brand GMV & Market Share Analysis</span>
+      <span class="su">Price Band Mapping</span>
+      <span class="su">Leading Company Study (3 Archetypes)</span>
+      <span class="su">P&L & Margin Structure Benchmarking</span>
+      <span class="su">KPI System Analysis</span>
+      <span class="su">Distribution Architecture</span>
+      <span class="su">After-Sales Model Benchmarking</span>
+      <span class="su">Consumer Purchase Journey Mapping</span>
+      <span class="su">Internal Gap Diagnosis</span>
+      <span class="su">Executive Steering Pack · NRI Framework</span>
+    </div>
+    <a class="btn1" href="contact.html">Work with Dan →</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="fcopy">© 2026 Dan Xu</div>
+  <button class="ftop" onclick="window.scrollTo({top:0,behavior:'smooth'})">Back to top ↑</button>
+</footer>
+</body>
+</html>
