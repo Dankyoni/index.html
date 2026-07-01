@@ -17,34 +17,38 @@
   <rect x="0" y="0" width="600" height="3" fill="#8B6F4E"/>
 
   <!-- Category -->
-  <text x="36" y="50" font-size="10" fill="#8B6F4E" font-family="Arial,sans-serif" letter-spacing="2">HEALTHCARE · MEDICAL DEVICE · PATIENT ACCESS</text>
+  <text x="36" y="50" font-size="10" fill="#8B6F4E" font-family="Arial,sans-serif" letter-spacing="2">HEALTHCARE · MEDICAL DEVICE · CHINA SLEEP THERAPY</text>
 
   <!-- Title -->
-  <text x="36" y="102" font-size="30" font-weight="400" fill="#2a1a0a" font-family="Georgia,serif">Healthcare PAP</text>
-  <text x="36" y="142" font-size="30" font-weight="400" fill="#2a1a0a" font-family="Georgia,serif">Landscape &amp; Design</text>
+  <text x="36" y="102" font-size="29" font-weight="400" fill="#2a1a0a" font-family="Georgia,serif">China Home PAP</text>
+  <text x="36" y="141" font-size="29" font-weight="400" fill="#2a1a0a" font-family="Georgia,serif">Market Review</text>
 
   <!-- Subtitle -->
-  <text x="36" y="178" font-size="13.5" fill="rgba(80,50,20,0.68)" font-family="Georgia,serif" font-style="italic">Patient Access Program Analysis · Executive Steering Pack</text>
+  <text x="36" y="178" font-size="13" fill="rgba(80,50,20,0.68)" font-family="Georgia,serif" font-style="italic">Competitive Landscape · 3-Brand Leading Company Study</text>
 
   <!-- Rule -->
   <rect x="36" y="202" width="200" height="1" fill="rgba(139,111,78,0.35)"/>
 
-  <!-- Single access barrier bar visual -->
-  <rect x="36" y="228" width="120" height="18" fill="#1c2b3a" rx="1"/>
-  <rect x="158" y="228" width="80" height="18" fill="#2e4a62" rx="1"/>
-  <rect x="240" y="228" width="96" height="18" fill="#8B6F4E" rx="1"/>
-  <rect x="338" y="228" width="50" height="18" fill="#b8956e" rx="1"/>
+  <!-- Price band distribution bar (proportional, no numbers) -->
+  <!-- Entry: narrow, Low-mid, Core: widest, Mid-high, Premium, High-end -->
+  <rect x="36"  y="228" width="8"  height="18" fill="#e8e4de" rx="1"/>
+  <rect x="46"  y="228" width="42" height="18" fill="#c5bfb5" rx="1"/>
+  <rect x="90"  y="228" width="74" height="18" fill="#1c2b3a" rx="1"/>
+  <rect x="166" y="228" width="54" height="18" fill="#2e4a62" rx="1"/>
+  <rect x="222" y="228" width="36" height="18" fill="#8B6F4E" rx="1"/>
+  <rect x="260" y="228" width="28" height="18" fill="#b8956e" rx="1"/>
 
-  <text x="36"  y="262" font-size="8.5" fill="rgba(80,50,20,0.45)" font-family="Arial,sans-serif" letter-spacing="0.5">Financial</text>
-  <text x="158" y="262" font-size="8.5" fill="rgba(80,50,20,0.45)" font-family="Arial,sans-serif" letter-spacing="0.5">Reimbursement</text>
-  <text x="240" y="262" font-size="8.5" fill="rgba(80,50,20,0.45)" font-family="Arial,sans-serif" letter-spacing="0.5">Clinical Pathway</text>
-  <text x="338" y="262" font-size="8.5" fill="rgba(80,50,20,0.45)" font-family="Arial,sans-serif" letter-spacing="0.5">Awareness</text>
+  <text x="36"  y="262" font-size="8" fill="rgba(80,50,20,0.45)" font-family="Arial,sans-serif" letter-spacing="0.5">Entry</text>
+  <text x="90"  y="262" font-size="8" fill="rgba(80,50,20,0.45)" font-family="Arial,sans-serif" letter-spacing="0.5">Core ★</text>
+  <text x="222" y="262" font-size="8" fill="rgba(80,50,20,0.45)" font-family="Arial,sans-serif" letter-spacing="0.5">Premium</text>
+
+  <text x="36" y="285" font-size="8.5" fill="rgba(80,50,20,0.38)" font-family="Arial,sans-serif" letter-spacing="0.8">Price Band · Tmall Unit Volume Distribution (Proportional)</text>
 
   <!-- Caption -->
-  <text x="36" y="310" font-size="9" fill="rgba(80,50,20,0.4)" font-family="Arial,sans-serif" letter-spacing="1.5">CLIENT ANONYMIZED · METHODOLOGY ONLY · NRI SHANGHAI</text>
+  <text x="36" y="310" font-size="9" fill="rgba(80,50,20,0.4)" font-family="Arial,sans-serif" letter-spacing="1.5">CLIENT ANONYMIZED · NRI SHANGHAI · 2024</text>
 
   <!-- Bottom bar -->
   <rect x="0" y="340" width="600" height="40" fill="rgba(0,0,0,0.04)"/>
-  <text x="36" y="364" font-size="9.5" fill="rgba(80,50,20,0.4)" font-family="Arial,sans-serif" letter-spacing="1.8">PATIENT ACCESS · PAP DESIGN · HEALTHCARE CONSULTING</text>
+  <text x="36" y="364" font-size="9.5" fill="rgba(80,50,20,0.4)" font-family="Arial,sans-serif" letter-spacing="1.8">CPAP · APAP · BiPAP · MEDICAL DEVICE · CHINA MARKET</text>
   <text x="490" y="364" font-size="9.5" fill="#8B6F4E" font-family="Arial,sans-serif" letter-spacing="1.2">READ →</text>
 </svg>
