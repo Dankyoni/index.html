@@ -9,25 +9,25 @@
   <rect x="300" y="150" width="300" height="230" fill="url(#dots)"/>
   <rect x="0" y="0" width="600" height="3" fill="#1c2b3a"/>
 
-  <text x="36" y="50" font-size="10" fill="#8B6F4E" font-family="Arial,sans-serif" letter-spacing="2">FMCG ù COSMETICS ù NRI SHANGHAI ù 2024</text>
+  <text x="36" y="50" font-size="10" fill="#8B6F4E" font-family="Arial,sans-serif" letter-spacing="2">FMCG ¬∑ COSMETICS ¬∑ NRI SHANGHAI ¬∑ 2024</text>
 
-  <text x="36" y="102" font-size="28" font-weight="400" fill="#1c2b3a" font-family="Georgia,serif">China Cosmetics</text>
-  <text x="36" y="140" font-size="28" font-weight="400" fill="#1c2b3a" font-family="Georgia,serif">Mid-Term Review</text>
+  <text x="36" y="102" font-size="28" font-weight="400" fill="#1c2b3a" font-family="Georgia,serif">China Portfolio</text>
+  <text x="36" y="140" font-size="28" font-weight="400" fill="#1c2b3a" font-family="Georgia,serif">Steering &amp; Priorities</text>
 
-  <text x="36" y="176" font-size="13.5" fill="rgba(28,43,58,0.65)" font-family="Georgia,serif" font-style="italic">Re-analysis ù H1 49 + H2 54 ù Project Lead</text>
+  <text x="36" y="176" font-size="13.5" fill="rgba(28,43,58,0.65)" font-family="Georgia,serif" font-style="italic">Mid-Term Plan Review ¬∑ Issue ‚Üí Options ‚Üí Decision</text>
 
   <rect x="36" y="200" width="220" height="1" fill="rgba(139,111,78,0.35)"/>
 
-  <text x="36"  y="242" font-size="30" font-weight="400" fill="#1c2b3a" font-family="Georgia,serif">2ù</text>
+  <text x="36"  y="242" font-size="30" font-weight="400" fill="#1c2b3a" font-family="Georgia,serif">2√ó</text>
   <text x="36"  y="261" font-size="9.5" fill="rgba(28,43,58,0.5)" font-family="Arial,sans-serif" letter-spacing="1.8">STEERING CYCLES</text>
 
-  <text x="130" y="242" font-size="30" font-weight="400" fill="#1c2b3a" font-family="Georgia,serif">49+54</text>
-  <text x="130" y="261" font-size="9.5" fill="rgba(28,43,58,0.5)" font-family="Arial,sans-serif" letter-spacing="1.8">SLIDES H1+H2</text>
+  <text x="130" y="242" font-size="30" font-weight="400" fill="#1c2b3a" font-family="Georgia,serif">~100</text>
+  <text x="130" y="261" font-size="9.5" fill="rgba(28,43,58,0.5)" font-family="Arial,sans-serif" letter-spacing="1.8">SLIDES TOTAL</text>
 
-  <text x="248" y="242" font-size="30" font-weight="400" fill="#1c2b3a" font-family="Georgia,serif">3</text>
-  <text x="248" y="261" font-size="9.5" fill="rgba(28,43,58,0.5)" font-family="Arial,sans-serif" letter-spacing="1.8">REC. PILLARS</text>
+  <text x="248" y="242" font-size="30" font-weight="400" fill="#1c2b3a" font-family="Georgia,serif">PL</text>
+  <text x="248" y="261" font-size="9.5" fill="rgba(28,43,58,0.5)" font-family="Arial,sans-serif" letter-spacing="1.8">PORTFOLIO LENS</text>
 
   <rect x="0" y="340" width="600" height="40" fill="rgba(0,0,0,0.04)"/>
-  <text x="36" y="364" font-size="9.5" fill="rgba(28,43,58,0.4)" font-family="Arial,sans-serif" letter-spacing="1.8">ANONYMISED ù CONSULTING ENGAGEMENT</text>
-  <text x="490" y="364" font-size="9.5" fill="#8B6F4E" font-family="Arial,sans-serif" letter-spacing="1.2">READ ?</text>
+  <text x="36" y="364" font-size="9.5" fill="rgba(28,43,58,0.4)" font-family="Arial,sans-serif" letter-spacing="1.8">ANONYMISED ¬∑ CONSULTING ENGAGEMENT</text>
+  <text x="490" y="364" font-size="9.5" fill="#8B6F4E" font-family="Arial,sans-serif" letter-spacing="1.2">READ ‚Üí</text>
 </svg>
