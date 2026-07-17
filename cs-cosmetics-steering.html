@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dan Xu · China Cosmetics Portfolio Steering Case Study</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --ink:#111;--muted:#777;--light:#f8f7f5;--white:#fff;
+  --border:#e5e1db;--tag:#eeebe6;--accent:#8B6F4E;--navy:#1c2b3a;
+  --serif:'Playfair Display',serif;--sans:'DM Sans',sans-serif;
+}
+body{font-family:var(--sans);background:var(--light);color:var(--ink);font-size:14px;line-height:1.65;min-height:100vh}
+header{display:flex;justify-content:space-between;align-items:stretch;padding:0 2.8rem;background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:30;height:58px}
+.logo{font-family:var(--serif);font-size:1.1rem;font-weight:400;display:flex;align-items:center;text-decoration:none;color:var(--ink);flex-shrink:0}
+.logo span{color:var(--muted);font-style:italic;font-size:.95rem}
+.header-nav{display:flex;align-items:stretch;overflow-x:auto}
+.tab{font-family:var(--sans);font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:0 1.1rem;border:none;background:none;cursor:pointer;color:var(--muted);border-bottom:2px solid transparent;transition:all .2s;white-space:nowrap;text-decoration:none;display:flex;align-items:center}
+.tab:hover{color:var(--ink)}
+.tab.on{color:var(--ink);border-bottom-color:var(--accent);font-weight:500}
+
+.cs-hero{padding:3.5rem 2.8rem 3rem;border-bottom:1px solid var(--border);background:var(--white);border-top:3px solid var(--navy)}
+.cs-back{display:inline-flex;align-items:center;gap:.5rem;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem;background:none;border:none;font-family:var(--sans);text-decoration:none}
+.cs-back:hover{color:var(--ink)}
+.cs-eyebrow{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--navy);margin-bottom:.75rem;opacity:.7}
+.cs-hero h1{font-family:var(--serif);font-size:2.6rem;font-weight:400;line-height:1.15;max-width:720px;margin-bottom:1rem;color:var(--ink)}
+.cs-hero h1 em{font-style:italic;color:var(--accent)}
+.cs-meta{display:flex;gap:2.5rem;flex-wrap:wrap;margin-top:1.5rem}
+.cs-meta-item{font-size:12px;color:var(--muted)}
+.cs-meta-item strong{color:#aaa;display:block;font-size:10px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.25rem}
+.cs-disclaimer{display:inline-block;margin-top:1.5rem;font-size:11px;padding:.45rem 1rem;border:1px solid var(--border);color:var(--muted);letter-spacing:.06em}
+
+.cs-body{max-width:900px;margin:0 auto;padding:3rem 2.8rem}
+.cs-section{margin-bottom:3rem;padding-bottom:3rem;border-bottom:1px solid var(--border)}
+.cs-section:last-child{border-bottom:none}
+.cs-section-label{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem;display:flex;align-items:center;gap:.6rem}
+.cs-section-label::after{content:'';width:24px;height:.5px;background:var(--border);display:inline-block}
+.cs-section h2{font-family:var(--serif);font-size:1.55rem;font-weight:400;margin-bottom:1.2rem;line-height:1.25}
+
+.ctx-strip{border:1px solid var(--border);margin:1.2rem 0 1.6rem}
+.ctx-row{display:grid;grid-template-columns:96px 1fr;border-bottom:1px solid var(--border)}
+.ctx-row:last-child{border-bottom:none}
+.ctx-key{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding:.9rem 1.1rem;background:var(--tag);border-right:1px solid var(--border);display:flex;align-items:center;line-height:1.4}
+.ctx-val{font-size:13px;color:#333;padding:.9rem 1.3rem;line-height:1.75}
+
+/* NISSIN-TYPE FRAMEWORK */
+.fw-strip{border:1px solid var(--border);background:var(--white);margin:1.5rem 0;overflow:hidden}
+.fw-header{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:.9rem 1.3rem;border-bottom:1px solid var(--border);background:var(--tag)}
+.fw-flow{display:flex;gap:1px;background:var(--border)}
+.fw-step{flex:1;background:var(--white);padding:1rem 1rem 1.1rem;position:relative}
+.fw-step.active{background:var(--navy)}
+.fw-num{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:.35rem}
+.fw-step.active .fw-num{color:rgba(255,255,255,.5)}
+.fw-title{font-size:11.5px;font-weight:500;color:var(--ink);margin-bottom:.25rem;line-height:1.35}
+.fw-step.active .fw-title{color:var(--white)}
+.fw-sub{font-size:10.5px;color:var(--muted);line-height:1.5}
+.fw-step.active .fw-sub{color:rgba(255,255,255,.55)}
+.fw-arrow{display:none}
+
+.chapter-flow{display:flex;gap:1px;background:var(--border);margin:1.5rem 0}
+.ch-block{flex:1;background:var(--white);padding:1.2rem 1.3rem}
+.ch-block.active{background:var(--navy)}
+.ch-num{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:.3rem}
+.ch-block.active .ch-num{color:rgba(255,255,255,.5)}
+.ch-title{font-family:var(--serif);font-size:1rem;color:var(--ink);margin-bottom:.3rem}
+.ch-block.active .ch-title{color:var(--white)}
+.ch-sub{font-size:11px;color:var(--muted);line-height:1.55}
+.ch-block.active .ch-sub{color:rgba(255,255,255,.55)}
+
+.layer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);margin:1.5rem 0}
+.layer-cell{background:var(--white);padding:1rem 1.1rem;text-align:center}
+.layer-cell .ln{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:.35rem}
+.layer-cell .lt{font-size:12px;font-weight:500;color:var(--ink);line-height:1.4}
+
+.rec-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--border);margin:1.5rem 0}
+.rec-card{background:var(--white);padding:1.1rem 1.2rem}
+.rec-num{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:.35rem}
+.rec-title{font-size:13px;font-weight:500;color:var(--ink);margin-bottom:.4rem;line-height:1.35}
+.rec-desc{font-size:11.5px;color:var(--muted);line-height:1.7}
+
+.opt-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:12.5px}
+.opt-table th,.opt-table td{border:1px solid var(--border);padding:.75rem 1rem;text-align:left;vertical-align:top;line-height:1.65}
+.opt-table th{background:var(--tag);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.opt-table td{color:#444}
+.opt-table tr.highlight td{background:#f5f0ea}
+
+.h-cycle-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:12px}
+.h-cycle-table th,.h-cycle-table td{border:1px solid var(--border);padding:.7rem .9rem;text-align:left;vertical-align:top;line-height:1.6}
+.h-cycle-table th{background:var(--navy);color:var(--white);font-size:9px;letter-spacing:.1em;text-transform:uppercase;font-weight:500}
+.h-cycle-table td{color:#444}
+.h-cycle-table td:first-child{font-weight:500;color:var(--ink);background:var(--tag);width:88px;font-size:10px;letter-spacing:.06em;text-transform:uppercase}
+
+.insight-box{background:var(--light);border-left:3px solid var(--navy);padding:1rem 1.3rem;margin:1.2rem 0;font-size:13px;color:#333;line-height:1.75}
+.insight-box.accent{border-left-color:var(--accent)}
+.insight-box.nissin{background:#f5f0ea;border-left-color:var(--accent)}
+
+.journey-flow{display:flex;gap:1px;background:var(--border);margin:1.5rem 0}
+.jnode{flex:1;background:var(--white);padding:1rem 1.1rem}
+.jnode.active{background:#f5f0ea}
+.jnum{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:.3rem}
+.jtitle{font-size:12px;font-weight:500;color:var(--ink);margin-bottom:.25rem}
+.jsub{font-size:11px;color:var(--muted);line-height:1.55}
+
+.skills-used{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem}
+.su{font-size:11px;padding:.3rem .8rem;background:var(--tag)}
+.btn1{font-size:11px;letter-spacing:.09em;text-transform:uppercase;padding:.65rem 1.5rem;background:var(--ink);color:var(--white);border:none;cursor:pointer;transition:background .2s;text-decoration:none;display:inline-block;margin-top:1.5rem}
+.btn1:hover{background:#333}
+
+footer{padding:1.4rem 2.8rem;border-top:1px solid var(--border);background:var(--white);display:flex;justify-content:space-between;align-items:center}
+.fcopy{font-size:12px;color:var(--muted)}
+.ftop{background:none;border:none;font-size:12px;color:var(--muted);cursor:pointer;font-family:var(--sans)}
+
+@media(max-width:760px){
+  .cs-body{padding:2rem 1.4rem}
+  .cs-hero{padding:2.5rem 1.4rem 2rem}
+  .fw-flow,.chapter-flow,.layer-grid,.rec-grid,.journey-flow{flex-direction:column;display:block}
+  .layer-grid,.rec-grid{display:flex;flex-direction:column}
+  header{padding:0 1.4rem}
+  .cs-hero h1{font-size:1.9rem}
+  .opt-table,.h-cycle-table{font-size:11px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">Dan Xu <span>· Personal Site</span></a>
+  <nav class="header-nav">
+    <a href="index.html" class="tab">About</a>
+    <a href="experience.html" class="tab">Experience</a>
+    <a href="projects.html" class="tab">Projects</a>
+    <a href="casestudy.html" class="tab on">Case Study</a>
+    <a href="articles.html" class="tab">Articles</a>
+    <a href="contact.html" class="tab">Contact</a>
+  </nav>
+</header>
+
+<div class="cs-hero">
+  <a class="cs-back" href="casestudy.html"><i class="ti ti-arrow-left"></i> Back to Case Studies</a>
+  <div class="cs-eyebrow">Case Study · FMCG · Cosmetics · Portfolio Steering · NRI Shanghai · 2024</div>
+  <h1>China Business Mid-Term Plan Review:<br><em>Portfolio Steering &amp; Resource Priorities</em></h1>
+  <div class="cs-meta">
+    <div class="cs-meta-item"><strong>Sector</strong>FMCG / Personal Care &amp; Cosmetics</div>
+    <div class="cs-meta-item"><strong>Client</strong>Global Personal Care Manufacturer (anonymized)</div>
+    <div class="cs-meta-item"><strong>Market</strong>China — EC (Tmall / TikTok) · CS · Tier 2–3 Cities</div>
+    <div class="cs-meta-item"><strong>Deliverables</strong>~49-slide H1 pack + ~54-slide H2 pack</div>
+    <div class="cs-meta-item"><strong>Cycles</strong>2 executive steering sessions (Jun + Nov 2024)</div>
+    <div class="cs-meta-item"><strong>Role</strong>Project Lead · NRI Shanghai</div>
+  </div>
+  <div class="cs-disclaimer">🔒 Client identity and all commercial data anonymized. Methodology and framework only.</div>
+</div>
+
+<div class="cs-body">
+
+  <!-- FRAMEWORK -->
+  <div class="cs-section">
+    <div class="cs-section-label">Consulting Model</div>
+    <h2>From Issue Structuring to Management Decision — and a Launchpad for Execution</h2>
+
+    <p style="font-size:13px;color:#444;line-height:1.9;margin-bottom:1rem">This engagement followed the same logic I apply to global strategy roles: not a research report that stops at diagnosis, but a structured path from <strong>issues → options → priorities → decision materials</strong> — creating the foundation leadership can use to align portfolio, channel, and resource allocation before execution teams take over.</p>
+
+    <div class="fw-strip">
+      <div class="fw-header">Project Logic — Strategy Design → Execution Launchpad</div>
+      <div class="fw-flow">
+        <div class="fw-step active">
+          <div class="fw-num">Step 01</div>
+          <div class="fw-title">Issue Structuring</div>
+          <div class="fw-sub">Macro · category · channel · competitive layers — reframe the China mid-term plan question</div>
+        </div>
+        <div class="fw-step">
+          <div class="fw-num">Step 02</div>
+          <div class="fw-title">Strategic Options</div>
+          <div class="fw-sub">Segment, channel, and product-route alternatives — not one answer, but decision-ready choices</div>
+        </div>
+        <div class="fw-step">
+          <div class="fw-num">Step 03</div>
+          <div class="fw-title">Portfolio &amp; Resource Priorities</div>
+          <div class="fw-sub">Move from equal SKU investment to ranked portfolio · channel · budget allocation</div>
+        </div>
+        <div class="fw-step">
+          <div class="fw-num">Step 04</div>
+          <div class="fw-title">Management Decision Materials</div>
+          <div class="fw-sub">Two steering packs that leadership used to debate and update the 2025 investment plan</div>
+        </div>
+        <div class="fw-step">
+          <div class="fw-num">Step 05</div>
+          <div class="fw-title">Execution Launchpad</div>
+          <div class="fw-sub">Validated priorities handed to brand, EC, and local teams — hypothesis → field check → course correction</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="insight-box nissin">The output was designed as a <strong>management decision substrate</strong>: leadership could move from outlook (H1) to course correction (H2) on portfolio and resource allocation — the same type of work global strategy teams do when connecting <strong>issue design, option framing, and execution accompaniment</strong> across overseas markets.</div>
+  </div>
+
+  <!-- SITUATION -->
+  <div class="cs-section">
+    <div class="cs-section-label">Situation</div>
+    <h2>Revising China Mid-Term Strategy Under Market Pressure</h2>
+
+    <div class="ctx-strip">
+      <div class="ctx-row">
+        <div class="ctx-key">Context</div>
+        <div class="ctx-val">China cosmetics demand remained under pressure in 2024: weak consumer confidence, prestige slowdown, and Japanese-brand sentiment headwinds — while EC (especially TikTok) and lower-tier cities showed selective growth pockets. Client China leadership needed to <strong>revisit the mid-term plan</strong>, not just refresh market data.</div>
+      </div>
+      <div class="ctx-row">
+        <div class="ctx-key">The Ask</div>
+        <div class="ctx-val">Two steering cycles in 2024: <strong>H1 (Jun)</strong> to set the outlook and forward investment hypotheses for 2025; <strong>H2 (Nov)</strong> to test those hypotheses against H1 actuals, competitive moves, and 618 / Double 11 signals — then update portfolio and resource priorities entering 2025.</div>
+      </div>
+      <div class="ctx-row">
+        <div class="ctx-key">My Role</div>
+        <div class="ctx-val">Project lead synthesizing Euromonitor, syndicated EC, and macro sources into executive steering decks — structuring issues, presenting options, and translating analysis into <strong>portfolio · channel · resource priority recommendations</strong> that became the basis for management discussion.</div>
+      </div>
+    </div>
+
+    <div class="chapter-flow">
+      <div class="ch-block active">
+        <div class="ch-num">Cycle 01 · Jun 2024 · ~49 slides</div>
+        <div class="ch-title">Outlook &amp; Investment Hypotheses</div>
+        <div class="ch-sub">4-layer market analysis → market view → segment-level recommendations → 2025 investment direction as a <strong>discussion draft</strong></div>
+      </div>
+      <div class="ch-block">
+        <div class="ch-num">Cycle 02 · Nov 2024 · ~54 slides</div>
+        <div class="ch-title">Performance Check &amp; Priority Update</div>
+        <div class="ch-sub">H1 actuals embedded → was the outlook right? → market · mid-term · marketing · channel implications → <strong>2025 priority revision</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ANALYSIS -->
+  <div class="cs-section">
+    <div class="cs-section-label">Step 01 — Issue Structuring</div>
+    <h2>Four-Layer Analysis to Reframe the Planning Question</h2>
+
+    <p style="font-size:13px;color:#444;line-height:1.9;margin-bottom:1rem">Both steering packs shared a common analytical spine. The goal was not category reporting for its own sake, but to answer: <strong>where should China portfolio, channel, and resource investment concentrate in 2025?</strong></p>
+
+    <div class="layer-grid">
+      <div class="layer-cell">
+        <div class="ln">Layer 01</div>
+        <div class="lt">Macro &amp; Consumer</div>
+      </div>
+      <div class="layer-cell">
+        <div class="ln">Layer 02</div>
+        <div class="lt">Category &amp; Segment</div>
+      </div>
+      <div class="layer-cell">
+        <div class="ln">Layer 03</div>
+        <div class="lt">Channel &amp; EC</div>
+      </div>
+      <div class="layer-cell">
+        <div class="ln">Layer 04</div>
+        <div class="lt">Competitive &amp; Client Implications</div>
+      </div>
+    </div>
+
+    <table class="opt-table">
+      <tr>
+        <th>Layer</th>
+        <th>Key Issues Structured</th>
+        <th>Planning Implication</th>
+      </tr>
+      <tr>
+        <td><strong>Macro</strong></td>
+        <td>GDP path · policy stimulus narrative · tier-city income divergence (Tier 3–4 vs Tier 1–2)</td>
+        <td>Demand recovery uneven — portfolio cannot assume one national growth curve</td>
+      </tr>
+      <tr>
+        <td><strong>Category</strong></td>
+        <td>Skincare / makeup / fragrance / hair / dermocosmetics · Mass Premium vs High Prestige</td>
+        <td>Prestige under pressure · masstige and science-backed segments relatively stronger</td>
+      </tr>
+      <tr>
+        <td><strong>Channel</strong></td>
+        <td>Retail vs EC penetration · Tmall vs TikTok dynamics · 618 / Double 11 direction</td>
+        <td>EC 40%+ structurally — channel roles must be split by acquisition vs repeat</td>
+      </tr>
+      <tr class="highlight">
+        <td><strong>Competitive</strong></td>
+        <td>International vs local strategies · Japanese-brand stress · EC incubation (Douyin flagship, KOL/livestream)</td>
+        <td>Competitors accelerating on product strength + efficiency — client needs ranked priorities, not equal SKU spend</td>
+      </tr>
+    </table>
+
+    <div class="insight-box">Core diagnosis: <strong>equal investment across all SKUs was structurally inefficient</strong>. The mid-term plan review had to move leadership toward explicit portfolio, channel, and resource ranking.</div>
+  </div>
+
+  <!-- OPTIONS & PRIORITIES -->
+  <div class="cs-section">
+    <div class="cs-section-label">Steps 02–03 — Options &amp; Priorities</div>
+    <h2>From Strategic Options to Portfolio · Channel · Resource Ranking</h2>
+
+    <p style="font-size:13px;color:#444;line-height:1.9;margin-bottom:1rem">Recommendations were organized across four axes — consumer, product, channel, communication — then translated into three priority levers leadership could act on.</p>
+
+    <div class="rec-grid">
+      <div class="rec-card">
+        <div class="rec-num">Priority 01 · Segment</div>
+        <div class="rec-title">Portfolio role allocation</div>
+        <div class="rec-desc"><strong>High prestige:</strong> concentrate on hero SKU cultivation · <strong>Mass skincare:</strong> accelerate via local development · <strong>Mass UV:</strong> evaluate cross-border EC vs local production routes</div>
+      </div>
+      <div class="rec-card">
+        <div class="rec-num">Priority 02 · Channel</div>
+        <div class="rec-title">Purpose-based channel split</div>
+        <div class="rec-desc"><strong>Acquisition:</strong> Redbook · hotel / lifestyle touchpoints · live commerce · <strong>Repeat:</strong> Tmall flagship · membership repurchase · H2 update: upward revision to TikTok / live resource allocation</div>
+      </div>
+      <div class="rec-card">
+        <div class="rec-num">Priority 03 · Resource</div>
+        <div class="rec-title">Ranked investment order</div>
+        <div class="rec-desc">Exit equal-SKU logic → confirm order across <strong>portfolio · channel · budget</strong> · reinforce hero SKU + functional / evidence-based claims across segments</div>
+      </div>
+    </div>
+
+    <p style="font-size:13px;color:#444;line-height:1.9;margin:1.2rem 0 .6rem"><strong>Illustrative Segment Options (H1 · anonymized)</strong></p>
+
+    <table class="opt-table">
+      <tr>
+        <th>Segment</th>
+        <th>Product Option</th>
+        <th>Channel Option</th>
+      </tr>
+      <tr>
+        <td><strong>High Prestige</strong></td>
+        <td>Hero SKU focus · base makeup as new-user entry</td>
+        <td>Redbook / hotel / lifestyle for acquisition · Tmall for repeat</td>
+      </tr>
+      <tr>
+        <td><strong>Mass × Skincare</strong></td>
+        <td>Local development to speed launch · functional + value positioning</td>
+        <td>Tier 2–3 CS expansion · EC incubation support</td>
+      </tr>
+      <tr>
+        <td><strong>Mass × UV</strong></td>
+        <td>Cross-border EC vs general trade — route comparison</td>
+        <td>Outdoor / seasonal collaboration as activation lever</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- H1 vs H2 -->
+  <div class="cs-section">
+    <div class="cs-section-label">Step 04 — Two Steering Cycles</div>
+    <h2>H1 Hypothesis → H2 Validation → Priority Revision</h2>
+
+    <table class="h-cycle-table">
+      <tr>
+        <th></th>
+        <th>H1 · Jun (~49 slides)</th>
+        <th>H2 · Nov (~54 slides)</th>
+      </tr>
+      <tr>
+        <td>Question</td>
+        <td>Where to invest in 2025?</td>
+        <td>Was the H1 outlook right? What to revise?</td>
+      </tr>
+      <tr>
+        <td>Structure</td>
+        <td>Analysis → market view → segment recommendations</td>
+        <td>H1 actuals → market · mid-term · marketing · channel implications</td>
+      </tr>
+      <tr>
+        <td>Output</td>
+        <td>2025 investment <strong>premises + recommendations</strong> — management discussion draft</td>
+        <td>2025 <strong>priority revision</strong> — outlook → course correction</td>
+      </tr>
+      <tr>
+        <td>Key update</td>
+        <td>Prestige slowdown · masstige relative strength · EC 40%+ · no equal-SKU investment</td>
+        <td>TikTok / live upward revision · hero SKU + science claims maintained · mass development cycle shortened · UV Go/No-Go clarified</td>
+      </tr>
+    </table>
+
+    <div class="journey-flow">
+      <div class="jnode active">
+        <div class="jnum">H1 · Jun</div>
+        <div class="jtitle">Set 2025 investment hypotheses</div>
+        <div class="jsub">Market view + segment options → leadership debate on direction</div>
+      </div>
+      <div class="jnode">
+        <div class="jnum">Field signals</div>
+        <div class="jtitle">H1 actuals · 618 · competitive moves</div>
+        <div class="jsub">Test which assumptions held · where temperature gaps widened</div>
+      </div>
+      <div class="jnode">
+        <div class="jnum">H2 · Nov</div>
+        <div class="jtitle">Update portfolio &amp; resource priorities</div>
+        <div class="jsub">Confirm ranked allocation entering 2025 mid-term plan revision</div>
+      </div>
+    </div>
+
+    <div class="insight-box accent">The two cycles were deliberately linked: H1 created the <strong>investment hypothesis</strong>; H2 converted field evidence into a <strong>priority update</strong> — the same rhythm of hypothesis → validation → course correction used when steering overseas portfolio decisions.</div>
+  </div>
+
+  <!-- RESULT -->
+  <div class="cs-section">
+    <div class="cs-section-label">Result</div>
+    <h2>Management Decision Materials — Not a Report That Stopped at Analysis</h2>
+
+    <div class="ctx-strip">
+      <div class="ctx-row">
+        <div class="ctx-key">Outcome</div>
+        <div class="ctx-val">Two executive steering conversations in 2024 aligned China leadership on the outlook (H1), then on <strong>course correction and 2025 priorities</strong> (H2) — supporting the client's China mid-term plan review and investment decision process.</div>
+      </div>
+      <div class="ctx-row">
+        <div class="ctx-key">Decision value</div>
+        <div class="ctx-val">Quantified why EC + lower-tier cities + masstige / science positioning matter while prestige and Japanese-brand cohorts face headwinds — and translated that into <strong>ranked portfolio, channel, and resource choices</strong> leadership could act on.</div>
+      </div>
+      <div class="ctx-row">
+        <div class="ctx-key">Execution link</div>
+        <div class="ctx-val">Outputs served as the <strong>launchpad for execution</strong>: brand owners, EC teams, and local functions could proceed from agreed priorities rather than reopening unstructured debate — with H2 providing the validation loop for field adjustment.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="cs-section">
+    <div class="cs-section-label">Skills Demonstrated</div>
+    <h2>FMCG Strategy · Portfolio Prioritization · Executive Steering</h2>
+    <p style="font-size:13px;color:#444;line-height:1.9">This engagement applied structured issue framing, option presentation, and portfolio / resource prioritization to a global personal care manufacturer's China business — producing management-ready decision materials across two steering cycles. All client and commercial data is fully anonymized.</p>
+    <div class="skills-used">
+      <span class="su">FMCG Market Research</span>
+      <span class="su">China Cosmetics / Personal Care</span>
+      <span class="su">Mid-Term Plan Review</span>
+      <span class="su">Issue Structuring · 4-Layer Analysis</span>
+      <span class="su">Strategic Options Framing</span>
+      <span class="su">Portfolio Prioritization</span>
+      <span class="su">Channel Strategy (Tmall / TikTok)</span>
+      <span class="su">Resource Allocation Ranking</span>
+      <span class="su">Prestige / Masstige Segmentation</span>
+      <span class="su">Competitive Benchmarking</span>
+      <span class="su">Executive Steering Pack</span>
+      <span class="su">Management Decision Support</span>
+      <span class="su">Hypothesis → Validation Loop</span>
+    </div>
+    <a class="btn1" href="contact.html">Work with Dan →</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="fcopy">© 2026 Dan Xu</div>
+  <button class="ftop" onclick="window.scrollTo({top:0,behavior:'smooth'})">Back to top ↑</button>
+</footer>
+</body>
+</html>
