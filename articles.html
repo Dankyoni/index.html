@@ -11,7 +11,7 @@
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
   --ink:#111;--muted:#777;--light:#f8f7f5;--white:#fff;
-  --border:#e5e1db;--tag:#eeebe6;--accent:#8B6F4E;
+  --border:#e5e1db;--tag:#eeebe6;--accent:#5E6B2F;
   --serif:'Playfair Display',serif;--sans:'DM Sans',sans-serif;
 }
 body{font-family:var(--sans);background:var(--light);color:var(--ink);font-size:14px;line-height:1.65;min-height:100vh}
@@ -264,6 +264,22 @@ body :where(h1,h2,h3,h4){font-family:var(--serif)!important;font-weight:400!impo
 body *:not(.verse):not(.hero-panel h1 em):not(.hero-panel h1 em *){font-style:normal!important}
 body :where(.sec-label,.about-label,.lang-title,.ph-label,.div-label,.place,.csg-eyebrow,.sw-tag,.dtag,.ci-label,.hi-eyebrow,.art-meta,.ameta){font-family:var(--sans)!important;font-size:11px!important;letter-spacing:.18em!important;text-transform:uppercase!important;color:var(--olive)!important}
 body :where(p,li){line-height:1.8}
+
+/* unified-design 2026-11-12 */
+:root{--accent:#5E6B2F}
+body :where(table,.cs-table,.sit-grid,.situation,.callout,.cs-disclaimer,.tag,.art-tag,.atag,.chip){border-radius:10px}
+body :where(.cs-disclaimer){border-color:rgba(94,107,47,.25)!important;background:rgba(94,107,47,.05)!important}
+body :where(hr){border-color:rgba(94,107,47,.15)}
+body a:where(:not(.tab):not(.btn1):not(.btn2):not(.btn):not(.logo)){color:var(--olive)}
+
+/* articles-pass */
+@media(min-width:761px){.filter-row,.filters,.agrid,.page-head{padding-left:max(2.8rem,calc((100% - 1180px)/2))!important;padding-right:max(2.8rem,calc((100% - 1180px)/2))!important}}
+.fb{border-radius:999px!important;border:1px solid rgba(94,107,47,.45)!important;background:none!important;color:var(--olive)!important}
+.fb.on{background:var(--olive)!important;color:#fff!important}
+.acard{background:#fff!important;border:1px solid rgba(94,107,47,.14)!important;border-top:2px solid var(--olive)!important;border-radius:10px!important}
+.acard:hover{box-shadow:0 18px 40px -24px rgba(60,50,30,.45)}
+.anum{color:rgba(94,107,47,.25)!important}
+.amore{color:var(--olive)!important}
 </style>
 </head>
 <body>
@@ -280,7 +296,7 @@ body :where(p,li){line-height:1.8}
   </nav>
 </header>
 <div class="page-head"><h2>Articles & Writing</h2><p>Professional insights on market entry and growth, alongside personal life writing.</p></div>
-  <div style="padding:.75rem 2.8rem;border-bottom:1px solid var(--border);display:flex;gap:.5rem;align-items:center">
+  <div class="filters" style="padding:.75rem 2.8rem;border-bottom:1px solid rgba(94,107,47,.12);display:flex;gap:.5rem;align-items:center">
     <span style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-right:.3rem">Filter:</span>
     <button class="fb on" id="fb-essay" onclick="fa('essay',this)" style="font-family:var(--sans);font-size:11px;letter-spacing:.07em;text-transform:uppercase;padding:.32rem .9rem;border:1px solid var(--ink);background:var(--ink);color:var(--white);cursor:pointer">Essay</button>
     <button class="fb" id="fb-life" onclick="fa('life',this)" style="font-family:var(--sans);font-size:11px;letter-spacing:.07em;text-transform:uppercase;padding:.32rem .9rem;border:1px solid var(--border);background:none;color:var(--muted);cursor:pointer">Life Writing</button>

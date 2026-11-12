@@ -11,7 +11,7 @@
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
   --ink:#111;--muted:#777;--light:#f8f7f5;--white:#fff;
-  --border:#e5e1db;--tag:#eeebe6;--accent:#8B6F4E;--navy:#1c2b3a;
+  --border:#e5e1db;--tag:#eeebe6;--accent:#5E6B2F;--navy:#3a4228;
   --serif:'Playfair Display',serif;--sans:'DM Sans',sans-serif;
 }
 body{font-family:var(--sans);background:var(--light);color:var(--ink);font-size:14px;line-height:1.65;min-height:100vh}
@@ -68,10 +68,10 @@ header{display:flex;justify-content:space-between;align-items:stretch;padding:0 
 .pb-seg:last-child{border-right:none}
 .pb-seg.s1{background:#e8e4de;color:#999;flex:1}
 .pb-seg.s2{background:#c5bfb5;color:#666;flex:3}
-.pb-seg.s3{background:#1c2b3a;color:rgba(255,255,255,.9);flex:5.5}
+.pb-seg.s3{background:#3a4228;color:rgba(255,255,255,.9);flex:5.5}
 .pb-seg.s4{background:#2e4a62;color:rgba(255,255,255,.85);flex:3.5}
-.pb-seg.s5{background:#8B6F4E;color:rgba(255,255,255,.85);flex:2.5}
-.pb-seg.s6{background:#b8956e;color:rgba(255,255,255,.8);flex:2}
+.pb-seg.s5{background:#5E6B2F;color:rgba(255,255,255,.85);flex:2.5}
+.pb-seg.s6{background:#8a9466;color:rgba(255,255,255,.8);flex:2}
 .pb-legend{display:flex;gap:1.2rem;flex-wrap:wrap}
 .leg-item{display:flex;align-items:center;gap:.4rem;font-size:11px;color:var(--muted)}
 .leg-dot{width:10px;height:10px;border-radius:1px;flex-shrink:0}
@@ -102,7 +102,7 @@ header{display:flex;justify-content:space-between;align-items:stretch;padding:0 
 /* JOURNEY */
 .journey-flow{display:flex;gap:1px;background:var(--border);margin:1.5rem 0}
 .jnode{flex:1;background:var(--white);padding:1rem 1.1rem}
-.jnode.active{background:#f5f0ea}
+.jnode.active{background:#f1f2ea}
 .jnum{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:.3rem}
 .jtitle{font-size:12px;font-weight:500;color:var(--ink);margin-bottom:.25rem}
 .jsub{font-size:11px;color:var(--muted);line-height:1.55}
@@ -198,6 +198,13 @@ body :where(h1,h2,h3,h4){font-family:var(--serif)!important;font-weight:400!impo
 body *:not(.verse):not(.hero-panel h1 em):not(.hero-panel h1 em *){font-style:normal!important}
 body :where(.sec-label,.about-label,.lang-title,.ph-label,.div-label,.place,.csg-eyebrow,.sw-tag,.dtag,.ci-label,.hi-eyebrow,.art-meta,.ameta){font-family:var(--sans)!important;font-size:11px!important;letter-spacing:.18em!important;text-transform:uppercase!important;color:var(--olive)!important}
 body :where(p,li){line-height:1.8}
+
+/* unified-design 2026-11-12 */
+:root{--accent:#5E6B2F}
+body :where(table,.cs-table,.sit-grid,.situation,.callout,.cs-disclaimer,.tag,.art-tag,.atag,.chip){border-radius:10px}
+body :where(.cs-disclaimer){border-color:rgba(94,107,47,.25)!important;background:rgba(94,107,47,.05)!important}
+body :where(hr){border-color:rgba(94,107,47,.15)}
+body a:where(:not(.tab):not(.btn1):not(.btn2):not(.btn):not(.logo)){color:var(--olive)}
 </style>
 </head>
 <body>
@@ -224,7 +231,7 @@ body :where(p,li){line-height:1.8}
     <div class="cs-meta-item"><strong>Client</strong>Japanese Medical Device Manufacturer (anonymized)</div>
     <div class="cs-meta-item"><strong>Market</strong>China — Online EC (Tmall / JD) + Offline</div>
     <div class="cs-meta-item"><strong>Brands Studied</strong>3 Leading Competitors · APAP &amp; BiPAP</div>
-    <div class="cs-meta-item"><strong>Format</strong>~45-Slide Executive Steering Pack</div>
+    <div class="cs-meta-item"><strong>Format</strong>Executive Steering Pack</div>
     <div class="cs-meta-item"><strong>Role</strong>Lead Analyst · NRI Shanghai</div>
   </div>
   <div class="cs-disclaimer">🔒 Client identity and all commercial data anonymized. Methodology and framework only.</div>
@@ -248,7 +255,7 @@ body :where(p,li){line-height:1.8}
       </div>
       <div class="ctx-row">
         <div class="ctx-key">Deliverable</div>
-        <div class="ctx-val">~45-slide executive steering pack delivered to client leadership to reassess mid-term product strategy, channel investment priorities, and organizational structure for the China PAP business.</div>
+        <div class="ctx-val">executive steering pack delivered to client leadership to reassess mid-term product strategy, channel investment priorities, and organizational structure for the China PAP business.</div>
       </div>
     </div>
 
@@ -289,10 +296,10 @@ body :where(p,li){line-height:1.8}
         <div class="pb-legend">
           <div class="leg-item"><div class="leg-dot" style="background:#e8e4de"></div>Entry tier (lowest volume)</div>
           <div class="leg-item"><div class="leg-dot" style="background:#c5bfb5"></div>Low-mid</div>
-          <div class="leg-item"><div class="leg-dot" style="background:#1c2b3a"></div>Core tier ★ Highest unit volume</div>
+          <div class="leg-item"><div class="leg-dot" style="background:#3a4228"></div>Core tier ★ Highest unit volume</div>
           <div class="leg-item"><div class="leg-dot" style="background:#2e4a62"></div>Mid-high</div>
-          <div class="leg-item"><div class="leg-dot" style="background:#8B6F4E"></div>Premium</div>
-          <div class="leg-item"><div class="leg-dot" style="background:#b8956e"></div>High-end</div>
+          <div class="leg-item"><div class="leg-dot" style="background:#5E6B2F"></div>Premium</div>
+          <div class="leg-item"><div class="leg-dot" style="background:#8a9466"></div>High-end</div>
         </div>
         <p class="bar-note">Bar shows relative proportional weight of each price tier. Specific unit shares not disclosed.</p>
       </div>

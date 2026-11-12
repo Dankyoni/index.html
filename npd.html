@@ -11,7 +11,7 @@
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
   --ink:#111;--muted:#777;--light:#f8f7f5;--white:#fff;
-  --border:#e5e1db;--tag:#eeebe6;--accent:#8B6F4E;
+  --border:#e5e1db;--tag:#eeebe6;--accent:#5E6B2F;
   --serif:'Playfair Display',serif;--sans:'DM Sans',sans-serif;
 }
 body{font-family:var(--sans);background:var(--light);color:var(--ink);font-size:14px;line-height:1.65;min-height:100vh}
@@ -355,6 +355,13 @@ body :where(h1,h2,h3,h4){font-family:var(--serif)!important;font-weight:400!impo
 body *:not(.verse):not(.hero-panel h1 em):not(.hero-panel h1 em *){font-style:normal!important}
 body :where(.sec-label,.about-label,.lang-title,.ph-label,.div-label,.place,.csg-eyebrow,.sw-tag,.dtag,.ci-label,.hi-eyebrow,.art-meta,.ameta){font-family:var(--sans)!important;font-size:11px!important;letter-spacing:.18em!important;text-transform:uppercase!important;color:var(--olive)!important}
 body :where(p,li){line-height:1.8}
+
+/* unified-design 2026-11-12 */
+:root{--accent:#5E6B2F}
+body :where(table,.cs-table,.sit-grid,.situation,.callout,.cs-disclaimer,.tag,.art-tag,.atag,.chip){border-radius:10px}
+body :where(.cs-disclaimer){border-color:rgba(94,107,47,.25)!important;background:rgba(94,107,47,.05)!important}
+body :where(hr){border-color:rgba(94,107,47,.15)}
+body a:where(:not(.tab):not(.btn1):not(.btn2):not(.btn):not(.logo)){color:var(--olive)}
 </style>
 </head>
 <body>
@@ -375,12 +382,12 @@ body :where(p,li){line-height:1.8}
   <a href="casestudy.html" style="display:inline-flex;align-items:center;gap:.5rem;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem;text-decoration:none"><i class="ti ti-arrow-left"></i> Back to Case Studies</a>
   <div class="npd-eyebrow">NPD Case Study · FMCG · China Market · ~6 Months</div>
   <h1>China New Product Development:<br><em>From Category Research to Executive Decision</em></h1>
-  <p class="npd-tagline">Coordinated a 6-month NPD program for a global household & personal care manufacturer — from market sizing and consumer research to a 61-slide executive steering pack that shaped the client's China product roadmap.</p>
+  <p class="npd-tagline">Coordinated a 6-month NPD program for a global household & personal care manufacturer — from market sizing and consumer research to an executive steering pack that shaped the client's China product roadmap.</p>
   <div class="npd-meta">
     <div class="npd-meta-item"><strong>Client</strong><span>Global household & personal care manufacturer (Japan HQ)</span></div>
     <div class="npd-meta-item"><strong>Period</strong><span>Oct 2023 – May 2024</span></div>
     <div class="npd-meta-item"><strong>My Role</strong><span>Program coordinator & research lead, NRI Shanghai</span></div>
-    <div class="npd-meta-item"><strong>Deliverable</strong><span>~61-slide executive capstone pack</span></div>
+    <div class="npd-meta-item"><strong>Deliverable</strong><span>executive capstone pack</span></div>
   </div>
   <div class="npd-disclaimer">⚡ Fully anonymized — client name and unpublished data omitted</div>
 </div>
@@ -426,7 +433,7 @@ body :where(p,li){line-height:1.8}
       <div class="role-card">
         <div class="role-icon"><i class="ti ti-file-text"></i></div>
         <div class="role-title">Executive Pack Architecture</div>
-        <div class="role-desc">Drove the ~61-slide capstone: concept filtering → category evidence → 4P hypotheses → feasibility trade-offs → regulatory guardrails → partner landscape → roadmap. Bilingual delivery in Chinese and Japanese/English.</div>
+        <div class="role-desc">Drove the capstone: concept filtering → category evidence → 4P hypotheses → feasibility trade-offs → regulatory guardrails → partner landscape → roadmap. Bilingual delivery in Chinese and Japanese/English.</div>
       </div>
     </div>
   </div>
@@ -473,12 +480,12 @@ body :where(p,li){line-height:1.8}
     <p>Across six categories, four themes consistently shaped the strategic recommendations:</p>
     <div class="finding-grid">
       <div class="finding-card">
-        <div class="finding-stripe" style="background:#8B6F4E"></div>
+        <div class="finding-stripe" style="background:#5E6B2F"></div>
         <div class="finding-body">
           <div class="finding-tag">Market Structure</div>
-          <div class="finding-icon" style="color:#8B6F4E"><i class="ti ti-trending-up"></i></div>
+          <div class="finding-icon" style="color:#5E6B2F"><i class="ti ti-trending-up"></i></div>
           <div class="finding-title">Aroma is the highest-priority category</div>
-          <div class="finding-stat" style="border-color:#8B6F4E">CAGR 15% · Largest Tmall GMV across 6 categories</div>
+          <div class="finding-stat" style="border-color:#5E6B2F">CAGR 15% · Largest Tmall GMV across 6 categories</div>
           <div class="finding-desc">No Japanese brand holds a dominant position in premium aroma — creating a clear gap for a Japanese quality + air-care expert positioning strategy.</div>
         </div>
       </div>
@@ -548,7 +555,7 @@ body :where(p,li){line-height:1.8}
   <div class="npd-section">
     <div class="npd-section-label">05 — Outcome</div>
     <h2>Defend vs. Incubate — The Decision Framework</h2>
-    <p>The ~61-slide executive capstone enabled leadership to align on a clear investment framework — where to commit now, where to phase in, and where to validate first.</p>
+    <p>The executive capstone enabled leadership to align on a clear investment framework — where to commit now, where to phase in, and where to validate first.</p>
     <div class="priority-grid">
       <div class="priority-card dark">
         <div class="priority-label">Defend — Invest Now</div>
@@ -579,7 +586,7 @@ body :where(p,li){line-height:1.8}
       </div>
     </div>
     <div class="outcome-grid">
-      <div class="outcome-card"><div class="outcome-num">~61</div><div class="outcome-label">Slide executive capstone</div><div class="outcome-desc">One integrated leadership narrative linking renovation and net-new concepts under a single evidence-backed frame</div></div>
+      <div class="outcome-card"><div class="outcome-num">6</div><div class="outcome-label">Categories in one decision pack</div><div class="outcome-desc">One integrated leadership narrative linking renovation and net-new concepts under a single evidence-backed frame</div></div>
       <div class="outcome-card"><div class="outcome-num">~10</div><div class="outcome-label">Directional SKUs shortlisted</div><div class="outcome-desc">Each with explicit feasibility vs. market-attractiveness trade-offs for FY planning conversations</div></div>
       <div class="outcome-card"><div class="outcome-num">~8</div><div class="outcome-label">Partners identified</div><div class="outcome-desc">Universities, ODM/OEM manufacturers, and air-care startups mapped for next-phase development</div></div>
       <div class="outcome-card"><div class="outcome-num">6</div><div class="outcome-label">Months Program Duration</div><div class="outcome-desc">Weekly PMO cadence Oct 2023 – Mar 2024, with product-page sprint through May 2024</div></div>

@@ -11,7 +11,7 @@
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
   --ink:#111;--muted:#777;--light:#f8f7f5;--white:#fff;
-  --border:#e5e1db;--tag:#eeebe6;--accent:#8B6F4E;--navy:#1c2b3a;
+  --border:#e5e1db;--tag:#eeebe6;--accent:#5E6B2F;--navy:#3a4228;
   --serif:'Playfair Display',serif;--sans:'DM Sans',sans-serif;
 }
 body{font-family:var(--sans);background:var(--light);color:var(--ink);font-size:14px;line-height:1.65;min-height:100vh}
@@ -82,7 +82,7 @@ header{display:flex;justify-content:space-between;align-items:stretch;padding:0 
 .ch-tier-name{font-size:12.5px;font-weight:500;color:var(--ink);margin-bottom:.2rem}
 .ch-tier-desc{font-size:11.5px;color:var(--muted);line-height:1.6}
 .ch-tier.highlight .ch-tier-label{background:var(--navy);color:rgba(255,255,255,.6);border-right-color:var(--navy)}
-.ch-tier.highlight .ch-tier-content{background:#f5f0ea}
+.ch-tier.highlight .ch-tier-content{background:#f1f2ea}
 .ch-tier.highlight .ch-tier-name{color:var(--navy)}
 
 /* COMMERCIAL MODEL */
@@ -208,6 +208,13 @@ body :where(h1,h2,h3,h4){font-family:var(--serif)!important;font-weight:400!impo
 body *:not(.verse):not(.hero-panel h1 em):not(.hero-panel h1 em *){font-style:normal!important}
 body :where(.sec-label,.about-label,.lang-title,.ph-label,.div-label,.place,.csg-eyebrow,.sw-tag,.dtag,.ci-label,.hi-eyebrow,.art-meta,.ameta){font-family:var(--sans)!important;font-size:11px!important;letter-spacing:.18em!important;text-transform:uppercase!important;color:var(--olive)!important}
 body :where(p,li){line-height:1.8}
+
+/* unified-design 2026-11-12 */
+:root{--accent:#5E6B2F}
+body :where(table,.cs-table,.sit-grid,.situation,.callout,.cs-disclaimer,.tag,.art-tag,.atag,.chip){border-radius:10px}
+body :where(.cs-disclaimer){border-color:rgba(94,107,47,.25)!important;background:rgba(94,107,47,.05)!important}
+body :where(hr){border-color:rgba(94,107,47,.15)}
+body a:where(:not(.tab):not(.btn1):not(.btn2):not(.btn):not(.logo)){color:var(--olive)}
 </style>
 </head>
 <body>
@@ -276,7 +283,7 @@ body :where(p,li){line-height:1.8}
         <div class="bid-status">Not Selected</div>
       </div>
       <div class="bid-col winner">
-        <div class="bid-icon" style="opacity:1;color:#8B6F4E;font-size:1.5rem">✓</div>
+        <div class="bid-icon" style="opacity:1;color:#5E6B2F;font-size:1.5rem">✓</div>
         <div class="bid-label">Awarded To</div>
         <div class="bid-name">This Engagement</div>
         <div class="bid-status">Exclusive Mandate</div>
@@ -300,21 +307,21 @@ body :where(p,li){line-height:1.8}
             <span class="brand-name">Japan Brand (Client) · Market Pioneer</span>
             <span class="direction down">▼ Declining share</span>
           </div>
-          <div class="share-bar-outer"><div class="share-bar-fill" style="width:52%;background:#1c2b3a"></div></div>
+          <div class="share-bar-outer"><div class="share-bar-fill" style="width:52%;background:#3a4228"></div></div>
         </div>
         <div class="share-row">
           <div class="share-label">
             <span class="brand-name">European Challenger A · Aggressive EC Growth</span>
             <span class="direction up">▲ Fast growing</span>
           </div>
-          <div class="share-bar-outer"><div class="share-bar-fill" style="width:28%;background:#8B6F4E"></div></div>
+          <div class="share-bar-outer"><div class="share-bar-fill" style="width:28%;background:#5E6B2F"></div></div>
         </div>
         <div class="share-row">
           <div class="share-label">
             <span class="brand-name">European Challenger B · Mid-Market Entry</span>
             <span class="direction up">▲ Growing</span>
           </div>
-          <div class="share-bar-outer"><div class="share-bar-fill" style="width:13%;background:#b8956e"></div></div>
+          <div class="share-bar-outer"><div class="share-bar-fill" style="width:13%;background:#8a9466"></div></div>
         </div>
         <div class="share-row">
           <div class="share-label">
