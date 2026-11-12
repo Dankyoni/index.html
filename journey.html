@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dan Xu · My Journey</title>
+<meta name="description" content="From a mountain village in south China to Japan, Shanghai, a year on the road across four continents, and Germany: how I learned to understand people across cultures.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --ink:#111;--muted:#777;--light:#f8f7f5;--white:#fff;
+  --border:#e5e1db;--tag:#eeebe6;--accent:#8B6F4E;
+  --serif:'Playfair Display',serif;--sans:'DM Sans',sans-serif;
+}
+body{font-family:var(--sans);background:var(--light);color:var(--ink);font-size:14px;line-height:1.65;min-height:100vh}
+header{position:sticky;top:0;z-index:30;display:flex;justify-content:space-between;align-items:center;padding:0 2.8rem;height:58px;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(229,225,219,.6)}
+.logo{font-family:var(--serif);font-size:1.05rem;font-weight:400;text-decoration:none;color:var(--ink)}
+.logo span{color:var(--muted);font-style:italic;font-size:.9rem}
+.header-nav{display:flex;align-items:stretch;overflow-x:auto}
+.tab{font-family:var(--sans);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding:0 1rem;height:58px;border:none;background:none;cursor:pointer;color:var(--muted);border-bottom:2px solid transparent;transition:all .2s;white-space:nowrap;text-decoration:none;display:inline-flex;align-items:center}
+.tab:hover{color:var(--ink)}
+.tab.on{color:var(--ink);border-bottom-color:var(--accent);font-weight:500}
+
+.page-head{padding:3rem 2.8rem 2.5rem;border-bottom:1px solid var(--border);background:var(--white)}
+.page-head h2{font-family:var(--serif);font-size:2rem;font-weight:400;margin-bottom:.35rem}
+.page-head p{color:var(--muted);font-size:13.5px;max-width:640px;line-height:1.8}
+
+.section{padding:2.8rem 2.8rem;border-bottom:1px solid var(--border)}
+.sec-label{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:1.6rem;display:flex;align-items:center;gap:.6rem}
+.sec-label::after{content:'';width:28px;height:.5px;background:var(--border);display:inline-block}
+
+.thread{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);margin-bottom:1.6rem}
+.step{background:var(--white);padding:1.2rem 1.1rem}
+.step-n{font-family:var(--serif);font-style:italic;color:var(--accent);font-size:1.1rem}
+.step-t{font-weight:500;font-size:13px;margin:.2rem 0 .3rem}
+.step-d{font-size:12px;color:var(--muted);line-height:1.7}
+.lead{font-family:var(--serif);font-size:1.25rem;line-height:1.6;max-width:720px}
+
+.stop{display:grid;grid-template-columns:320px 1fr;gap:2.4rem;padding:2rem 0;border-bottom:1px solid var(--border)}
+.stop:last-child{border-bottom:none}
+.stop figure{margin:0}
+.stop img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:var(--tag)}
+.stop figcaption{font-size:11px;color:#aaa;margin-top:.4rem}
+.place{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:.35rem}
+.stop h3{font-family:var(--serif);font-weight:400;font-size:1.3rem;margin-bottom:.7rem;line-height:1.35}
+.stop p{font-size:13.5px;color:#444;line-height:1.85;margin-bottom:.7rem;max-width:620px}
+.takeaway{font-size:12.5px;color:var(--ink);border-left:2px solid var(--accent);padding:.3rem 0 .3rem .9rem;margin-top:.4rem;max-width:620px}
+.takeaway b{font-weight:500}
+.stop.noimg{grid-template-columns:1fr}
+
+.close{background:var(--white)}
+.close p{font-size:14px;color:#444;line-height:1.9;max-width:680px;margin-bottom:.9rem}
+.links{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.2rem}
+.btn{font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:.6rem 1.1rem;border:1px solid var(--ink);color:var(--ink);text-decoration:none}
+.btn.dark{background:var(--ink);color:var(--white)}
+
+footer{background:var(--white);border-top:1px solid var(--border);padding:1.4rem 2.8rem;display:flex;justify-content:space-between;align-items:center}
+.fcopy{font-size:12px;color:var(--muted)}
+.ftop{background:none;border:none;font-size:12px;color:var(--muted);cursor:pointer;font-family:var(--sans)}
+
+@media(max-width:760px){
+  header{padding:0 1.6rem}
+  .page-head,.section{padding-left:1.6rem;padding-right:1.6rem}
+  .thread{grid-template-columns:repeat(2,1fr)}
+  .stop{grid-template-columns:1fr;gap:1rem}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">Dan Xu <span>· Personal Site</span></a>
+  <nav class="header-nav">
+    <a href="index.html" class="tab">About</a>
+    <a href="experience.html" class="tab">Experience</a>
+    <a href="journey.html" class="tab on">Journey</a>
+    <a href="projects.html" class="tab">Projects</a>
+    <a href="casestudy.html" class="tab">Case Study</a>
+    <a href="articles.html" class="tab">Articles</a>
+    <a href="contact.html" class="tab">Contact</a>
+  </nav>
+</header>
+
+<div class="page-head">
+  <h2>My Journey</h2>
+  <p>From a mountain village in Jiangxi to Sapporo, Tokyo, Shanghai, a year on the road across four continents, and now Düsseldorf. Every step took me further from where I started, and closer to the people I met along the way.</p>
+</div>
+
+<div class="section">
+  <div class="sec-label">The thread</div>
+  <p class="lead">I grew up in a mountain village in south China. I was the first in my family to go to university, the first to study and work abroad, and the first to travel the world. Every chapter since has followed the same four steps.</p>
+  <div class="thread" style="margin-top:1.6rem">
+    <div class="step"><div class="step-n">01</div><div class="step-t">Arrive somewhere new</div><div class="step-d">Tokyo as the first foreign sales hire. Shanghai as a newcomer to FMCG. South America as a stranger. Germany with a new language.</div></div>
+    <div class="step"><div class="step-n">02</div><div class="step-t">Learn from the people there</div><div class="step-d">Listen first. Ask the questions a local wouldn't think to ask. Understand before judging.</div></div>
+    <div class="step"><div class="step-n">03</div><div class="step-t">Earn their trust</div><div class="step-d">Through frequent, honest conversation and solving real problems together.</div></div>
+    <div class="step"><div class="step-n">04</div><div class="step-t">Deliver</div><div class="step-d">An exclusive mandate won in six months at Rakuten. German B2 in eight months. Friendships that outlast the trip.</div></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="sec-label">Part I · Leaving the village</div>
+
+  <div class="stop noimg">
+    <div>
+      <div class="place">Jiangxi, China · age 3 to 13</div>
+      <h3>"You plant seeds, Grandpa. I plant words."</h3>
+      <p>I grew up in my grandparents' village in southern Jiangxi. Like many families there, my parents worked in the factory cities of the south, and at times seven or eight of us grandchildren lived under my grandmother's roof. My grandfather was proud to be a farmer. When he asked why reading made me so happy, I told him: you plant seeds and harvest rice; I plant words and harvest joy. He didn't fully understand, but from then on studying earned me a pass on some of the farm work.</p>
+      <p>Around the age of ten, the village school principal took me into town on his motorcycle for an essay competition. For the first time I saw a world bigger than the village: confident city kids who came over to talk to me. In fifth grade I wrote down a dream: to travel around the world.</p>
+      <div class="takeaway"><b>What I took with me:</b> a life without much is still full of people who help you. A principal, a teacher, a grandfather who let a girl read.</div>
+    </div>
+  </div>
+
+  <div class="stop noimg">
+    <div>
+      <div class="place">Jiangxi → Chengdu</div>
+      <h3>An English teacher, a factory line, and the first in my family at university</h3>
+      <p>In middle school I fell in love with English, and my teacher kept telling me to go out and see the bigger world. The summer before high school I worked on a shoe-factory production line in Dongguan, standing at the same station every day. It showed me clearly which life I did not want to choose by default.</p>
+      <p>My parents came home to open a small shop so they could support my studies. With their care, I became the first in my family to go to university, in Chengdu, far from home.</p>
+      <div class="takeaway"><b>What I took with me:</b> motivation is strongest when you have seen the alternative up close.</div>
+    </div>
+  </div>
+
+  <div class="stop noimg">
+    <div>
+      <div class="place">Sapporo · Tokyo, Japan</div>
+      <h3>Across the sea: research on belonging, then the first foreign sales hire</h3>
+      <p>A chance at university took me across the sea to Hokkaido for my master's. My field research was with immigrant students in Japanese schools, on language, identity and belonging. To pay my way I worked part-time in a Korean barbecue restaurant, an Italian restaurant, an international hotel café and as an interpreter in a high-end department store. Japanese service culture taught me to read what a guest needs before they say it.</p>
+      <p>In Tokyo I joined YRGLM as their first foreign sales hire. Senior colleagues trained me hands-on, and I rotated through business development, marketing analysis and inside sales.</p>
+      <div class="takeaway"><b>What I took with me:</b> being the outsider is a skill. You learn to listen harder, and you notice what insiders miss.</div>
+    </div>
+  </div>
+
+  <div class="stop noimg">
+    <div>
+      <div class="place">Shanghai, China</div>
+      <h3>New to FMCG, new to Shanghai, and then into strategy</h3>
+      <p>At Rakuten I had never worked in FMCG or lived in Shanghai. My method was simple: learning, asking, absorbing, monitoring. Within six months my manager trusted me to lead a competitive bid, and we won an exclusive distribution mandate against two agencies. I went on to manage eight Japanese brand partnerships to 132% of target. Work hard, play hard: I once submitted a proposal at 10 pm, then flew to Laos for a holiday.</p>
+      <p>At Nomura Research Institute I moved to the strategy side, building the market analyses and entry strategies that Japanese manufacturers used to decide where to go next.</p>
+      <p>Shanghai also opened the door to a much bigger world. I became close friends with people from all over the globe, and our conversations went far beyond the mainstream values I grew up with in Asia: death and vitality, equality, education, passion for life, freedom, relationships, and what it really means to have seen the world. Those friendships changed how I think, and they planted the seed for the year that came next.</p>
+      <div class="takeaway"><b>What I took with me:</b> strategy and execution need each other, and I had now done both. And the best ideas often come from people who see the world differently from you.</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="sec-label">Part II · A year on the road</div>
+  <p class="lead" style="margin-bottom:1rem">In 2025, with the dream from fifth grade still in my pocket, I gave myself one year: Europe, South America, the US and Asia, with freelance market research in my backpack. I wasn't looking for a gap. I was looking for people.</p>
+
+  <div class="stop">
+    <figure><img src="img/journey/argentina.jpg" alt="Walking on a beach in Patagonia with friends" onerror="this.parentNode.style.display='none';this.closest('.stop').classList.add('noimg')"><figcaption>Patagonia, Argentina</figcaption></figure>
+    <div>
+      <div class="place">Argentina · Buenos Aires → Patagonia</div>
+      <h3>Living inside a matriarchal family, then five of us on the road south</h3>
+      <p>Buenos Aires was my first stop in South America. A friend brought me into her family's reunion in Mar del Plata, a big family organised around a grandmother, where daughters argued openly with their parents and every mother pushed her children to live their own lives. Then five of us drove from Buenos Aires to Patagonia.</p>
+      <p>Days in a car do something that meetings never do. We planned routes, solved problems, argued, laughed, and by the end it felt as if we had known each other in another life.</p>
+      <div class="takeaway"><b>What I took with me:</b> trust is built through frequent, honest conversation and solving problems side by side. It is the same with a distributor or a brand partner.</div>
+    </div>
+  </div>
+
+  <div class="stop">
+    <figure><img src="img/journey/brazil.jpg" alt="A world-map tattoo and a camper van in Brazil" onerror="this.parentNode.style.display='none';this.closest('.stop').classList.add('noimg')"><figcaption>Brazil</figcaption></figure>
+    <div>
+      <div class="place">Brazil</div>
+      <h3>A woman who tattooed the world map onto her arm</h3>
+      <p>I think I came to Brazil just to meet her. After a life that broke and rebuilt her, she gave up almost everything, tattooed a world map as her new world, and bought a camper van as her new home.</p>
+      <p>When I'm honest with myself, honest people seem to find me. She taught me an order I still follow: understanding first, then storytelling.</p>
+      <div class="takeaway"><b>What I took with me:</b> before I pitch anything, I want to understand the person on the other side of the table.</div>
+    </div>
+  </div>
+
+  <div class="stop">
+    <figure><img src="img/journey/peru.jpg" alt="Sacred Valley, Peru" onerror="this.parentNode.style.display='none';this.closest('.stop').classList.add('noimg')"><figcaption>Sacred Valley, Peru</figcaption></figure>
+    <div>
+      <div class="place">Peru · Lima · Cusco · Sacred Valley</div>
+      <h3>A month at a dog shelter, and both sides of a country</h3>
+      <p>I volunteered at a dog shelter run by a writer who had built it with his friends. His life was simple: care for the dogs, organise the volunteers, write his novels. Life can be that simple, if you choose it.</p>
+      <p>I loved Lima's sunsets over the cliffs and the colour of Cusco's markets. A local host also showed me, from a bridge, the hillside settlements that most visitors never see. I hiked to Machu Picchu alone, and was never really alone on the way.</p>
+      <div class="takeaway"><b>What I took with me:</b> a market is never only its shopping streets. To understand consumers, look at the whole picture, the beautiful and the uncomfortable.</div>
+    </div>
+  </div>
+
+  <div class="stop">
+    <figure><img src="img/journey/bolivia.jpg" alt="Spanish school group in Bolivia" onerror="this.parentNode.style.display='none';this.closest('.stop').classList.add('noimg')"><figcaption>Bolivia</figcaption></figure>
+    <div>
+      <div class="place">Bolivia</div>
+      <h3>One month of Spanish, then deep into the mountains</h3>
+      <p>After a month of intensive Spanish, I could finally hold everyday conversations, and that changed everything. I went into the mountains and started hearing local people's stories in their own words. The people I met there were faithful, pure and deeply genuine.</p>
+      <div class="takeaway"><b>What I took with me:</b> even basic language opens doors that no translator can. It is why I learned Japanese to N1 and German to B2.</div>
+    </div>
+  </div>
+
+  <div class="stop">
+    <figure><img src="img/journey/colombia.jpg" alt="View from a mountain wooden house in Colombia" onerror="this.parentNode.style.display='none';this.closest('.stop').classList.add('noimg')"><figcaption>Northern Colombia</figcaption></figure>
+    <div>
+      <div class="place">Colombia</div>
+      <h3>A month behind the bar of a wooden house between mountain and sea</h3>
+      <p>I volunteered as a bartender in a hostel high on a jungle mountainside above the Caribbean, reusing what I had learned in a part-time job in Tokyo. Listening, talking and smiling turned out to be the best skills for building connections.</p>
+      <p>Friends I had met along the whole South American route came to visit me there, including a couple I had first met in Buenos Aires half a year earlier. We talked philosophy over mojitos for an afternoon, and promised to meet again in Europe. We did.</p>
+      <div class="takeaway"><b>What I took with me:</b> relationships built with care travel with you. Most of my partnerships at Rakuten lasted for the same reason.</div>
+    </div>
+  </div>
+
+  <div class="stop">
+    <figure><img src="img/journey/europe.jpg" alt="Friends gathered in a living room" onerror="this.parentNode.style.display='none';this.closest('.stop').classList.add('noimg')"><figcaption>Europe</figcaption></figure>
+    <div>
+      <div class="place">Europe · New York · Istanbul</div>
+      <h3>Writing for a bed, and friends in every city</h3>
+      <p>In Spain, Portugal, France, Germany and Denmark I exchanged writing and storytelling work for accommodation and visited friends I had made over the years. New York reminded me that culture is open to anyone who takes part, however long they stay. In Istanbul, friends who had lived there for three years showed me the city through their eyes.</p>
+      <div class="takeaway"><b>What I took with me:</b> I can make myself useful almost anywhere, and people open up when you arrive with something to give.</div>
+    </div>
+  </div>
+
+  <div class="stop">
+    <figure><img src="img/journey/germany.jpg" alt="German language class in Düsseldorf" onerror="this.parentNode.style.display='none';this.closest('.stop').classList.add('noimg')"><figcaption>Düsseldorf, Germany</figcaption></figure>
+    <div>
+      <div class="place">Germany · Düsseldorf</div>
+      <h3>German B2 in eight months</h3>
+      <p>I moved to Germany and studied five hours a day in an intensive course, plus three to five hours of self-study after class, reading and talking with AI. The most interesting part was writing and speaking: a new language is a new way of thinking and of expressing values.</p>
+      <div class="takeaway"><b>What I took with me:</b> the same habit that won the Rakuten bid in my first six months: learning, asking, absorbing, monitoring.</div>
+    </div>
+  </div>
+</div>
+
+<div class="section close">
+  <div class="sec-label">Why it matters for the work</div>
+  <p>Most of my career has been stakeholder work: sitting between a brand headquarters and a new market, between strategy and the people who have to make it happen. Consulting taught me to read markets from data. This year taught me to read them from people.</p>
+  <p>I don't judge people quickly. I try to understand them first. That is what I bring to international business development, partner management and market expansion: the analysis, and the human context that makes it work.</p>
+  <div class="links">
+    <a class="btn dark" href="experience.html">See my experience</a>
+    <a class="btn" href="https://kyoni.substack.com" target="_blank">Read my lifewriting on Substack</a>
+    <a class="btn" href="contact.html">Get in touch</a>
+  </div>
+</div>
+
+<footer>
+  <div class="fcopy">© 2026 Dan Xu</div>
+  <button class="ftop" onclick="window.scrollTo({top:0,behavior:'smooth'})">Back to top ↑</button>
+</footer>
+
+</body>
+</html>
