@@ -159,6 +159,25 @@ footer{flex-wrap:wrap;gap:.8rem}
   .step::before{top:.9rem;left:-1.6rem}
   .step-n{font-size:2rem!important}
 }
+
+/* layout-pass 2026-11-12 */
+@media(min-width:761px){.page-head,.section{padding-left:max(2.8rem,calc((100% - 1180px)/2))!important;padding-right:max(2.8rem,calc((100% - 1180px)/2))!important}}
+.page-head p{max-width:720px!important}
+.page-head p{font-family:var(--sans)!important;font-style:normal!important;font-size:1.05rem!important;color:#5a554d}
+.sec-label{font-family:var(--sans)!important;font-style:normal!important;font-size:11px!important;letter-spacing:.18em!important;text-transform:uppercase!important}
+@media(min-width:761px){
+  .stop{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr)!important;gap:3.5rem!important;align-items:center}
+  .stop.right{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr)!important}
+  .stop.noimg{grid-template-columns:1fr!important}
+}
+.stop p,.takeaway{max-width:none!important}
+.stop img{aspect-ratio:4/3}
+.stop img.tall{aspect-ratio:3/4!important;object-fit:cover;max-height:620px}
+.stop figcaption{font-family:var(--sans)!important;font-style:normal!important;font-size:12.5px!important;text-align:left!important;color:#8a857c}
+.takeaway{font-family:var(--sans)!important;font-style:normal!important;font-size:14.5px!important;line-height:1.7}
+.takeaway b{font-size:10.5px}
+.close p{font-family:var(--sans)!important;font-size:1.05rem!important}
+.step-n{font-style:normal}
 </style>
 </head>
 <body>
