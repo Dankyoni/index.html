@@ -201,6 +201,13 @@ footer{flex-wrap:wrap;gap:.8rem}
 .lang-box{border-radius:0}
 img{border-radius:4px}
 .hero-photo img,.logo img{border-radius:0}
+
+/* unified-type 2026-11-12 (Journey = reference) */
+body :where(p,li,figcaption,blockquote,td,th,small,label,button,input){font-family:var(--sans)!important}
+body :where(h1,h2,h3,h4){font-family:var(--serif)!important;font-weight:400!important;letter-spacing:-.005em}
+body *:not(.verse):not(.hero-panel h1 em):not(.hero-panel h1 em *){font-style:normal!important}
+body :where(.sec-label,.about-label,.lang-title,.ph-label,.div-label,.place,.csg-eyebrow,.sw-tag,.dtag,.ci-label,.hi-eyebrow,.art-meta,.ameta){font-family:var(--sans)!important;font-size:11px!important;letter-spacing:.18em!important;text-transform:uppercase!important;color:var(--olive)!important}
+body :where(p,li){line-height:1.8}
 </style>
 </head>
 <body>
