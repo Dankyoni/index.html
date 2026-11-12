@@ -88,6 +88,8 @@ img{max-width:100%;height:auto}
   section,.section,.page-head,.about,.hero-panel{max-width:100vw}
 }
 
+.stop img.tall{aspect-ratio:auto;height:auto}
+@media(max-width:760px){.stop img.tall{max-height:75vh;object-fit:cover}}
 /* readability + olive accent 2026-11-12 */
 :root{--olive:#5E6B2F;--muted:#625d55}
 body{font-size:15px}
@@ -193,7 +195,7 @@ footer{flex-wrap:wrap;gap:.8rem}
       <p>Shanghai also opened the door to a much bigger world. I became close friends with people from all over the globe, and our conversations went far beyond the mainstream values I grew up with in Asia: death and vitality, equality, education, passion for life, freedom, relationships, and what it really means to have seen the world. Those friendships changed how I think, and they planted the seed for the year that came next.</p>
       <div class="takeaway"><b>What I took with me:</b> strategy and execution need each other, and I had now done both. And the best ideas often come from people who see the world differently from you.</div>
     </div>
-    <figure><img src="img/journey/shanghai.jpg" alt="Shanghai skyline with the Oriental Pearl Tower" onerror="this.parentNode.style.display='none'"><figcaption>Shanghai</figcaption></figure>
+    <figure><img class="tall" src="img/journey/shanghai.jpg" alt="Shanghai skyline with the Oriental Pearl Tower" onerror="this.parentNode.style.display='none'"><figcaption>Shanghai</figcaption></figure>
   </div>
 </div>
 
