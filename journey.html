@@ -48,6 +48,9 @@ header{position:sticky;top:0;z-index:30;display:flex;justify-content:space-betwe
 .takeaway{font-size:12.5px;color:var(--ink);border-left:2px solid var(--accent);padding:.3rem 0 .3rem .9rem;margin-top:.4rem;max-width:620px}
 .takeaway b{font-weight:500}
 .stop.noimg{grid-template-columns:1fr}
+.stop.right{grid-template-columns:1fr 320px}
+.stop.right figure{order:2}
+.stop.right>div{order:1}
 
 .close{background:var(--white)}
 .close p{font-size:14px;color:#444;line-height:1.9;max-width:680px;margin-bottom:.9rem}
@@ -63,7 +66,25 @@ footer{background:var(--white);border-top:1px solid var(--border);padding:1.4rem
   header{padding:0 1.6rem}
   .page-head,.section{padding-left:1.6rem;padding-right:1.6rem}
   .thread{grid-template-columns:repeat(2,1fr)}
-  .stop{grid-template-columns:1fr;gap:1rem}
+  .stop,.stop.right{grid-template-columns:1fr;gap:1rem}
+}
+
+/* mobile-fix 2026-11-12 */
+img{max-width:100%;height:auto}
+@media(max-width:760px){
+  html,body{max-width:100%;overflow-x:hidden}
+  header{flex-wrap:wrap;height:auto;padding:.55rem 1.1rem 0;gap:.1rem}
+  .logo{font-size:1rem}
+  .header-nav{width:100%;min-width:0;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin:0 -.4rem}
+  .header-nav::-webkit-scrollbar{display:none}
+  .tab{height:42px;padding:0 .65rem;font-size:11px}
+  .btns{flex-wrap:wrap;gap:.6rem}
+  .btns a{flex:1 1 auto;justify-content:center;text-align:center}
+  .nr-inner{flex-wrap:wrap;gap:.5rem}
+  .nr-title{flex-basis:100%}
+  p,li,h1,h2,h3,.lead{overflow-wrap:break-word;word-break:normal}
+  table{display:block;max-width:100%;overflow-x:auto}
+  section,.section,.page-head,.about,.hero-panel{max-width:100vw}
 }
 </style>
 </head>
@@ -101,7 +122,7 @@ footer{background:var(--white);border-top:1px solid var(--border);padding:1.4rem
 <div class="section">
   <div class="sec-label">Part I · Leaving the village</div>
 
-  <div class="stop noimg">
+  <div class="stop right">
     <div>
       <div class="place">Jiangxi, China · age 3 to 13</div>
       <h3>"You plant seeds, Grandpa. I plant words."</h3>
@@ -109,9 +130,10 @@ footer{background:var(--white);border-top:1px solid var(--border);padding:1.4rem
       <p>Around the age of ten, the village school principal took me into town on his motorcycle for an essay competition. For the first time I saw a world bigger than the village: confident city kids who came over to talk to me. In fifth grade I wrote down a dream: to travel around the world.</p>
       <div class="takeaway"><b>What I took with me:</b> a life without much is still full of people who help you. A principal, a teacher, a grandfather who let a girl read.</div>
     </div>
+    <figure><img src="img/journey/hometown.jpg" alt="River and fields near my grandfather's village" onerror="this.parentNode.style.display='none'"><figcaption>My grandfather's hometown, Jiangxi</figcaption></figure>
   </div>
 
-  <div class="stop noimg">
+  <div class="stop right">
     <div>
       <div class="place">Jiangxi → Chengdu</div>
       <h3>An English teacher, a factory line, and the first in my family at university</h3>
@@ -119,9 +141,10 @@ footer{background:var(--white);border-top:1px solid var(--border);padding:1.4rem
       <p>My parents came home to open a small shop so they could support my studies. With their care, I became the first in my family to go to university, in Chengdu, far from home.</p>
       <div class="takeaway"><b>What I took with me:</b> motivation is strongest when you have seen the alternative up close.</div>
     </div>
+    <figure><img src="img/journey/smalltown.webp" alt="A small town under open skies" onerror="this.parentNode.style.display='none'"><figcaption>Small town is not enough for me. I want to know more, learn more.</figcaption></figure>
   </div>
 
-  <div class="stop noimg">
+  <div class="stop right">
     <div>
       <div class="place">Sapporo · Tokyo, Japan</div>
       <h3>Across the sea: research on belonging, then the first foreign sales hire</h3>
@@ -129,9 +152,10 @@ footer{background:var(--white);border-top:1px solid var(--border);padding:1.4rem
       <p>In Tokyo I joined YRGLM as their first foreign sales hire. Senior colleagues trained me hands-on, and I rotated through business development, marketing analysis and inside sales.</p>
       <div class="takeaway"><b>What I took with me:</b> being the outsider is a skill. You learn to listen harder, and you notice what insiders miss.</div>
     </div>
+    <figure><img src="img/journey/japan.jpg" alt="Friends watching the sunset by the sea in Japan" onerror="this.parentNode.style.display='none'"><figcaption>With my first team in Japan</figcaption></figure>
   </div>
 
-  <div class="stop noimg">
+  <div class="stop right">
     <div>
       <div class="place">Shanghai, China</div>
       <h3>New to FMCG, new to Shanghai, and then into strategy</h3>
@@ -140,6 +164,7 @@ footer{background:var(--white);border-top:1px solid var(--border);padding:1.4rem
       <p>Shanghai also opened the door to a much bigger world. I became close friends with people from all over the globe, and our conversations went far beyond the mainstream values I grew up with in Asia: death and vitality, equality, education, passion for life, freedom, relationships, and what it really means to have seen the world. Those friendships changed how I think, and they planted the seed for the year that came next.</p>
       <div class="takeaway"><b>What I took with me:</b> strategy and execution need each other, and I had now done both. And the best ideas often come from people who see the world differently from you.</div>
     </div>
+    <figure><img src="img/journey/shanghai.jpg" alt="Shanghai skyline with the Oriental Pearl Tower" onerror="this.parentNode.style.display='none'"><figcaption>Shanghai</figcaption></figure>
   </div>
 </div>
 
