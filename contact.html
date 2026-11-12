@@ -248,6 +248,25 @@ footer{flex-wrap:wrap;gap:.8rem}
 .lang-box{border-radius:0}
 img{border-radius:4px}
 .hero-photo img,.logo img{border-radius:0}
+
+/* two-font-pass 2026-11-12 */
+@media(min-width:761px){.page-head,.section,.work-sec .sw-list{padding-left:max(2.8rem,calc((100% - 1180px)/2))!important;padding-right:max(2.8rem,calc((100% - 1180px)/2))!important}}
+.page-head p{font-family:var(--sans)!important;font-style:normal!important;font-size:1.05rem!important;color:#5a554d!important;max-width:720px!important}
+.sec-label,.about-label,.lang-title{font-family:var(--sans)!important;font-style:normal!important;font-size:11px!important;letter-spacing:.18em!important;text-transform:uppercase!important}
+.hero-origin{font-family:var(--sans)!important;font-style:normal!important;font-size:15px!important;font-weight:500}
+.sw-why{font-family:var(--sans)!important;font-style:normal!important;font-size:14.5px!important}
+.quote-text{font-style:normal!important}
+.nr-title{font-family:var(--sans)!important;font-weight:500!important;font-size:14.5px!important}
+
+/* contact-pass */
+.cwrap{max-width:1180px;margin:0 auto!important;padding:5rem 2.8rem 6rem!important;min-height:calc(100vh - 160px);align-items:center}
+.cleft h2{font-size:3rem!important}
+.cleft p{font-size:1.05rem!important;line-height:1.85!important;color:#4a4640!important;max-width:440px!important}
+.c-note{color:var(--olive)!important;font-weight:500;margin-top:1rem}
+.ci{background:#fff!important;border:1px solid rgba(94,107,47,.14)!important;border-radius:12px!important;transition:box-shadow .2s,transform .2s}
+.ci:hover{box-shadow:0 14px 30px -20px rgba(60,50,30,.45);transform:translateY(-1px)}
+.ci-icon{color:var(--olive)!important}
+.ci-label{color:var(--olive)!important}
 </style>
 </head>
 <body>
@@ -266,7 +285,8 @@ img{border-radius:4px}
 <div class="cwrap">
     <div class="cleft">
       <h2>Let's connect</h2>
-      <p>Actively seeking English-led roles in international consulting, strategic account management, or e-commerce growth. Based in Düsseldorf, Germany — open to hybrid roles across Germany and Europe.</p>
+      <p>I'm looking for international sales, business development and market expansion roles, where building trust with partners across cultures is the job. Based in Düsseldorf, open to roles across Germany and Europe, and happy to travel.</p>
+      <p class="c-note">Whether it's about a role, a market or a story, I'd love to hear from you.</p>
       
     </div>
     <div class="citems">
@@ -274,6 +294,7 @@ img{border-radius:4px}
       
       <div class="ci" onclick="window.open('https://www.linkedin.com/in/xudankyoni/','_blank')"><i class="ti ti-brand-linkedin ci-icon"></i><div><div class="ci-label">LinkedIn</div><div class="ci-val">linkedin.com/in/xudankyoni</div></div></div>
       <div class="ci"><i class="ti ti-map-pin ci-icon"></i><div><div class="ci-label">Location</div><div class="ci-val">Düsseldorf, Germany</div></div></div>
+      <div class="ci" onclick="window.open('https://kyoni.substack.com','_blank')"><i class="ti ti-pencil ci-icon"></i><div><div class="ci-label">Lifewriting</div><div class="ci-val">kyoni.substack.com</div></div></div>
       <div class="ci"><i class="ti ti-language ci-icon"></i><div><div class="ci-label">Languages</div><div class="ci-val">Chinese · English · Japanese · German (B2)</div></div></div>
     </div>
   </div>
