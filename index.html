@@ -280,7 +280,7 @@ img{border-radius:4px}
 /* unified-type 2026-11-12 (Journey = reference) */
 body :where(p,li,figcaption,blockquote,td,th,small,label,button,input){font-family:var(--sans)!important}
 body :where(h1,h2,h3,h4){font-family:var(--serif)!important;font-weight:400!important;letter-spacing:-.005em}
-body *:not(.verse):not(.hero-panel h1 em):not(.hero-panel h1 em *){font-style:normal!important}
+body *:not(.verse):not(.hero-origin):not(.hero-panel h1 em):not(.hero-panel h1 em *){font-style:normal!important}
 body :where(.sec-label,.about-label,.lang-title,.ph-label,.div-label,.place,.csg-eyebrow,.sw-tag,.dtag,.ci-label,.hi-eyebrow,.art-meta,.ameta){font-family:var(--sans)!important;font-size:11px!important;letter-spacing:.18em!important;text-transform:uppercase!important;color:var(--olive)!important}
 body :where(p,li){line-height:1.8}
 
@@ -290,6 +290,9 @@ body :where(table,.cs-table,.sit-grid,.situation,.callout,.cs-disclaimer,.tag,.a
 body :where(.cs-disclaimer){border-color:rgba(94,107,47,.25)!important;background:rgba(94,107,47,.05)!important}
 body :where(hr){border-color:rgba(94,107,47,.15)}
 body a:where(:not(.tab):not(.btn1):not(.btn2):not(.btn):not(.logo)){color:var(--olive)}
+/* hero-origin-serif */
+.hero-origin{font-family:var(--serif)!important;font-style:italic!important;font-weight:400!important;font-size:1.2rem!important;line-height:1.6!important;max-width:540px!important;color:var(--olive)!important;margin-top:.4rem!important}
+@media(max-width:600px){.hero-origin{font-size:1.08rem!important}}
 </style>
 </head>
 <body>
