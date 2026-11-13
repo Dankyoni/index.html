@@ -12,7 +12,7 @@
 <meta property="og:description" content="Almost six years in consulting and commercial roles in China and Japan. Based in Germany, open to international BD, market expansion and commercial strategy roles in Europe.">
 <meta property="og:image" content="https://dankyoni.github.io/index.html/dan-photo.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -302,6 +302,11 @@ body a:where(:not(.tab):not(.btn1):not(.btn2):not(.btn):not(.logo)){color:var(--
 .hero-links a:hover{color:var(--olive)!important;border-color:var(--olive)}
 .hero-panel .btn1{background:none!important;color:var(--ink)!important;border:1px solid #bbb!important;transition:all .2s}
 .hero-panel .btn1:hover{border-color:var(--accent)!important;color:var(--accent)!important}
+/* hero-origin-legible: darker, larger, medium-weight italic so the thin Playfair strokes stay readable */
+.hero-origin{font-size:1.15rem!important;font-weight:500!important;color:#3B4419!important;line-height:1.55!important;letter-spacing:.005em!important;-webkit-font-smoothing:antialiased}
+@media(max-width:600px){.hero-origin{font-size:1.05rem!important}}
+.hero-origin{max-width:none!important}
+.hero-origin .nw{white-space:nowrap}
 </style>
 </head>
 <body>
@@ -327,7 +332,7 @@ body a:where(:not(.tab):not(.btn1):not(.btn2):not(.btn):not(.logo)){color:var(--
     <div class="hi-eyebrow">International Sales · APAC to Europe</div>
     <h1>Hi, I'm Dan.<br><em>I build bridges.</em></h1>
     <p class="hero-lead">Between Asian markets and European ambition. Almost six years of international partnerships, built by understanding people first.</p>
-    <p class="hero-origin">A mountain-village girl from south China → Japan → the world → Germany</p>
+    <p class="hero-origin"><span class="nw">A mountain-village girl</span> <span class="nw">from south China → Japan</span><br><span class="nw">→ the world → Germany</span></p>
     <div class="btns">
       <a class="btn1" href="projects.html">View My Work</a>
       <a class="btn2" href="journey.html">Read My Story</a>
